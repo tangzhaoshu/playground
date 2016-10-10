@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1461226397 source:c:\users\oureda\documents\code\singlen\main.cpp
+	<iostream>
+	<vector>
+
