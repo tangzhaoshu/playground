@@ -1,0 +1,109 @@
+%% start of file `template-zh.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv 主题
+\moderncvstyle{classic}                        % 选项参数是 ‘casual’, ‘classic’, ‘oldstyle’ 和 ’banking’
+\moderncvcolor{blue}                          % 选项参数是 ‘blue’ (默认)、‘orange’、‘green’、‘red’、‘purple’ 和 ‘grey’
+%\nopagenumbers{}                             % 消除注释以取消自动页码生成功能
+
+% 字符编码
+\usepackage[utf8]{inputenc}                   % 替换你正在使用的编码
+\usepackage{CJKutf8}
+
+% 调整页面出血
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}           % 如果你希望改变日期栏的宽度
+
+% 个人信息
+\name{唐兆树}{}
+\title{}                     % 可选项、如不需要可删除本行
+%\address{街道及门牌号}{邮编及城市}            % 可选项、如不需要可删除本行
+\phone[mobile]{TEL: +86~188~4262~1051}              % 可选项、如不需要可删除本行
+%\phone[fixed]{+2~(345)~678~901}               % 可选项、如不需要可删除本行
+%\phone[fax]{+3~(456)~789~012}                 % 可选项、如不需要可删除本行
+\email{Mail: tang.zhaoshu@gmail.com}                    % 可选项、如不需要可删除本行
+%\homepage{www.xialongli.com}                  % 可选项、如不需要可删除本行
+%\extrainfo{附加信息 (可选项)}                 % 可选项、如不需要可删除本行
+%\photo[64pt][0.4pt]{picture}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
+\quote{}                          % 可选项、如不需要可删除本行
+
+% 显示索引号;仅用于在简历中使用了引言
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% 分类索引
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            内容
+%----------------------------------------------------------------------------------
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}                       % 详情参阅CJK文件包
+\maketitle
+ \vspace{-0.5in}
+\section{教育背景}
+\cvitem{2010.9 -- 至今}{网络工程学士，软件工程硕士，大连理工大学}{} % 第3到第6 编码可留白
+\section{科研成果}
+%\subsection{专业}
+\cvitem{科研经历}{%
+\begin{itemize}
+  \item 研究问题：无线传感器网络中的链路调度优化问题。\newline 研究目的：如何在利用定向天线的无线网络环境中设计链路调度优化问题可行的调度算法。\newline 根据定向天线的特点对其进行数学建模，并结合传统的物理干扰模型设计适用于定向环境下的网络模型，将研究问题利用数学方式表述。利用图论的方法，设计了基于网络模型的调度算法，并用数学分析以及仿真实验的方式给出算法的正确性分析和性能分析。
+  \item 针对WiFi中MU-MIMO技术的user selection问题，从用户QoS、网络吞吐量、干扰等角度作为切入点，利用数据挖掘、机器学习等技术分析用户行为关系或者寻找CSI特征，以优化用户调度算法。
+\end{itemize}
+}
+\cvitem{研究成果}{
+\begin{itemize}
+  \item Zhaoshu Tang, Ming Zhu, Lei Wang, \emph{et.al}. A Novel Link Scheduling Algorithm for WirelessNetworks using Directional Antenna, WCNC 2016 IEEE.
+  \item Zhaoshu Tang, Zhenquan Qin, Ming Zhu, \emph{et.al}. TOUSE: A Fair User Selection Mechanism Based on Dynamic Time Warping for MU-MIMO Networks, IWQoS 2016 IEEE. (在投)
+  \item Ming Zhu, Zhaoshu Tang, Wenlong Yue, \emph{et.al}. Gatewaying theWireless Sensor Networks, EAI Endorsed Transactions on Industrial Networks and Intelligent Systems 2016. (在投)
+  \item Zhicheng Zeng, Ming Zhu, Zhaoshu Tang, \emph{et.al}. A single Access Point Based Traffic Control System with Passive Measurement, FCST 2015.
+\end{itemize}
+}
+
+
+\section{计算机技能}
+\cvitem{}{基础： C / C++，MATLAB \newline{}
+阅读：《算法导论》，《C++Primer》}
+
+\section{荣获奖项}
+\cvitem{}{获国家励志奖学金，获学习优秀奖学金二等，
+校优秀毕业生}
+
+\section{自我评价}
+\cvitem{}{本人善于沟通，学习能力强，做事认真负责。本硕的研究经历磨练了意志与心性，使我更加严谨扎实}
+
+\section{兴趣爱好}
+\cvitem{}{足球，游泳，羽毛球，健身}
+
+\renewcommand{\listitemsymbol}{-}             % 改变列表符号
+
+
+
+% 来自BibTeX文件但不使用multibib包的出版物
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% BibTeX 的数字标签
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                    % 'publications' 是BibTeX文件的文件名
+
+% 来自BibTeX文件并使用multibib包的出版物
+%\section{出版物}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}               % 'publications' 是BibTeX文件的文件名
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}               % 'publications' 是BibTeX文件的文件名
+
+\clearpage\end{CJK}
+\end{document}
+
+
+%% 文件结尾 `template-zh.tex'.

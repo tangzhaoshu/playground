@@ -1,0 +1,603 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.15)  25 SEP 2016 21:38
+entering extended mode
+**C:/Users/OurEDA/Desktop/CV--TZS/templates--2.tex
+(C:/Users/OurEDA/Desktop/CV--TZS/templates--2.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\koma-script\scrartcl.cls"
+Document Class: scrartcl 2012/03/08 v3.10a KOMA-Script document class (article)
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\koma-script\scrkbase.sty"
+Package: scrkbase 2012/03/08 v3.10a KOMA-Script package (KOMA-Script-dependent 
+basics and keyval usage)
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\koma-script\scrbase.sty"
+Package: scrbase 2012/03/08 v3.10a KOMA-Script package (KOMA-Script-independent
+ basics and keyval usage)
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\koma-script\scrlfile.sty"
+Package: scrlfile 2011/03/09 v3.09 KOMA-Script package (loading files)
+
+Package scrlfile, 2011/03/09 v3.09 KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+))) ("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\koma-script\tocbasic.sty"
+Package: tocbasic 2011/05/30 v3.09a KOMA-Script package (handling toc-files)
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 115.
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 116.
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 117.
+Class scrartcl Info: File `scrsize11pt.clo' used to setup font sizes on input l
+ine 1263.
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\koma-script\scrsize11pt.clo"
+File: scrsize11pt.clo 2012/03/08 v3.10a KOMA-Script font size class option (11p
+t)
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\koma-script\typearea.sty"
+Package: typearea 2012/03/08 v3.10a KOMA-Script package (type area)
+
+Package typearea, 2012/03/08 v3.10a KOMA-Script package (type area)
+                  Copyright (C) Frank Neukam, 1992-1994
+                  Copyright (C) Markus Kohm, 1994-
+
+\ta@bcor=\skip41
+\ta@div=\count79
+\ta@hblk=\skip42
+\ta@vblk=\skip43
+\ta@temp=\skip44
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 418.25555pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 17.3562pt
+(typearea)              \oddsidemargin  = 17.3562pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.60002pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1177.
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\abovecaptionskip=\skip45
+\belowcaptionskip=\skip46
+\c@pti@nb@sid@b@x=\box26
+\c@figure=\count86
+\c@table=\count87
+\bibindent=\dimen102
+) ("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\CTEX\UserData\tex\latex\babel-english\english.ldf"
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+\l@british = a dialect from \language0
+\l@UKenglish = a dialect from \language0
+\l@american = a dialect from \language0
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\unicode\utf8x.def"
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\unicode\ucs.sty"
+Package: ucs 2004/10/17 UCS: Unicode input support
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\unicode\data\uni-global.def"
+File: uni-global.def 2004/10/17 UCS: Unicode global data
+)
+\uc@secondtry=\count89
+\uc@combtoks=\toks17
+\uc@combtoksb=\toks18
+\uc@temptokena=\toks19
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\microtype\microtype.sty"
+Package: microtype 2010/01/10 v2.4 Micro-typography with pdfTeX (RS)
+\MT@toks=\toks20
+\MT@count=\count90
+LaTeX Info: Redefining \lsstyle on input line 1597.
+LaTeX Info: Redefining \lslig on input line 1597.
+\MT@outer@space=\skip47
+LaTeX Info: Redefining \textls on input line 1605.
+\MT@outer@kern=\dimen104
+LaTeX Info: Redefining \textmicrotypecontext on input line 2156.
+Package microtype Info: Loading configuration file microtype.cfg.
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\microtype\microtype.cfg"
+File: microtype.cfg 2010/01/10 v2.4 microtype main configuration file (RS)
+))
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip48
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks21
+\ex@=\dimen105
+))
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks22
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks23
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks24
+\multlinegap=\skip49
+\multlinetaggap=\skip50
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\classes\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks26
+\thm@bodyfont=\toks27
+\thm@headfont=\toks28
+\thm@notefont=\toks29
+\thm@headpunct=\toks30
+\thm@preskip=\skip51
+\thm@postskip=\skip52
+\thm@headsep=\skip53
+\dth@everypar=\toks31
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count103
+))
+\Gin@req@height=\dimen114
+\Gin@req@width=\dimen115
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\xcolor\svgnam.def"
+File: svgnam.def 2007/01/21 v2.11 Predefined colors according to SVG 1.1 (UK)
+))
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count104
+\Gm@cntv=\count105
+\c@Gm@tempcnt=\count106
+\Gm@bindingoffset=\dimen116
+\Gm@wd@mp=\dimen117
+\Gm@odd@mp=\dimen118
+\Gm@even@mp=\dimen119
+\Gm@layoutwidth=\dimen120
+\Gm@layoutheight=\dimen121
+\Gm@layouthoffset=\dimen122
+\Gm@layoutvoffset=\dimen123
+\Gm@dimlist=\toks32
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\cjk\CJK.sty"
+Package: CJK 2008/12/29 4.8.2
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\cjk\mule\MULEenc.sty"
+Package: MULEenc 2008/12/29 4.8.2
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\cjk\CJK.enc"
+File: CJK.enc 2008/12/29 4.8.2
+)
+LaTeX Info: Redefining \selectfont on input line 756.
+\CJK@indent=\box29
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\sectsty\sectsty.sty"
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+)
+\spacebox=\skip54
+
+(C:\Users\OurEDA\Desktop\CV--TZS\templates--2.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 97.
+LaTeX Font Info:    ... okay on input line 97.
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\unicode\ucsencs.def"
+File: ucsencs.def 2003/11/29 Fixes to fontencodings LGR, T3
+)
+LaTeX Info: Redefining \microtypecontext on input line 97.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\microtype\mt-cmr.cfg"
+File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman 
+(RS)
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count107
+\scratchdimen=\dimen124
+\scratchbox=\box30
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen125
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks34
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.6271pt, 418.25372pt, 89.6271pt)
+* v-part:(T,H,B)=(101.40665pt, 591.53027pt, 152.11002pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
+* \textwidth=418.25372pt
+* \textheight=702.62756pt
+* \oddsidemargin=17.35712pt
+* \evensidemargin=17.35712pt
+* \topmargin=-8.26335pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.60002pt
+* \marginparwidth=59.7508pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\cjk\UTF8\UTF8.bdg"
+File: UTF8.bdg 2008/12/29 4.8.2
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\cjk\UTF8\UTF8.enc"
+File: UTF8.enc 2008/12/29 4.8.2
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\cjk\UTF8\UTF8.chr"
+File: UTF8.chr 2008/12/29 4.8.2
+)
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 105.
+
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\psnfss\ot1phv.fd"
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 105.
+LaTeX Font Info:    Try loading font information for C70+gbsn on input line 105
+.
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\cjk\UTF8\c70gbsn.fd"
+File: c70gbsn.fd 2008/12/29 4.8.2
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\cjk\UTF8\c70gbsn.fdx"
+File: c70gbsn.fdx 2008/12/29 4.8.2
+)
+
+LaTeX Font Warning: Font shape `C70/gbsn/b/n' undefined
+(Font)              using `C70/gbsn/m/n' instead on input line 123.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 125.
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\microtype\mt-msa.cfg"
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 125.
+
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\microtype\mt-msb.cfg"
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+
+LaTeX Font Warning: Font shape `C70/gbsn/m/it' undefined
+(Font)              using `C70/gbsn/m/n' instead on input line 125.
+
+[1
+
+{C:/Program Files (x86)/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGB
+K.sfd}}] (C:\Users\OurEDA\Desktop\CV--TZS\templates--2.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 8089 strings out of 495354
+ 122166 string characters out of 3182739
+ 259252 words of memory out of 3000000
+ 11036 multiletter control sequences out of 15000+200000
+ 42228 words of font info for 158 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 35i,5n,39p,616b,330s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Progr
+am Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progra
+m Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Progra
+m Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program 
+Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fil
+es (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program File
+s (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu30.pfb><C:/Program Files (x86
+)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu4e.pfb><C:/Program Files (x86)/CTEX
+/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu4f.pfb><C:/Program Files (x86)/CTEX/MiKTe
+X/fonts/type1/arphic/gbsnu/gbsnu50.pfb><C:/Program Files (x86)/CTEX/MiKTeX/font
+s/type1/arphic/gbsnu/gbsnu51.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type
+1/arphic/gbsnu/gbsnu52.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arph
+ic/gbsnu/gbsnu53.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbs
+nu/gbsnu54.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbs
+nu55.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu56.p
+fb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu57.pfb><C:
+/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu58.pfb><C:/Progr
+am Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu59.pfb><C:/Program Fil
+es (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu5b.pfb><C:/Program Files (x8
+6)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu5d.pfb><C:/Program Files (x86)/CTE
+X/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu5e.pfb><C:/Program Files (x86)/CTEX/MiKT
+eX/fonts/type1/arphic/gbsnu/gbsnu5f.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fon
+ts/type1/arphic/gbsnu/gbsnu60.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/typ
+e1/arphic/gbsnu/gbsnu61.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arp
+hic/gbsnu/gbsnu62.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gb
+snu/gbsnu63.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gb
+snu64.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu65.
+pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu66.pfb><C
+:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu67.pfb><C:/Prog
+ram Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu68.pfb><C:/Program Fi
+les (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu6a.pfb><C:/Program Files (x
+86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu6b.pfb><C:/Program Files (x86)/CT
+EX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu6c.pfb><C:/Program Files (x86)/CTEX/MiK
+TeX/fonts/type1/arphic/gbsnu/gbsnu6d.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fo
+nts/type1/arphic/gbsnu/gbsnu6e.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/ty
+pe1/arphic/gbsnu/gbsnu70.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/ar
+phic/gbsnu/gbsnu72.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/g
+bsnu/gbsnu73.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/g
+bsnu74.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu75
+.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu76.pfb><
+C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu77.pfb><C:/Pro
+gram Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu78.pfb><C:/Program F
+iles (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu79.pfb><C:/Program Files (
+x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu7a.pfb><C:/Program Files (x86)/C
+TEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu7b.pfb><C:/Program Files (x86)/CTEX/Mi
+KTeX/fonts/type1/arphic/gbsnu/gbsnu7c.pfb><C:/Program Files (x86)/CTEX/MiKTeX/f
+onts/type1/arphic/gbsnu/gbsnu7e.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/t
+ype1/arphic/gbsnu/gbsnu7f.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/a
+rphic/gbsnu/gbsnu80.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/
+gbsnu/gbsnu83.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/
+gbsnu86.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu8
+8.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu89.pfb>
+<C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu8a.pfb><C:/Pr
+ogram Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu8b.pfb><C:/Program 
+Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu8c.pfb><C:/Program Files 
+(x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu8d.pfb><C:/Program Files (x86)/
+CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu8e.pfb><C:/Program Files (x86)/CTEX/M
+iKTeX/fonts/type1/arphic/gbsnu/gbsnu8f.pfb><C:/Program Files (x86)/CTEX/MiKTeX/
+fonts/type1/arphic/gbsnu/gbsnu90.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/
+type1/arphic/gbsnu/gbsnu91.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/
+arphic/gbsnu/gbsnu94.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic
+/gbsnu/gbsnu95.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu
+/gbsnu96.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu
+97.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu98.pfb
+><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnu9a.pfb><C:/P
+rogram Files (x86)/CTEX/MiKTeX/fonts/type1/arphic/gbsnu/gbsnuff.pfb><C:/Program
+ Files (x86)/CTEX/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb>
+Output written on templates--2.pdf (1 page, 360413 bytes).
+PDF statistics:
+ 291 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 12801 words of extra memory for PDF output out of 14400 (max. 10000000)
+

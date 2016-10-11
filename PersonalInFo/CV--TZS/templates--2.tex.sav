@@ -1,0 +1,171 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX:
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+							
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+	\textheight=700px                    % Saving trees ;-)
+\usepackage{url}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+\usepackage{CJK}
+%\usepackage{CJKutf8}
+%\usepackage[utf8]{inputenc}
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+		\Huge \usefont{OT1}{phv}{b}{n} % #1
+         \textbf{#1} \hfill
+		\normalfont\normalsize}
+		
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+		\large \usefont{OT1}{phv}{m}{n} \textit{#1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+		\hfill % Indentation
+		        % Box to align text
+		\textit{#1}		       % Entry name (birth, address, etc.)
+		#2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+		\noindent\hangindent=0em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value	
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{Black}{%
+			\parbox{6em}{%
+			\hfill\color{White}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+% you can upload a photo and include it here...
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%	\vspace*{-2cm}
+%		\includegraphics[width=0.15\textwidth]{photo}
+%\end{wrapfigure}
+\vspace*{-2cm}
+\MyName{唐兆树}
+\PersonalEntry{Phone:}{+86~188~4262~1051}
+\PersonalEntry{Mail:}{tang.zhaoshu@gmail.com}
+%\MySlogan{Tang, Zhaoshu}
+
+\sepspace
+
+%%% Personal details
+%%% ------------------------------------------------------------
+%\NewPart{Personal details}{}
+
+%\PersonalEntry{TEL:+86~188~4262~1051}{January 1, 1980}
+%\PersonalEntry{Address}{111 First St, New York}
+%\PersonalEntry{Phone}{(123) 000-0000}
+%\PersonalEntry{Mail}{\url{me@home.com}}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{教育背景}{}
+
+\EducationEntry{网络工程学士：网络安全方向；软件工程硕士：无线传感器网络方向}{2010.9-2017.6}{大连理工大学（本科本校保送研究生）}{}
+\vspace*{-0.5cm}
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{科研/项目经历}{}
+
+\EducationEntry{研究项目：定向天线下的无线传感器网络中的链路调度选择}{2014.9-2015.5}{目标：定向天线下无线传感器网络环境中解决暴露终端问题的调度算法。}{根据定向天线的特点对其进行数学建模，并结合传统的物理干扰模型设计适用于定向环境下的网络模型，利用图论设计基于网络模型的调度算法。}
+\noindent 研究成果：Zhaoshu Tang, Ming Zhu, Lei Wang, et.al. A Novel Link Scheduling Algorithm for Wireless Networks using Directional Antenna, WCNC 2016 IEEE.
+\sepspace
+
+\EducationEntry{研究问题：802.11ac标准中MU-MIMO技术的多用户调度问题}{2015.9-2016.4}{研究目的：设计最佳的调度策略选择用户组合使得传输效率最大化。}{从用户QoS、网络吞吐量、干扰等角度作为切入点，利用CSI、传输速率、用
+户需求等信息，设计数据传输速率预测方法，采用时间动态规划的方法设计调度算法。}
+\noindent 研究成果：Zhaoshu Tang, Zhenquan Qin, Ming Zhu, et.al. TOUSE: A Fair User Selection Mechanism Based on Dynamic Time Warping for MU-MIMO Networks. （JNCA在投）
+\par
+\sepspace
+\noindent\textbf{其他成果}：\normalfont \normalsize\par
+Ming Zhu, Zhaoshu Tang, Wenlong Yue, et.al. Gatewaying theWireless Sensor Networks, EAI Endorsed Transactions on Industrial Networks and Intelligent Systems 2016.
+\par
+Zhicheng Zeng, Ming Zhu, Zhaoshu Tang, et.al. A single Access Point Based Traffic Control System with Passive Measurement, FCST 2015.
+%%% Skills
+
+%-----------------------------------------------------------------
+\NewPart{实习经历}{}
+\EducationEntry{实习公司：新美团大众点评}{2016.6-2016.9}{主要工作：跟团游业务交易平台（主要是下单、退款、优惠、商家及客服操作等业务流程）维护与优化。}{详细细节：协助完成压力测试，并搭建Mock服务来伪造系统调用的外部依赖接口，配置测试环境，完善系统集成测试。负责平台下单退款优惠环节的业务逻辑细节优化及问题处理。实习期间学习Java 及Web 开发的相关技术。}
+
+\vspace*{-0.2cm}
+
+%%% ------------------------------------------------------------
+\NewPart{荣获奖项}{}
+获国家励志奖学金，获学习优秀奖学金二等，校优秀毕业生
+
+\NewPart{专业技能}{}
+
+\SkillsEntry{语言基础}{\textsc{C/C++}， \textsc{Java}， \textsc{Matlab}， \LaTeX}
+\SkillsEntry{阅读升华}{C++Primer，Think in Java，STL源码剖析，深入理解Java虚拟机}
+\SkillsEntry{}{ProGit，Spring in Action}
+%\SkillsEntry{}{}
+
+\vspace*{-0.2cm}
+%%% References
+%%% ------------------------------------------------------------
+\NewPart{兴趣爱好}{}
+足球，游泳，羽毛球，健身
+
+
+\end{CJK}
+\end{document}

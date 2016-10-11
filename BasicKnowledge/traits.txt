@@ -1,0 +1,314 @@
+萃取(traits)编程技术的介绍和应用
+引子
+
+最近在写C++代码的时候, 经常能使用到萃取(traits)编程技术,
+于是学习STL中关于萃取的知识, 并总结出来, 以飨读者, 同时加深自己的理解.
+
+迭代器中萃取技术
+
+STL简述
+STL(Standard Template Library)是C++泛型编程(template技术)的集大成者,
+迭代器在STL中发挥重要的作用. 在STL中有3个重要的概念:
+
+容器, 包括顺序容器(vector, list)和关联容器(map, set)算法, 各种操作容器的函数模版(count, count_if)
+迭代器, 作为算法和容器的桥梁, 让算法独立于容器发展
+迭代器的重要作用就是让容器和算法解耦合, 或者说让数据和操作解耦合, 算法利用迭代器作为输入, 从而摆脱对容器具体数据的访问. 容器生成的迭代器用于遍历容器中的每个元素, 同时避免暴露容器的内部数据结构和实现细节.
+
+这里通过一个算法的例子来展示迭代器的使用:
+
+template <class Iterator, class T>
+Iterator find(Iterator begin, Iterator end, const T& value)
+{
+while (begin != end && *begin != value)
+++begin;
+return begin;
+}
+注意这个例子展示的算法find()可以用于各种各样的容器(vector, map…), 试想没有迭代器, 那就需要为每个容器都实现一个find()算法, 何其繁琐.
+
+简单的迭代器
+在迭代器的实现中, 经常需要访问迭代器所指对象的类型,称之为该迭代器的value type. 利用内嵌类型申明typedef可以轻松实现隐藏所指对象类型, 如下迭代器的实现:
+
+templates <class T>
+struct Iterator {
+typedef T value_type;
+...
+};
+泛型算法就可以通过typename Iterator::value_type来获得value type.
+
+template <class Iterator>
+typename Iterator::value_type
+getValue(Iterator iter) {
+return *iter;
+}
+注意关键字typename必不可少, 因为T是一个template参数, 在它被实例化之前, 编译器不知道T是一个类型还是一个其他的对象, typename用于告诉编译器这是一个类型, 这样才能通过编译.
+
+萃取的概念
+在简单的迭代器中, 通过内嵌类型申明很好的隐藏了所指对象的内部细节, 实现了数据和算法的分离, 但是STL要求支持迭代器的算法, 应该也要支持原生指针, 比如
+
+Int array[4] = {1, 2, 3, 4};
+find(array, array+4, 3);
+这里存在的一个难题就是原生指针不能内嵌类型申明, 于是这里就需要多一层的封装,萃取编译技术应运而生.
+萃取(traits)编程技术，归纳成四个字就是：特性萃取。在迭代器的上下文中, 就是萃取出迭代器的value type, 可以概念上认为迭代器所指对象的类型(value type)就是该迭代器的一个特性(traits)
+
+template <class Iterator>
+struct iterator_traits {
+typedef typename Iterator::value_type value_type;
+...
+};
+有了iterator_traits,就可以改写算法getValue():
+
+template <class Iterator>
+typename iterator_traits<Iterator>::value_type
+getValue(Iterator iter) {
+return *iter;
+}
+多一层封装的好处在于, iterator_traits是一个C++类模版,可以为原生指针(特殊的迭代器)定义模版偏特化, <<泛型思维>>对模版偏特化做出的定义是: 针对(任何)template参数进一步的条件限制所设计出来的一个特化版本, 而原生指针T*, const T*就是一种偏特化.
+
+template <class T>
+struct iterator_traits<T*> {
+typedef T value_type;
+};
+template <class T>
+struct iterator_traits<const T*> {
+typedef T value_type;
+};
+现在不管迭代器是自定义类模板, 还是原生指针(T*, const T*), struct iterator_traits都能萃取出正确的value type
+
+STL迭代器
+Value type只是迭代器的一种特性(traits), 在实际情况中, STL迭代器总共定义了5个特性, 为了让用户自定义迭代器能适用于STL算法, STL做了一个约定, 即写了一个base class std::terator, 只要自定义的迭代器继承std::iterator, iterator_traits就能正确的萃取出迭代器的各种特性, 从而让自定义迭代器融入STL的大家庭, 无缝的使用各种泛型算法:
+
+template < class Category , class Value , class Distance = ptrdiff_t ,
+class Pointer = Value*, class Reference = Value&>
+struct iterator {
+typedef Category category ;
+typedef Value value_type ;
+typedef Distance difference_type ;
+typedef Pointer pointer ;
+typedef Reference reference ;
+};
+相应的iterator_traits定义如下:
+
+template < class Iterator > struct iterator_traits {
+typedef typename Iterator::value_typevalue_type ;
+typedef typename Iterator::difference_type difference_type ;
+typedef typename Iterator::pointer pointer ;
+typedef typename Iterator::reference reference ;
+typedef typename Iterator::iterator_category iterator_category ;
+};
+template < class T > struct iterator_traits <T* > {
+typedef T value_type ;
+typedef ptrdiff_t difference_type ;
+typedef T* pointer ;
+typedef T& reference ;
+typedef random_access_iterator_tag iterator_category ;
+};
+template < class T > struct iterator_traits <const T* > {
+typedef T value_type ;
+typedef ptrdiff_t difference_type ;
+typedef const T* pointer ;
+typedef const T& reference ;
+typedef random_access_iterator_tag iterator_category ;
+};
+上述迭代器中涉及其他四个特性, 限于篇幅, 不再累述, 有兴趣的读者自行翻阅下文的参考文献.
+
+类型萃取
+
+萃取(traits)编程技术弥补了C++语言本身的不足, 而STL仅仅是对迭代器的特性做出规范, 制定出iterator_traits.既然该技术如此有用, 就该应用于更加广泛的应用场景, SGI STL(Silicon Graphics System 开发的STL版本)做出了尝试, 把它应用在迭代器以外的世界, 于是产生了类型萃取的概念.
+
+我们知道, C++自定义类型有很多特性(traits), 比如拥有构造函数, 拷贝构造函数, 析构函数. 另一方面, C++内置类型入整形int, long, 就没有构造函数, 拷贝构造函数, 析构函数. 根据这些特性, 我们就可以采用最有效的措施进行构造和赋值, 比如对内置类型, 根本就不需要调用构造函数和拷贝构造函数, 而直接采用内存处理操作(malloc(), memcpy()), 从而获得最高效率, 这对于大规模而且操作频繁的容器, 有显著的性能提升.
+
+简单例子
+为了使用类型中的这些特性, 可以给类型定义一个特性萃取机: __type_traits
+
+struct __true_type {};
+struct __false_type {};
+Template <class T>
+struct __type_traits {
+typedef __false_type has_trivial_default_constructor;
+typedef __false_type has_trivial_destructor;
+};
+因为内嵌类型申明没法表示true和false，我们在这里定义结构体表示__true_type和__false_type。缺省情况下, 这些特性都按照最保守的值, 接下来再根据具体的情况, 利用模版特化, 对具体的类型设定更加乐观的值. 比如内置int类型的定义模版特化:
+
+template <>
+struct __type_traits<int> {
+typedef __true_type has_trivial_default_constructor;
+typedef __true_type has_trivial_destructor;
+};
+根据<<STL源码剖析>>介绍, 某些编译器可以分析程序中的各个类型, 并生成相应的__type_trait模版特化. 当然对于不支持该功能的编译器来说, 手动编写模版特化, 才能定义更加乐观的值. 否则默认值__false_type将生效.
+
+SGI STL类型萃取
+SGI STL定义的__type_traits除了包含特性has_trivial_default_constructor和has_trivial_destructor, 还其他的特性, 如下所述:
+
+template <class type>
+struct __type_traits {
+typedef __true_type this_dummy_member_must_be_first; //为特殊编译器定制
+typedef __false_type has_trivial_default_constructor;
+typedef __false_type has_trivial_copy_constructor;
+typedef __false_type has_trivial_assignment_operator;
+typedef __false_type has_trivial_destructor;
+};
+应用场景-copy
+模版函数copy()是STL一个泛型算法, 它有非常多的模版特化, 目的都是为了在不同的场景下提升性能, 希望在适当的情况下采用雷霆万钧的手段,从而获得最高性能, 比如针对不同的类型, 根据是否有拷贝构造函数, 它就可以有不同的操作:
+
+// 拷贝一个数组, 其元素为任意类型, 视情况采用最有效拷贝手段
+template <class T>
+inline void copy(T* source, T* destination, int n) {
+copy(source destination, n,
+typename __type_traits<T>::has_trivial_copy_constructor());
+}
+// 拷贝一个数组,其元素类型没有trival copy constructors
+template <class T>
+void copy (T* source, T* destination, int n, __false_type) {...}
+// 拷贝一个数组,其元素类型拥有trival copy constructors
+template <class T>
+void copy (T* source, T* destination, int n, __true_type) {...}
+应用场景-内存池中的析构函数
+在内存池的实现中, 需要涉及对象内存空间的获取和释放, 一般情况下,释放一个对象的动态内存空间, 需要调用该对象的析构函数, 因此可以定义析构函数模版destruct()来执行析构操作, 另一方面, 如果该对象不需要析构函数，那destuct()就什么都不干。
+
+template <class T>
+void destruct(T& t)
+{
+typedef typename type_traits<T>::has_trivial_destrutor has_trivial_destructor;
+__destruct(t, has_trivial_destructor());
+}
+template<class T>
+__destruct(T& t, __ture_type)
+{
+// 析构对象T
+}
+template<class T>
+__destruct<T& t, __false_type)
+{
+// 啥也不干
+}
+应用萃取技术
+
+枚举类型转化成真实类型
+在实际代码编写中, 经常会碰到这样的情景: 已知一个枚举常量, 获取对应真实类型, 这就可以通过萃取技术来解决, 比如定义一下枚举常量:
+
+typedef enum FieldType
+{
+FIELDTYPE_UNDEFINED = 0,
+FIELDTYPE_INT8,
+FIELDTYPE_UINT8,
+FIELDTYPE_INT16,
+FIELDTYPE_UINT16,
+FIELDTYPE_INT32,
+FIELDTYPE_UINT32,
+FIELDTYPE_INT64,
+FIELDTYPE_UINT64,
+FIELDTYPE_FLOAT,
+FIELDTYPE_DOUBLE,
+FIELDTYPE_CSTRING,
+} EFieldType;
+可以通过萃取技术来定义萃取机VariableTypeTraits, 来获取枚举类型对应的真实类型:
+
+template<FieldType pt>
+struct VariableTypeTraits {
+typedef void SyntaxType;
+};
+上述含义表示，如果pt拥有一个特性void，那么就可以通过VariableTypeTraits<pt>::SyntaxType，把void萃取出来。当然，上述模块只是一个空壳, 因为对于不同的枚举类型来说，每次都从VariableTypeTraits<pt>::SyntaxType萃取出void是没有意义的。此时, 模版特化就派上用场了, 通过模版特化，就能为每个枚举类型定义对应的类型:
+
+#define VARIABLE_TYPE_TRAITS_HELPER(pt, type) \
+template<> \
+struct VariableTypeTraits<pt> \ { \
+typedef type SyntaxType; \
+};
+VARIABLE_TYPE_TRAITS_HELPER(FIELDTYPE_INT8, int8_t)
+VARIABLE_TYPE_TRAITS_HELPER(FIELDTYPE_UINT8, uint8_t)
+VARIABLE_TYPE_TRAITS_HELPER(FIELDTYPE_INT16, int16_t)
+VARIABLE_TYPE_TRAITS_HELPER(FIELDTYPE_UINT16, uint16_t)
+VARIABLE_TYPE_TRAITS_HELPER(FIELDTYPE_INT32, int32_t)
+VARIABLE_TYPE_TRAITS_HELPER(FIELDTYPE_UINT32, uint32_t)
+VARIABLE_TYPE_TRAITS_HELPER(FIELDTYPE_INT64, int64_t)
+VARIABLE_TYPE_TRAITS_HELPER(FIELDTYPE_UINT64, uint64_t)
+VARIABLE_TYPE_TRAITS_HELPER(FIELDTYPE_FLOAT, float)
+VARIABLE_TYPE_TRAITS_HELPER(FIELDTYPE_DOUBLE, double)
+为了避免大量的代码重复, 上述使用了宏定义的实现方式. 定义上述内容之后, 就可以轻松获取枚举常量指向的真实类型了:
+
+void Fun (FieldType ft) {
+switch (ft) {
+case FIELDTYPE_INT32:
+typedef VariableTypeTraits<FIELDTYPE_INT32>::SyntaxType syntaxType;
+syntaxType foo;
+...
+}
+}
+样例代码
+我先把上文中代码片段组织成完整的程序，以加深读者对该用法的理解
+
+// Traits_example1.cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+// 枚举类型定义
+typedef enum FieldType
+{
+FIELDTYPE_UNDEFINED = 0,
+FIELDTYPE_INT8,
+FIELDTYPE_INT32, //为简化问题，只列举两种
+} EFieldType;
+// 利用Traits编程技巧
+template<FieldType pt>
+struct VariableTypeTraits {
+typedef void SyntaxType;
+};
+template<>
+struct VariableTypeTraits<FIELDTYPE_INT8> {
+typedef int8_t SyntaxType;
+};
+template<>
+struct VariableTypeTraits<FIELDTYPE_INT32> {
+typedef int32_t SyntaxType;
+};
+// 测试demo函数
+void func(int8_t var)
+{
+fprintf(stdout, "type: int8_t; value: %d\n", var);
+}
+void func(int32_t var)
+{
+fprintf(stdout, "type: int32_t; value: %d\n", var);
+}
+int main()
+{
+typedef VariableTypeTraits<FIELDTYPE_INT8>::SyntaxType int8_type;
+int8_type int8_a = 1;
+func(int8_a);
+typedef VariableTypeTraits<FIELDTYPE_INT32>::SyntaxType int32_type;
+int32_type int32_b = 2;
+func(int32_b);
+return 0;
+}
+真实类型转化成枚举类型
+同理可以利用萃取技术实现真实类型到枚举类型的转化:
+
+template <typename T>
+struct TypeTraits {
+static const FieldType FIELD_TYPE = FIELDTYPE_UNDEFINED;
+}
+注意这里不能依葫芦画瓢画瓢使用嵌套类型申明(typedef), 因为枚举变量是对象而不是类型, 于是这里使用了类的静态常量来定义FIELD_TYPE, 接下来可以为各个类型定义模版特化,而没有模版特化的类型, 获得到的FILED_TYPE = FIELDTYPE_UNDEFINED
+
+#define TYPE_TO_FIELDTYPE(type, field_type) \
+template<> \
+struct TypeTraits<type> { \
+static const FieldType FIELD_TYPE = field_type; \
+};
+TYPE_TO_FIELDTYPE(int8_t, FIELDTYPE_INT8);
+TYPE_TO_FIELDTYPE(uint8_t, FIELDTYPE_UINT8);
+TYPE_TO_FIELDTYPE(int16_t, FIELDTYPE_INT16);
+TYPE_TO_FIELDTYPE(uint16_t, FIELDTYPE_UINT16);
+TYPE_TO_FIELDTYPE(int32_t, FIELDTYPE_INT32);
+TYPE_TO_FIELDTYPE(uint32_t, FIELDTYPE_UINT32);
+TYPE_TO_FIELDTYPE(int64_t, FIELDTYPE_INT64);
+TYPE_TO_FIELDTYPE(uint64_t, FIELDTYPE_UINT64);
+TYPE_TO_FIELDTYPE(float, FIELDTYPE_FLOAT);
+TYPE_TO_FIELDTYPE(double, FIELDTYPE_DOUBLE);
+使用起来也比较简单, 调用TypeTraits<int>::FIELD_TYPE就可以获得int类型对应的枚举类型FIELDTYPE_INT32
+
+总结
+
+总结起来, traits编程技巧最大的好处有两点
+
+可以把利用“特性”来做的判断提升到编译级别，而不是运行时刻再来判断。这样提升了性能。
+可以实现通用实现和数据的解耦合
