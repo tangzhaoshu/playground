@@ -6,9 +6,20 @@
 #include <queue>
 using namespace std;
   /* code */
+
+int function(int a, int b) {
+    char *c;
+    c = (char *) a;
+    return (int) &c[b];
+}
+
 int main() {
+    cout << function(10, 4) << endl;
     cout << INT_MAX << endl;
     stringstream ss;
+    ss.str("111");
+    int a << ss;
+    cout << a << endl;
     ss << INT_MAX;
     cout << ss.str() + "hello" << endl;
     cout << "hello" << endl;

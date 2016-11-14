@@ -1,0 +1,154 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{choi2004transmit}
+L.-U. Choi, R.~D. Murch, A transmit preprocessing technique for multiuser
+  {MIMO} systems using a decomposition approach, IEEE Transactions on Wireless
+  Communications 3~(1) (2004) 20--24.
+
+\bibitem{gross2012scheduling}
+J.~Gross, Scheduling with outdated {CSI}: effective service capacities of
+  optimistic vs. pessimistic policies, in: Proc. {IEEE} International Workshop
+  on Quality of Service (IWQoS), 2012.
+
+\bibitem{xie2014scalable}
+X.~Xie, X.~Zhang, Scalable user selection for {MU-MIMO} networks, in: Proc.
+  IEEE International Conference on Computer Communications (INFOCOM), 2014.
+
+\bibitem{xie2013adaptive}
+X.~Xie, X.~Zhang, K.~Sundaresan, Adaptive feedback compression for {MIMO}
+  networks, in: Proc. {ACM} International Conference on Mobile Computing and
+  Networking (MobiCom), 2013.
+
+\bibitem{anand2014mode}
+N.~Anand, J.~Lee, S.-J. Lee, E.~W. Knightly, Mode and user selection for
+  multi-user {MIMO} wlans without {CSI}, in: Proc. IEEE International
+  Conference on Computer Communications (INFOCOM), 2015.
+
+\bibitem{halperin2011predictable}
+D.~Halperin, W.~Hu, A.~Sheth, D.~Wetherall, Predictable 802.11 packet delivery
+  from wireless channel measurements, ACM SIGCOMM Computer Communication Review
+  41~(4) (2011) 159--170.
+
+\bibitem{yoo2006optimality}
+T.~Yoo, A.~Goldsmith, {On the optimality of multiantenna broadcast scheduling
+  using zero-forcing beamforming}, {IEEE} Journal on Selected Areas in
+  Communications 24~(3) (2006) 528--541.
+
+\bibitem{aryafar2010design}
+E.~Aryafar, N.~Anand, T.~Salonidis, E.~W. Knightly, Design and experimental
+  evaluation of multi-user beamforming in wireless {LANs}, in: Proc. {ACM}
+  International Conference on Mobile Computing and Networking (MobiCom), 2010.
+
+\bibitem{shen2015sieve}
+W.-L. Shen, K.~C.-J. Lin, M.-S. Chen, K.~Tan, Sieve: Scalable user grouping for
+  large {MU-MIMO} systems, in: Proc. IEEE International Conference on Computer
+  Communications (INFOCOM), 2015.
+
+\bibitem{liao2014mu}
+R.~Liao, B.~Bellalta, M.~Oliver, Z.~Niu, Mu-mimo mac protocols for wireless
+  local area networks: A survey, IEEE Communications Surveys and Tutorials
+  18~(1) (2014) 162--183.
+
+\bibitem{yang2013performance}
+H.~Yang, T.~L. Marzetta, Performance of conjugate and zero-forcing beamforming
+  in large-scale antenna systems, IEEE.
+
+\bibitem{ravindran2012multi}
+N.~Ravindran, N.~Jindal, Multi-user diversity vs. accurate channel state
+  information in {MIMO} downlink channels, IEEE Transactions on Wireless
+  Communications 11~(9) (2012) 3037--3046.
+
+\bibitem{jindal2006mimo}
+N.~Jindal, {MIMO} broadcast channels with finite-rate feedback, IEEE
+  Transactions on Information Theory 52~(11) (2006) 5045--5060.
+
+\bibitem{muller2007dynamic}
+M.~M{\"u}ller, Dynamic time warping, {Springer} Information retrieval for music
+  and motion (2007) 69--84.
+
+\bibitem{jain1984quantitative}
+R.~Jain, D.-M. Chiu, W.~R. Hawe, A quantitative measure of fairness and
+  discrimination for resource allocation in shared computer system, Vol.~38,
+  Eastern Research Laboratory, Digital Equipment Corporation Hudson, MA, 1984.
+
+\bibitem{Gong2015advanced}
+M.~S. Gong M~X, Hart~B, Advanced wireless lan technologies: {IEEE} 802.11 ac
+  and beyond, {ACM} GetMobile: Mobile Computing and Communications 18 (2015)
+  48--52.
+
+\bibitem{deng2014wifi}
+S.~Deng, R.~Netravali, A.~Sivaraman, H.~Balakrishnan, {WiFi}, {LTE}, or both?:
+  measuring multi-homed wireless internet performance, in: Proc. {ACM} Internet
+  Measurement Conference (IMC), 2014.
+
+\bibitem{lee2013performance}
+D.~Lee, Performance analysis of zf-precoded scheduling system for {MU-MIMO}
+  with generalized selection criterion, IEEE Transactions on Wireless
+  Communications 12~(4) (2013) 1812--1818.
+
+\bibitem{lim2014performance}
+W.~Lim, G.~Kim, J.~Kim, H.~Park, K.~Lee, H.~Jang, Performance of linear
+  precoding and user selection in {IEEE} 802.11 ac downlink {MU-MIMO} system,
+  in: Proc. IEEE Wireless Communications and Networking Conference (WCNC),
+  2014.
+
+\bibitem{miller2012vulnerabilities}
+R.~Miller, W.~Trappe, On the vulnerabilities of {CSI} in {MIMO} wireless
+  communication systems, {IEEE} Transactions on Mobile Computing 11~(8) (2012)
+  1386--1398.
+
+\bibitem{zhou2015signpost}
+A.~Zhou, T.~Wei, X.~Zhang, M.~Liu, Z.~Li, Signpost: Scalable {MU-MIMO}
+  signaling with zero {CSI} feedback, in: Proc. {ACM} International Symposium
+  on Mobile Ad Hoc Networking and Computing (MobiHoc), 2015.
+
+\bibitem{kuo2014leader}
+T.-W. Kuo, K.-C. Lee, K.~C.-J. Lin, M.-J. Tsai, Leader-contention-based user
+  matching for 802.11 multiuser {MIMO} networks, IEEE Transactions on Wireless
+  Communications 13~(8) (2014) 4389--4400.
+
+\bibitem{huang2013user}
+S.~Huang, H.~Yin, J.~Wu, V.~Leung, User selection for multiuser {MIMO} downlink
+  with zero-forcing beamforming, IEEE Transactions on Vehicular Technology
+  62~(7) (2013) 3084--3097.
+
+\bibitem{ko2012multiuser}
+K.~Ko, J.~Lee, Multiuser {MIMO} user selection based on chordal distance, IEEE
+  Transactions on Communications 60~(3) (2012) 649--654.
+
+\bibitem{zhang2013nemox}
+X.~Zhang, K.~Sundaresan, M.~A.~A. Khojastepour, S.~Rangarajan, K.~G. Shin,
+  {NEMOx}: scalable network {MIMO} for wireless networks, in: Proc. {ACM}
+  International Conference on Mobile Computing and Networking (MobiCom), 2013.
+
+\bibitem{shen2014rate}
+W.-L. Shen, K.~C.-J. Lin, S.~Gollakota, M.-S. Chen, Rate adaptation for 802.11
+  multiuser {MIMO} networks, IEEE Transactions on Mobile Computing 13~(1)
+  (2014) 35--47.
+
+\bibitem{2016infocomres}
+O.~Bejarano, R.~P.~F. Hoefel, E.~W. Knightly, Resilient multi-user beamforming
+  wlans: Mobility, interference, and imperfect {CSI}, in: Proc. IEEE
+  International Conference on Computer Communications (INFOCOM), 2016.
+
+\bibitem{control2015shep}
+Z.~L. Shepard~C, Javed~A, Control channel design for many-antenna {MU-MIMO},
+  in: Proc. {ACM} International Conference on Mobile Computing and Networking
+  (MobiCom), 2015.
+
+\bibitem{Practical2016zhxy}
+Z.~X. e.~a. Sur~S, Pefkianakis~I, Practical mu-mimo user selection on 802.11 ac
+  commodity networks, in: Proc. {ACM} International Conference on Mobile
+  Computing and Networking (MobiCom), 2016.
+
+\bibitem{esslaoui2012fair}
+M.~Esslaoui, F.~Riera-Palou, G.~Femenias, A fair {MU-MIMO} scheme for {IEEE}
+  802.11 ac, in: IEEE International Symposium on Wireless Communication Systems
+  (ISWCS), 2012.
+
+\end{thebibliography}
