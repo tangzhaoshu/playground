@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.15)  15 NOV 2016 14:15
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.15)  15 NOV 2016 18:16
 entering extended mode
 **C:/Users/belief/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-templa
 te/elsarticle-template.tex
@@ -382,8 +382,8 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.259 \begin{equation}
-                      \label{aggregation throughput}] [12]
+l.261 \end{equation}
+                    ] [12]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 296.
  [13] [14] [15]
@@ -521,7 +521,7 @@ pe1/public/amsfonts/cm/cmti10.pfb><E:/Program Files/CTEX/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmti7.pfb><E:/Program Files/CTEX/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmti8.pfb><E:/Program Files/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmtt8.pfb>
-Output written on elsarticle-template.pdf (28 pages, 345178 bytes).
+Output written on elsarticle-template.pdf (28 pages, 344973 bytes).
 PDF statistics:
  480 PDF objects out of 1000 (max. 8388607)
  120 named destinations out of 1000 (max. 500000)
