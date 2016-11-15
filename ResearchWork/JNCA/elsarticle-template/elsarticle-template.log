@@ -1,15 +1,18 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.15)  14 NOV 2016 16:42
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.15)  15 NOV 2016 11:03
 entering extended mode
-**C:/Users/OurEDA/Desktop/JNCA/elsarticle-template/elsarticle-template.tex
-(C:/Users/OurEDA/Desktop/JNCA/elsarticle-template/elsarticle-template.tex
+**C:/Users/belief/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-templa
+te/elsarticle-template.tex
+
+(C:/Users/belief/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-templat
+e/elsarticle-template.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\elsarticle\elsarticle.cls"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\elsarticle\elsarticle.cls"
 Document Class: elsarticle 2009/09/17, 1.2.0: Elsevier Ltd
 \@bls=\dimen102
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\base\article.cls"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\base\size10.clo"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\base\size10.clo"
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,31 +27,31 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen103
 )
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\keyval.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\graphics.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\trig.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\pdftex-def\pdftex.def"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
 )
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
@@ -56,16 +59,16 @@ Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\psnfss\pifont.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\psnfss\pifont.sty"
 Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
 LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\psnfss\upzd.fd"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\psnfss\upzd.fd"
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Try loading font information for U+psy on input line 64.
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\psnfss\upsy.fd"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\psnfss\upsy.fd"
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 ))
 \c@tnote=\count88
@@ -86,8 +89,9 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 \@sep=\skip43
 \@@sep=\skip44
 
-(C:\Users\OurEDA\Desktop\JNCA\elsarticle-template\elsarticle-template.spl)
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\natbib\natbib.sty"
+(C:\Users\belief\Desktop\Github\playground\ResearchWork\JNCA\elsarticle-templat
+e\elsarticle-template.spl)
+("E:\Program Files\CTEX\MiKTeX\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip45
 \bibsep=\skip46
@@ -96,7 +100,7 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 \splwrite=\write3
 )
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\lineno\lineno.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\lineno\lineno.sty"
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count95
 \output=\toks17
@@ -114,13 +118,13 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframebox=\box30
 LaTeX Info: Redefining \\ on input line 3056.
 )
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\hyperref\hyperref.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/02/06 v6.82o Hypertext links for LaTeX
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-hyperref.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2011/04/23 v1.4 Bundle oberdiek, subset hyperref (HO)
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-generic.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2011/04/23 v1.4 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2011/04/23 v1.4 Subsetting bundle oberdiek (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -157,22 +161,23 @@ Package: atveryend 2011/04/23 v1.7 Hooks at very end of document (HO)
 Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
 Package: refcount 2010/12/01 v3.2 Data extraction from references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
-) ("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\ifxetex\ifxetex.sty"
+)
+("E:\Program Files\CTEX\MiKTeX\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
 )
 \@linkdim=\dimen114
 \Hy@linkcounter=\count102
 \Hy@pagecounter=\count103
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\hyperref\pd1enc.def"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/02/06 v6.82o Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count104
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\00miktex\hyperref.cfg"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4046.
@@ -184,7 +189,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4284.
 \c@Hy@tempcnt=\count105
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ltxmisc\url.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
@@ -208,23 +213,23 @@ LaTeX Info: Redefining \pageref on input line 5831.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\hyperref\hpdftex.def"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/02/06 v6.82o Hyperref driver for pdfTeX
 \Fld@listcount=\count110
 \c@bookmark@seq@number=\count111
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip47
 )
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\algorithms\algorithm.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\algorithms\algorithm.sty"
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\float\float.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count112
 \float@exts=\toks18
@@ -232,13 +237,14 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks19
 \@floatcapt=\box32
 )
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\base\ifthen.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks20
 \c@algorithm=\count113
 )
-(C:\Users\OurEDA\Desktop\JNCA\elsarticle-template\algorithmic.sty
+(C:\Users\belief\Desktop\Github\playground\ResearchWork\JNCA\elsarticle-templat
+e\algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@unique=\count114
 \c@ALC@line=\count115
@@ -246,25 +252,24 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@depth=\count117
 \ALC@tlm=\skip48
 \algorithmicindent=\skip49
-)
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty"
+) ("E:\Program Files\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amstext.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\ams\math\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks21
 \ex@=\dimen117
 ))
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amsbsy.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\ams\math\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen118
 )
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ams\math\amsopn.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\ams\math\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count118
@@ -305,10 +310,11 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\multirow\multirow.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen126
 )
-(C:\Users\OurEDA\Desktop\JNCA\elsarticle-template\elsarticle-template.aux)
+(C:\Users\belief\Desktop\Github\playground\ResearchWork\JNCA\elsarticle-templat
+e\elsarticle-template.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
@@ -324,7 +330,7 @@ LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii"
+("E:\Program Files\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count130
 \scratchdimen=\dimen127
@@ -340,10 +346,10 @@ LaTeX Font Info:    ... okay on input line 50.
 )
 \AtBeginShipoutBox=\box36
 Package hyperref Info: Link coloring OFF on input line 50.
- ("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\hyperref\nameref.sty"
+ ("E:\Program Files\CTEX\MiKTeX\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\gettitlestring.sty"
+("E:\Program Files\CTEX\MiKTeX\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count136
@@ -351,25 +357,28 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 50.
 LaTeX Info: Redefining \pageref on input line 50.
 LaTeX Info: Redefining \nameref on input line 50.
-(C:\Users\OurEDA\Desktop\JNCA\elsarticle-template\elsarticle-template.out)
-(C:\Users\OurEDA\Desktop\JNCA\elsarticle-template\elsarticle-template.out)
+
+(C:\Users\belief\Desktop\Github\playground\ResearchWork\JNCA\elsarticle-templat
+e\elsarticle-template.out)
+(C:\Users\belief\Desktop\Github\playground\ResearchWork\JNCA\elsarticle-templat
+e\elsarticle-template.out)
 \@outlinefile=\write4
+ [1
 
-[1
 
-
-{C:/Program Files (x86)/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGB
-K.sfd}}] [2]
+{E:/Program Files/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}
+}] [2]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 116.
 
- ("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\base\omscmr.fd"
+
+("E:\Program Files\CTEX\MiKTeX\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
-
-[3] [4] [5] [6] [7] [8] [9] [10] [11pdfTeX warning (ext4): destination with the
- same identifier (name{table.1}) has been already used, duplicate ignored
+ [3] [4] [5] [6]
+[7] [8] [9] [10] [11pdfTeX warning (ext4): destination with the same identifier
+ (name{table.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -389,15 +398,16 @@ Package pdftex.def Info: image/CDF.pdf used on input line 355.
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.366 
-       <C:/Users/OurEDA/Desktop/JNCA/elsarticle-template/image/CDF.pdf>]
-[17] <image/fairness-2nd.pdf, id=264, 379.65741pt x 299.6826pt>
+       <C:/Users/belief/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-
+template/image/CDF.pdf>] [17]
+<image/fairness-2nd.pdf, id=265, 379.65741pt x 299.6826pt>
 File: image/fairness-2nd.pdf Graphic file (type pdf)
 
 <use image/fairness-2nd.pdf>
 Package pdftex.def Info: image/fairness-2nd.pdf used on input line 384.
 (pdftex.def)             Requested size: 224.03743pt x 176.8432pt.
 
-<image/fair-index.pdf, id=265, 394.9144pt x 290.55652pt>
+<image/fair-index.pdf, id=266, 394.9144pt x 290.55652pt>
 File: image/fair-index.pdf Graphic file (type pdf)
 
 <use image/fair-index.pdf>
@@ -413,108 +423,105 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.408 
-       <C:/Users/OurEDA/Desktop/JNCA/elsarticle-template/image/fairness-2nd.pdf
->] <image/throughput-antenna.pdf, id=280, 371.09138pt x 299.22389pt>
+       <C:/Users/belief/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-
+template/image/fairness-2nd.pdf>]
+<image/throughput-antenna.pdf, id=281, 371.09138pt x 299.22389pt>
 File: image/throughput-antenna.pdf Graphic file (type pdf)
 
 <use image/throughput-antenna.pdf>
 Package pdftex.def Info: image/throughput-antenna.pdf used on input line 419.
 (pdftex.def)             Requested size: 216.81pt x 174.82382pt.
- [19pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
-) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.433 
-       <C:/Users/OurEDA/Desktop/JNCA/elsarticle-template/image/fair-index.pdf>]
-<image/throughput-user.pdf, id=294, 376.62506pt x 299.6826pt>
+<image/throughput-user.pdf, id=283, 376.62506pt x 299.6826pt>
 File: image/throughput-user.pdf Graphic file (type pdf)
 
 <use image/throughput-user.pdf>
 Package pdftex.def Info: image/throughput-user.pdf used on input line 439.
 (pdftex.def)             Requested size: 224.03743pt x 178.27448pt.
- [20pdfTeX warning (ext4): destination with the same identifier (name{figure.4}
+ [19pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.452 ...ance in Different Channel Quality Region}
-                                                   <C:/Users/OurEDA/Desktop/JNC
-A/elsarticle-template/image/throughput-antenna.pdf>]
-<image/throughput-srn.pdf, id=306, 371.09138pt x 299.22389pt>
+l.445 \end{figure}
+                   <C:/Users/belief/Desktop/Github/playground/ResearchWork/JNCA
+/elsarticle-template/image/fair-index.pdf>]
+<image/throughput-srn.pdf, id=296, 371.09138pt x 299.22389pt>
 File: image/throughput-srn.pdf Graphic file (type pdf)
 
 <use image/throughput-srn.pdf>
 Package pdftex.def Info: image/throughput-srn.pdf used on input line 456.
 (pdftex.def)             Requested size: 216.81pt x 174.82382pt.
- [21pdfTeX warning (ext4): destination with the same identifier (name{figure.5}
+ [20pdfTeX warning (ext4): destination with the same identifier (name{figure.4}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
+l.466 
+       <C:/Users/belief/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-
+template/image/throughput-antenna.pdf>] [21pdfTeX warning (ext4): destination w
+ith the same identifier (name{figure.5}) has been already used, duplicate ignor
+ed
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
 l.470 
-       <C:/Users/OurEDA/Desktop/JNCA/elsarticle-template/image/throughput-user.
-pdf>] [22pdfTeX warning (ext4): destination with the same identifier (name{figu
-re.6}) has been already used, duplicate ignored
+       <C:/Users/belief/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-
+template/image/throughput-user.pdf>] [22pdfTeX warning (ext4): destination with
+ the same identifier (name{figure.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.472 
-       <C:/Users/OurEDA/Desktop/JNCA/elsarticle-template/image/throughput-srn.p
-df>]
-
-Package natbib Warning: Citation `ji2007low' on page 23 undefined on input line
- 477.
-
-
+       <C:/Users/belief/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-
+template/image/throughput-srn.pdf>]
 Overfull \hbox (4.6095pt too wide) in paragraph at lines 484--485
 []\OT1/cmr/m/n/10 So far, there are three key point in MU-MIMO MAC pro-to-col d
 e-sign: through-
  []
 
-[23] (C:\Users\OurEDA\Desktop\JNCA\elsarticle-template\elsarticle-template.bbl
-[24] [25] [26] [27])
-
-Package natbib Warning: There were undefined citations.
-
+[23]
+(C:\Users\belief\Desktop\Github\playground\ResearchWork\JNCA\elsarticle-templat
+e\elsarticle-template.bbl [24] [25] [26] [27])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 512.
-[28]
+ [28]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 512.
- (C:\Users\OurEDA\Desktop\JNCA\elsarticle-template\elsarticle-template.aux)
+
+(C:\Users\belief\Desktop\Github\playground\ResearchWork\JNCA\elsarticle-templat
+e\elsarticle-template.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 512.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 512.
 Package rerunfilecheck Info: File `elsarticle-template.out' has not changed.
 (rerunfilecheck)             Checksum: 470EBC681EB0ACFB93ED4160A27C1F34;1331.
  ) 
 Here is how much of TeX's memory you used:
- 6751 strings out of 495354
- 96973 string characters out of 3182739
- 186048 words of memory out of 3000000
- 9712 multiletter control sequences out of 15000+200000
+ 6750 strings out of 495354
+ 96925 string characters out of 3183074
+ 187048 words of memory out of 3000000
+ 9711 multiletter control sequences out of 15000+200000
  11627 words of font info for 41 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,18n,30p,1405b,740s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmbsy
-7.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10
-.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.
-pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb
-><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
-C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><
-C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
-/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
-rogram Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Prog
-ram Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program
- Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fi
-les (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program File
-s (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
- (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (
-x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x8
-6)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86
-)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Files (x86)/
-CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/CT
-EX/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on elsarticle-template.pdf (28 pages, 345428 bytes).
+ 34i,18n,30p,1436b,740s stack positions out of 5000i,500n,10000p,200000b,50000s
+<E:/Program Files/CTEX/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb>
+<E:/Program Files/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><E:/Pro
+gram Files/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><E:/Program Fi
+les/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/Program Files/CTE
+X/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><E:/Program Files/CTEX/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb><E:/Program Files/CTEX/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmib10.pfb><E:/Program Files/CTEX/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><E:/Program Files/CTEX/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmr12.pfb><E:/Program Files/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmr6.pfb><E:/Program Files/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pf
+b><E:/Program Files/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><E:/Pro
+gram Files/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><E:/Program Fil
+es/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><E:/Program Files/CTEX
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><E:/Program Files/CTEX/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb><E:/Program Files/CTEX/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmti10.pfb><E:/Program Files/CTEX/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmti7.pfb><E:/Program Files/CTEX/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmti8.pfb><E:/Program Files/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmtt8.pfb>
+Output written on elsarticle-template.pdf (28 pages, 345178 bytes).
 PDF statistics:
  480 PDF objects out of 1000 (max. 8388607)
  120 named destinations out of 1000 (max. 500000)
