@@ -1,0 +1,25 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: elsarticle-template.aux
+The style file: elsarticle-num.bst
+Database file #1: ref.bib
+I was expecting a `,' or a `}'---line 229 of file ref.bib
+ :   journal={IEEE} 
+ :                  Journal on Selected Areas in Communications},
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "ji2007low"
+Warning--empty pages in gross2012scheduling
+Warning--empty pages in xie2014scalable
+Warning--empty pages in xie2013adaptive
+Warning--empty pages in anand2014mode
+Warning--empty pages in aryafar2010design
+Warning--empty pages in shen2015sieve
+Warning--empty pages in deng2014wifi
+Warning--empty pages in lim2014performance
+Warning--empty pages in zhou2015signpost
+Warning--empty pages in zhang2013nemox
+Warning--empty pages in 2016infocomres
+Warning--empty pages in control2015shep
+Too many commas in name 1 of "Sur S, Pefkianakis I, Zhang X, et al" for entry Practical2016zhxy
+while executing---line 1495 of file elsarticle-num.bst
+Warning--empty pages in Practical2016zhxy
+Warning--empty pages in esslaoui2012fair
+(There were 2 error messages)
