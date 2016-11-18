@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.15)  16 NOV 2016 16:41
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.15)  18 NOV 2016 16:35
 entering extended mode
 **C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-templa
 te/elsarticle-template.tex
@@ -382,8 +382,8 @@ entifier (name{table.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.261 \end{equation}
-                    ] [12]
+l.259 \begin{equation}
+                      \label{aggregation throughput}] [12]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 296.
  [13] [14] [15]
@@ -397,17 +397,17 @@ Package pdftex.def Info: image/CDF.pdf used on input line 355.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.366 
+l.364 
        <C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-
 template/image/CDF.pdf>] [17]
-<image/fairness-2nd.pdf, id=265, 379.65741pt x 299.6826pt>
+<image/fairness-2nd.pdf, id=264, 379.65741pt x 299.6826pt>
 File: image/fairness-2nd.pdf Graphic file (type pdf)
 
 <use image/fairness-2nd.pdf>
 Package pdftex.def Info: image/fairness-2nd.pdf used on input line 384.
 (pdftex.def)             Requested size: 224.03743pt x 176.8432pt.
 
-<image/fair-index.pdf, id=266, 394.9144pt x 290.55652pt>
+<image/fair-index.pdf, id=265, 394.9144pt x 290.55652pt>
 File: image/fair-index.pdf Graphic file (type pdf)
 
 <use image/fair-index.pdf>
@@ -425,43 +425,42 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 l.408 
        <C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-
 template/image/fairness-2nd.pdf>]
-<image/throughput-antenna.pdf, id=281, 371.09138pt x 299.22389pt>
+<image/throughput-antenna.pdf, id=280, 371.09138pt x 299.22389pt>
 File: image/throughput-antenna.pdf Graphic file (type pdf)
 
 <use image/throughput-antenna.pdf>
 Package pdftex.def Info: image/throughput-antenna.pdf used on input line 419.
 (pdftex.def)             Requested size: 216.81pt x 174.82382pt.
-
-<image/throughput-user.pdf, id=283, 376.62506pt x 299.6826pt>
-File: image/throughput-user.pdf Graphic file (type pdf)
-
-<use image/throughput-user.pdf>
-Package pdftex.def Info: image/throughput-user.pdf used on input line 439.
-(pdftex.def)             Requested size: 224.03743pt x 178.27448pt.
  [19pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.445 \end{figure}
-                   <C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/JNCA
-/elsarticle-template/image/fair-index.pdf>]
-<image/throughput-srn.pdf, id=296, 371.09138pt x 299.22389pt>
-File: image/throughput-srn.pdf Graphic file (type pdf)
+l.433 
+       <C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-
+template/image/fair-index.pdf>]
+<image/throughput-user.pdf, id=294, 376.62506pt x 299.6826pt>
+File: image/throughput-user.pdf Graphic file (type pdf)
 
-<use image/throughput-srn.pdf>
-Package pdftex.def Info: image/throughput-srn.pdf used on input line 456.
-(pdftex.def)             Requested size: 216.81pt x 174.82382pt.
+<use image/throughput-user.pdf>
+Package pdftex.def Info: image/throughput-user.pdf used on input line 439.
+(pdftex.def)             Requested size: 224.03743pt x 178.27448pt.
  [20pdfTeX warning (ext4): destination with the same identifier (name{figure.4}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.466 
-       <C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-
-template/image/throughput-antenna.pdf>] [21pdfTeX warning (ext4): destination w
-ith the same identifier (name{figure.5}) has been already used, duplicate ignor
-ed
+l.452 ...nce in Different Channel Quality Regions}
+                                                   <C:/Users/OurEDA/Desktop/Git
+hub/playground/ResearchWork/JNCA/elsarticle-template/image/throughput-antenna.p
+df>] <image/throughput-srn.pdf, id=306, 371.09138pt x 299.22389pt>
+File: image/throughput-srn.pdf Graphic file (type pdf)
+
+<use image/throughput-srn.pdf>
+Package pdftex.def Info: image/throughput-srn.pdf used on input line 456.
+(pdftex.def)             Requested size: 216.81pt x 174.82382pt.
+ [21pdfTeX warning (ext4): destination with the same identifier (name{figure.5}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -474,13 +473,7 @@ template/image/throughput-user.pdf>] [22pdfTeX warning (ext4): destination with
                                                   \fi \fi 
 l.472 
        <C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-
-template/image/throughput-srn.pdf>]
-Overfull \hbox (4.6095pt too wide) in paragraph at lines 484--485
-[]\OT1/cmr/m/n/10 So far, there are three key point in MU-MIMO MAC pro-to-col d
-e-sign: through-
- []
-
-[23]
+template/image/throughput-srn.pdf>] [23]
 (C:\Users\OurEDA\Desktop\Github\playground\ResearchWork\JNCA\elsarticle-templat
 e\elsarticle-template.bbl [24] [25] [26] [27])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 513.
@@ -492,16 +485,16 @@ e\elsarticle-template.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 513.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 513.
 Package rerunfilecheck Info: File `elsarticle-template.out' has not changed.
-(rerunfilecheck)             Checksum: 470EBC681EB0ACFB93ED4160A27C1F34;1331.
+(rerunfilecheck)             Checksum: 5D4A7945B1DDD8D40E353B0D273ABC95;1331.
  ) 
 Here is how much of TeX's memory you used:
  6750 strings out of 495354
  97489 string characters out of 3182739
- 187048 words of memory out of 3000000
+ 186048 words of memory out of 3000000
  9711 multiletter control sequences out of 15000+200000
  11627 words of font info for 41 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,18n,30p,1436b,740s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,18n,30p,1396b,740s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmbsy
 7.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10
 .pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.
@@ -522,7 +515,7 @@ x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x8
 )/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Files (x86)/
 CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/CT
 EX/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on elsarticle-template.pdf (28 pages, 344633 bytes).
+Output written on elsarticle-template.pdf (28 pages, 345442 bytes).
 PDF statistics:
  480 PDF objects out of 1000 (max. 8388607)
  120 named destinations out of 1000 (max. 500000)
