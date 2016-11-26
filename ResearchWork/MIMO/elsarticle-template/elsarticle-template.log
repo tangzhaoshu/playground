@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.15)  18 NOV 2016 16:35
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.15)  25 NOV 2016 09:34
 entering extended mode
 **C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-templa
 te/elsarticle-template.tex
@@ -422,10 +422,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.408 
-       <C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-
-template/image/fairness-2nd.pdf>]
-<image/throughput-antenna.pdf, id=280, 371.09138pt x 299.22389pt>
+l.406 \end{equation}
+                     <C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/JN
+CA/elsarticle-template/image/fairness-2nd.pdf>]
+<image/throughput-antenna.pdf, id=278, 371.09138pt x 299.22389pt>
 File: image/throughput-antenna.pdf Graphic file (type pdf)
 
 <use image/throughput-antenna.pdf>
@@ -450,10 +450,10 @@ Package pdftex.def Info: image/throughput-user.pdf used on input line 439.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.452 ...nce in Different Channel Quality Regions}
-                                                   <C:/Users/OurEDA/Desktop/Git
-hub/playground/ResearchWork/JNCA/elsarticle-template/image/throughput-antenna.p
-df>] <image/throughput-srn.pdf, id=306, 371.09138pt x 299.22389pt>
+l.450 
+       <C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-
+template/image/throughput-antenna.pdf>]
+<image/throughput-srn.pdf, id=306, 371.09138pt x 299.22389pt>
 File: image/throughput-srn.pdf Graphic file (type pdf)
 
 <use image/throughput-srn.pdf>
@@ -464,7 +464,7 @@ Package pdftex.def Info: image/throughput-srn.pdf used on input line 456.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.470 
+l.466 
        <C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/JNCA/elsarticle-
 template/image/throughput-user.pdf>] [22pdfTeX warning (ext4): destination with
  the same identifier (name{figure.6}) has been already used, duplicate ignored
@@ -494,7 +494,7 @@ Here is how much of TeX's memory you used:
  9711 multiletter control sequences out of 15000+200000
  11627 words of font info for 41 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,18n,30p,1396b,740s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,18n,30p,1410b,740s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmbsy
 7.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10
 .pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.
@@ -515,7 +515,7 @@ x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x8
 )/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Files (x86)/
 CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/CT
 EX/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on elsarticle-template.pdf (28 pages, 345442 bytes).
+Output written on elsarticle-template.pdf (28 pages, 345774 bytes).
 PDF statistics:
  480 PDF objects out of 1000 (max. 8388607)
  120 named destinations out of 1000 (max. 500000)

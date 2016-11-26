@@ -1,0 +1,513 @@
+\documentclass[review]{elsarticle}
+
+\usepackage{lineno,hyperref}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{amsmath}
+\usepackage{multirow}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Begin:}}
+\renewcommand{\algorithmicoutput}{\textbf{Output:}}
+
+\modulolinenumbers[5]
+
+
+
+\journal{Journal of Network and Computer Applications}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{TOUSE: A Fair User Selection Mechanism Based on Dynamic Time Warping for MU-MIMO Networks}
+%\tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
+
+%\author{\IEEEauthorblockN{Zhaoshu Tang, Zhenquan Qin, Ming Zhu\thanks{Ming Zhu is the corresponding author in Dalian University of Technology.},\\
+%Jian Fang, Lei Wang, Honglian Ma}
+%\IEEEauthorblockA{School of Software,\\
+%Dalian University of Technology, China\\
+%tang.zhaoshu@mail.dlut.edu.cn, qzq@dlut.edu.cn, zhuming@dlut.edu.cn, \\
+%fangjian@mail.dlut.edu.cn, lei.wang@dlut.edu.cn, mhl@dlut.edu.cn } }
+
+
+
+%% Group authors per affiliation:
+\author[author1]{Zhaoshu Tang\fnref{myfootnote}}
+%\address{School of Software, Dalian University of Technology, China}
+\fntext[myfootnote]{Email: tang.zhaoshu@mail.dlut.edu.cn}
+%\fntext[myfootnote]{Since 1880.}
+
+%% or include affiliations in footnotes:
+\author[author1]{ Zhenquan Qin}
+%\ead[url]{www.elsevier.com}
+
+\author[author1]{Ming Zhu\corref{mycorrespondingauthor}}
+\cortext[mycorrespondingauthor]{Corresponding author}
+\ead{zhuming@dlut.edu.cn}
+
+
+
+\author[author1]{\\Jian Fang}
+\author[author1]{Lei Wang}
+\author[author1]{Honglian Ma}
+\address[author1]{School of Software, Dalian University of Technology, China}
+
+
+
+\begin{abstract}
+Multi-user Multiple-Input and Multiple-Output (MU-MIMO) has potential for prominently enhancing the capacity of wireless network by simultaneously transmitting to multiple users. User selection is an unavoidable problem which bottlenecks the gain of MU-MIMO to a great extent. Major state-of-the-art works focus on improving network capacity by using Channel State Information (CSI), however, the overhead of CSI feedback becomes unacceptable when the number of users is large. Some work does well in balancing tradeoff between complexity and achievable capacity but lack of consideration of fairness. Current works universally ignore the rational utilizing of time resource, which lead the improvement of network throughput to a standstill. In this paper, we propose TOUSE, a scalable and fair user selection scheme for MU-MIMO. The core design is dynamic time warping based user selection mechanism for downlink MU-MIMO, which could make full use of concurrent transmitting time. TOUSE also presents a novel data-rate estimation method without any CSI feedback, which provide supports for user selection. Simulation result shows that TOUSE significantly outperforms traditional contention-based user selection schemes in both throughput and fairness in an indoor condition.
+\end{abstract}
+
+\begin{keyword}
+MU-MIMO\sep user selection\sep fairness \sep dynamic time warping
+%\MSC[2010] 00-01\sep  99-00
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+
+\section{Introduction}
+
+Multi-user Multiple Input Multiple Output (MU-MIMO) has already attracted a huge amount of attention because it enables better spatial reuse. The network capacity is enhanced by sending frames
+to multiple single-stream users concurrently. Prior to 802.11ac, traditional 802.11 protocol limited every transmission only sent to a single user, which cannot full utilize spatial resources supported by multiple antennas AP. Multi-user transmission is a new technology within 802.11. By using MU-MIMO \cite{choi2004transmit}, AP is equipped with multiple antennas, and could transmit to multiple users at one time. Due to these abilities, MU-MIMO has the potential to change the way in which Wi-Fi networks are built and achieve improved capacity gains.
+
+A MU-MIMO downlink system, in theory, its capacity gains increases linearly with the number of transmitting and receiving antennas. But in practice, the number of antennas is limited by several reasons, and the inter-user interference could not be ignored. These lead to a series of important problems. First, how could an AP select a beamforming group of users and transmit simultaneously. Second, how to determine the size of the beamforming group. Different beamforming group selection leads to variant transmitting rate, then influences the overall network performance. Unwise selecting method may results in a huge waste of space-time at any single transmitted slot, and causes the problems of fairness and complexities. To make an optimal selection, we should choose a metric like sum rate as a criterion to process the feedback information like CSI (Channel State Information) or SNR (Signal-Noise Ratio), design an efficient scheduling scheme based on various data we obtained.
+
+Substantial researches \cite{gross2012scheduling} have provided the solving methods to the user selection problem for MU-MIMO. Most solutions select the optimal beamforming group based on understanding the full CSI of all potential users. CSI reflects the characteristics of the channel including fading distribution, average channel gain and spatial correlation, all are important for beamfroming group select. However, CSI is calculated by estimating the training sequence from AP, then users feed it back to the AP. Reducing the CSI overhead becomes an important issue in MU-MIMO since this is a long and complex process \cite{xie2014scalable}. Although numerous optimization schemes of feedback have been proposed, like compression algorithms \cite{xie2013adaptive}, the overhead of CSI feedback is still huge sometimes and severely affects the performance of network, since the overhead grows linearly with the number of users. Even worse, infrequent CSI feedback results in outdated, which may leads to the inter-user interference. It is convenient to select beamforming group within CSI, but intolerable for MU-MIMO system with unacceptable feedback overhead.
+
+In fact, these challenges have motivated previous works to find better possible solutions for user selection. In \cite{xie2014scalable}, the author proposed a distributed contention mechanism that singles out the best user to feed back its CSI. Narendra \cite{anand2014mode} present pre-sounding user selection algorithm only using available pre-sounding information instead of posting channel sounding information, and solved the problem of feedback overhead to a certain extent.
+
+In this paper, we propose \emph{Time Optimal User Selection based on Effective SNR} (TOUSE), a scalable and fair user selection scheme for MU-MIMO networks to achieve higher capacity. To sum up, our main contributions are as follows:
+
+\begin{itemize}
+    \item We design a novel dynamic time warping based user selection
+        mechanism to increasing throughput under the fairness constraints, and propose a algorithm to solve it.
+    \item We adopt a low complexity feedback mechanism to obtain the available channel information and presents a novel data-rate estimation method base on the information of effective SNR \cite{halperin2011predictable} without any CSI feedback.
+    \item TOUSE has abilities to adapt to different network channel qualities, no matter low SNR region or high link qualities. It is also suitable to dynamic network, since it selects users after channel sounding is completed and acquires real-time information.
+    \item Finally we experimentally evaluate the performance of TOUSE. Result shows that, on average, the gain of TOUSE is $1.5\times$ over traditional Random user selection scheme in 3-antennas AP scenarios. Compared with PUMA scheme \cite{anand2014mode}, network capacity gain is similar but TOUSE provides users with fair selection opportunities.
+\end{itemize}
+
+The rest of this paper is organized as follows. In Section \uppercase\expandafter{\romannumeral2}, we present background of user selection in MU-MIMO. Section \uppercase\expandafter{\romannumeral3} provides an overview of the components of TOUSE. Section \uppercase\expandafter{\romannumeral4} evaluates the performance of TOUSE with experimentations. Then we describe related works in Section \uppercase\expandafter{\romannumeral5} and Section \uppercase\expandafter{\romannumeral6} concludes the paper.
+
+
+
+\section{BACKGROUND AND CHALLENGES}
+\subsection{MU-MIMO System Model}
+
+In a downlink MU-MIMO system, consider a single-cell MIMO with a single base station serving $N$ users. The base station is equipped with $M$ antennas and the client with one or more receive antennas. We assume that AP sends frames to a set of selected single antenna users $S$ called beamforming group at the same time, which satisfies $K= |S|$, $K \leq M$. Due to the bad effect of multi-user interference at the client side, it is essential for AP to  precode outgoing signals to minimize interference among simultaneous streams. Owing to its low complexity, AP applies ZFBF (Zero-forcing beamforming) \cite{yoo2006optimality}. In ZFBF, user streams are separated by different beamforming directions. Let $x_k$ denotes the data symbol sending to user $k$, $\boldsymbol {w}_k$ be the beamforming weight vector, and $\boldsymbol {p}_k$ presents the transmit power. Assume $\boldsymbol {h}_k$ is the $1 \times M$ channel state vector between transmission antennas and receiver $k$. Define $\boldsymbol {\textrm{W}} = [\boldsymbol{w}_1, \boldsymbol{w}_2, ... ,\boldsymbol{w}_K]$, $S=\{s_1,s_2,...,s_K\}$, the transmitted signal $X=\sum_{k=1}^{K} \sqrt{p_k} \boldsymbol{h}_k \boldsymbol {w}_k x_k$. Then, let $n_k$ denotes the noise level of user $k$, and the received signal vector is:
+\begin{equation}\label{equation 1}
+    y_k= \sqrt {p_k} \boldsymbol{h}_k \boldsymbol {w}_k x_k + \sum _{j \neq k, j\in S} \sqrt {p_j} \boldsymbol{h}_k \boldsymbol {w}_j x_j +n_k, k\in S.
+\end{equation}
+
+To eliminate the interference from other beamforming frame streams, ZFBF should satisfy the zero-interference condition: $\boldsymbol{h}_k \boldsymbol{w}_j$ for all receivers $j \in S$, $j \neq k$. So that receiver $k$ only gets its symbol $x_k$. Let the channel state matrix $\boldsymbol {\textrm{H}} = [\boldsymbol{h}^T_1,\boldsymbol{h}^T_2,...,\boldsymbol{h}^T_K]^T$ and the beamforming weight matrix $\boldsymbol {\textrm{W}} = [\boldsymbol{w}_1,\boldsymbol{w}_2,...,\boldsymbol{w}_K]$. One optimal choice of $\boldsymbol {\textrm{W}}$ that satisfies zero-interference condition is the pseudo-inverse of $\boldsymbol {\textrm{H}}$:
+\begin{equation}
+  \boldsymbol {\textrm{W}}=\boldsymbol {\textrm{H}}^+=\boldsymbol {\textrm{H}}^* (\boldsymbol {\textrm{H}}\boldsymbol {\textrm{H}^*})^{-1}.
+\end{equation}
+Thus, another problem that needs to be considerd is power allocation. For simplicity, we adopted ZFBF-EP scheme where the transmitter allocates equal power to its users.
+
+
+\subsection{Impact of User Selection Mechanism}
+
+From above section, the performance of ZFBF is highly dependent on the channel vectors from transmitter to receiver. When the channel vectors of different receivers are uncorrelated with each other, it is most likely to improve the network capacity gains. It has been proved by the experimental \cite{aryafar2010design} for indoor wireless network. The network spatial multiplexing gain of ZFBF can be increased by a high number of transmitter antennas, wherever the location of receivers in indoor environment.
+
+\indent Selecting beamforming group is one of the key issues which are related to the performance of MU-MIMO system. From Eq. (\ref{equation 1}), the SNR of each receivers depends on its group member. If one receiver's channel vector is orthogonal to another, it will cause limited interference when transmitting together. The research \cite{aryafar2010design} also proved that the SNR or the size of beamforming group has great influence to the performance of ZFBF. The optimal size of beamforming group depends on the link state of the members. The state of queue and other information should be taken into account as well.
+
+
+\subsection{Challenges in User Selection}
+
+\indent User selection is a complicated process. Although optimal transmission beamforming group can improve the network capacity, high computational overhead is unacceptable. Before each downlink transmit, the AP need obtaining the CSI from the users' feedback. During the feedback process, AP sends a training sequence to the target users, users calculate the CSI by the training sequence and send the feedback of CSI to AP in order/sequence. Due to this mechanism, overhead by CSI feedback also increased with number of users. Researches \cite{xie2014scalable} present that even with $20$ users, the channel time cost of existing schemes can be comparable to or even competitive with that of actual data transmission.
+
+There are a number of factors which a user selection mechanism should be considered. First, how to determine the size of beamforming group. In a transmission time slot, AP beamforming to send frame to a set of users $S$, which the size of set $K$ satisfy $K \leq M$. In \cite{aryafar2010design}, it proved that maybe $K=3$ have a better network performance than the case of $K=4$. The authors of \cite{anand2014mode} proposed an aggregate throughput to select the combination mode. Second is the complexity reduction. Instead of exhaustive search over all possible combinations, most researches adopt the local optimal methods to solve this problem, which performs inefficiently. It is hard to achieve both low complexity and high performance. So the tradeoff between performance and complexity is essential \cite{shen2015sieve} . Another solution is to reduce the feedback overhead, which is not the way to the underlying problem. The last challenge is how to realize fairness. A simple way to improve the network throughput is just selecting the users which have a high link quality. But it might not be fair for all users \cite{xie2014scalable}. Sometimes, it will cause starvation.
+
+
+
+\section{TOUSE DESIGN}
+
+\subsection{Design Overview}
+
+The design inherits the advantages of throughput fairness and low complexity in user selection, it also improves the network capacity gain. TOUSE presents a new preference metric which aims to make full use of time resource and guarantees fairness. Besides, instead of requiring CSI feedback, TOUSE provides a mechanism in which AP just obtained effective SNR from users to make decision. This mechanism has limited time overhead compared to the CSI feedback.
+
+Before giving the details of TOUSE, there are some available pre-sounding information to introduce. In MU-MIMO system, AP owns the information of system state and queue state before channel sounding or communication. For each transmission, AP knows the hardware configurations, like available number of transmission antennas $M$, the number of clients' receiving antennas. AP is also aware of the queue state information for each users, like each user's backlog or queue size. The amount of available data directly affects the data transmission time in each transmission, which is used for user selection. By leveraging this information, we design a performance metric to select optimal beamforming group. The TOUSE works as follows:
+
+\emph{1)} First, the AP announces its intention for MU-MIMO downlink transmission through the NDP Announcement frame, and it is the time to start the MU-MIMO sounding process for users. AP randomly selects a first user into the optimal beamforming group, which can achieve channel access fairness.
+
+\emph{2)} Then, each user estimates its own CSI-independently based on the NDP Announcement frame. AP obtains the effective SNR feedback which is calculated by each client from the CSI. This is the first round of TOUSE user selection.
+
+\emph{3)} In subsequent round, AP estimates the potential datarate for each competitors based on the effective SNR and current beamforming group. Then it calculates time of data transmission for each users combined with the pre-sounding information, and gets global time of transmission slot based on selected users and candidate users.
+
+\emph{4)} Given transmission time of each data transmission and information of selected users. According to the constraint condition (described in section D), the AP selects the best candidate which can optimise total network capacity for this transmission slot.
+
+\emph{5)} The one who satisfies the optimal constraint, indicating the ability of the transmission among the members of beamforming group. Then the AP adds it to the beamforming group.
+
+\emph{6)} Repeat step (3)-(5) until the size of beamforming group reaches the maximum transmission number $M$, or there exists no any best choice left. Finally, AP would terminate the user selection process.
+
+Next, we are going to present TOUSE in details for better understanding.
+
+\subsection{Effective SNR}
+
+In order to accurately predict the packet delivery rate, a key point is using effective SNR (ESNR) \cite{halperin2011predictable}. It is a simple, easy-to-deploy, broadly useful,and rather accurate method. Effective SNR consider the factors of transmit power and antennas, which makes packet delivery predicted for 802.11n MIMO rates more effective. During the process, CSI is the input, which can provides the SNR values for each subcarrier. It is contains more information than RSSI, and provides the opportunity to of designing an accurate evaluate model.
+
+The effective SNR calculation is not just the average subcarrier SNR. Instead, it is biased towards the weaker subcarrier SNRs because the subcarriers cause most of the errors. The effective SNR is calculated by averaging the subcarrier BERs and finding the corresponding SNR. The formulas are shown as follows:
+\begin{equation}\label{}
+  \textrm{BER}_{eff}=\frac{1}{S} \sum \textrm{BER}(snr_s);
+\end{equation}
+\begin{equation}\label{}
+  \textrm{ESNR}=\textrm{BER}^{-1}(\textrm{BER}_{eff}).
+\end{equation}
+$\textrm{BER}^{-1}$ presents the inverse mapping, from $\textrm{BER}$ to $\textrm{SNR}$, and $S$ is the number of subcarriers. $\textrm{BER}_{eff}$ denotes the average $\textrm{BER}$ across subcarriers, $snr_s$ is the SNR values of each subcarrier.
+
+
+
+\subsection{MU-MIMO User Datarate Estimate}
+
+In TOUSE, the key is to predict the per-user packet delivery rate. During the process $\textrm{ESNR}$ evaluation is essential for each transmission. Then the AP obtains the data rate for each user from the $\textrm{ESNR}$ by using MCS table. However, There is still a problem when it comes to AP transmissions among multi-receivers at the same time resulting in the inevitable of the inter user interference. As a result it will influence the total capacity of network.
+
+\emph{1) Traditional Rate Estimation:} One of the classical approach to calculate the aggregate capacity is using channel state matrix. The sum rate ($R$) \cite{yoo2006optimality} is achieved by following scheme:
+\begin{equation}\label{traditional rate est}
+\begin{aligned}
+  R= \max \limits_{\boldsymbol{\textrm{W}}_k,P_k} \sum _{k=1}^{K} \log{ \frac{1+ \sum_{j=1}^{K}P_j |\boldsymbol{h }_k\boldsymbol{w}_j|^2}{1+\sum_{j=1,j\neq k}^{K}P_j|\boldsymbol{h}_k\boldsymbol{w}_j|^2}} \\
+  \text{ subject to } \sum_{k=1}^{K} \|{\boldsymbol{w}_k}\|^2 P_k \leq P.
+\end{aligned}
+\end{equation}
+This method is accurate but quite complex. It requires channel state matrix as input which is difficult to obtain. Given the significant overhead of CSI feedback, the AP needs more reasonable utilizations of this information to maximize the network performance. This leads to the system more complicated and hard to implement, which is opposite to what we originated.
+
+\emph{2) ESNR based Rate Estimation:} TOUSE's rate estimation method is based on theoretical MU-MIMO system scaling. In order to make it facilitate and precise, AP obtain the ESNR which is calculated by users, and estimates the data delivery rate by MCS-SNR table. Besides, qualifying the influence of inter-user interference when AP transmits to multi-users is also essential. As mentioned before, in ZF model, user only receives its desired symbol owing to the composite effects of precoding and channel distortion. The main features of ZF is complete interference cancellation with full CSI, but it will amplify the noise \cite{liao2014mu}.
+
+Many works \cite{yang2013performance} provide the analysis to network capacity performance influenced by ZF-precoded system. But most of methods are not suitable for our purposes because too much information is required. By the ZF criterion, there is residual interference due to the imperfect CSI-based beamformers. The SINR for selected user $k$ is (proposed in \cite{ravindran2012multi})
+\begin{equation}\label{SINR_k}
+  \textrm{SINR}_k= \frac{ \textrm{SNR}_k \|\boldsymbol{h}_k\|^2 \cos ^2{(\angle(\boldsymbol{h}_k, \boldsymbol{w}_k))}} {1+\textrm{SNR}_k \|\boldsymbol{h}_k\|^2 \sum _{j \neq k} \cos ^2 {(\angle(\boldsymbol{h}_k, \boldsymbol{w}_j))}}
+\end{equation}
+and the corresponding sum rate is $\sum_{k=1}^n \log _2 {(1+\textrm{SINR}_k)}$. Where $\boldsymbol{w}_k$ presents the precoding unit-norm beamforming vector for user $k$ is chosen in the direction of the projection of $\boldsymbol{h}_k$ on the nullspace of $\boldsymbol{h}_j$, $j\neq k$.
+
+Eq. (\ref{SINR_k}) presents SINR variation for each users, but there is the same problem of using information of CSI as input. As Eq. (\ref{SINR_k}) shows that the interference caused by other receivers in beamforming group is related to per-receiver SNR. Besides, the system state information also has great influence on the SINR, like transmission antennas number $M$ and the size of current transmission users group $K$. It is also necessary to note that this paper focuses on the users equipped with a single antenna. In \cite{jindal2006mimo} and \cite{ravindran2012multi}, it proved that in order to achieve the full multiplexing gain of $M$, the transmitters must have perfect channel knowledge in order to choose the zero-forcing beamforming vectors. However due to the imperfection in this knowledge, there will be some multi-user interference, which leads to performance degradation inevitably. Therefore, we proposed a suitable per-receiver SINR estimation method as following.
+\begin{equation}\label{TOUSE_rate estimation}
+\begin{split}
+   \textrm{SINR}_k & = \frac{\textrm{ESNR}_k- \textrm{ESNR}_k \cdot 2^{-B}}   {1 + \textrm{ESNR}_k \cdot 2^{- B  }}        \\
+   \\
+   B & =((M-1)P)/ (3(K-1))
+\end{split}
+\end{equation}
+Where $M$ is the number of transmitting antennas, presents the degree of freedom of MU-MIMO system. $K$ denotes the size of beamforming group, which leads an exponential increase in the multi-user interference.
+
+In TOUSE, we assume that each transmission antenna has a same transmitting power $P$. From Eq. (\ref{TOUSE_rate estimation}), the value of per-receiver SINR is inherently less precise than Eq. (\ref{traditional rate est}). But it can provide a sufficiently accurate result for TOUSE user selection process as well, and easy to implement. Then the transmission data rate $rate_k$ for user $k$ is calculated from the MCS-Rate (Table \ref{MCS-SNR}) by the SINR.
+
+\emph{3) TOUSE Rate Estimation Analyse:} In Eq. (\ref{TOUSE_rate estimation}), the TOUSE's SINR estimation method only requires the system hardware configurations $M$, number of users $K$ and the ESNR calculated by each user. This estimation scheme can accommodate with the network dynamically by using ESNR, and avoid CSI feedback overhead at the same time. $2^{-B}$ presents the multiplexing gain of inter-user interference, and it will increase linearly with the increase of transmission power. Thus, the SINR of each user is related to $B$ in MU-MIMO system.
+
+During the rate estimation process, TOUSE first measures the channel state information, and calculates the ESNR by each receivers. Then the each user's SINR is calculated based on the size of beamforming group. Finally the data delivery rate (for 90\% packet reception rate) is obtained by using the MCS-SNR table provided by the standard (as shown in Table \ref{MCS-SNR}).
+
+\begin{table}[!hbp]
+\centering
+\caption{Minimum SNR required}
+\label{MCS-SNR}
+  \begin{tabular}{|c|c|c|}
+  \hline
+  MCS      &   Rate (Mbps)   &SNR (dB)\\
+  \hline
+  0         &   6.5     &     1.1      \\
+  1         &   13.0    &     4.1  \\
+  2         &   19.5    &     6.7  \\
+  3         &   26.0    &     9.6  \\
+  4         &   39.0    &     12.8  \\
+  5         &   52.0    &     17.2\\
+  6         &   58.5    &     18.4\\
+  7         &   65.0    &     19.7\\
+  \hline
+  \end{tabular}
+
+\end{table}
+
+
+
+\subsection{User Selection Mechanism}
+
+In this section, we present the user selection mechanism to maximise the aggregate throughput of network, and implementation of the fairness of channel access for each users. In this subsection, the key point is the two types of limiting condition in the selection process.
+
+Previous sections have given the data rate estimation method. In order to calculate the data transmission time for a transport connection, the key point is total delivery data and network overhead (such as channel sounding and ESNR feedback overhead). These pre-sounding information can be obtained by AP queue state or network measurement. So the total throughput $R$ for each transmission slot can be calculated, which is the performance metric for user selection mechanism. The formula is as follows, $L$ denotes the total transmission data at a time slot, $T_s$ is the maximum transmission time of all transmissions and $T_o$ is the network overhead.
+\begin{equation}\label{aggregation throughput}
+  R= L/(T_s+T_o).
+\end{equation}
+
+In order to achieve the two design goals: throughput increment and fairness guarantee. We design a similarity matching algorithm for optimal user group selection based on dynamic time warping \cite{muller2007dynamic}. Before presenting the time constraint condition, some definitions should be introduced. First, $S=\{s_1,s_2,...,s_k \}$ denotes the current selected beamforming group and $|S|$ is the size of $S$, $c$ denotes a user which is candidate for $k+1$ solution from the unselected users, but still waiting for checking by constraint conditions. $T(c)$ presents the transmission time requirement that AP transmits the queue data to user $c$. Here is the first constraint condition : to maximum the aggregate throughput.
+\begin{equation}\label{first constraint}
+\begin{cases}
+\frac {T(c)}{T(\max(S))} < \frac{1}{(ratio(c)-1)}& T(\max(S)) \leq T(c)\\
+\\
+\frac {T(\max(S))}{T(c)} < \frac{1}{(ratio(\max(S))-1)}& T(\max(S)) > T(c)
+\end{cases}
+\end{equation}
+Where $\max(S)$ presents the one with maximum data transmission time in selected group, $T(\max(S))= \max {(L_i/ rate_i)}$, $ i\in S $, $ratio(c)$ is the ratio between the datarata of user $c$ at the mode of $K=|S|$ and $K=|S|+1$. The size of beamforming group $K$ has a big impact on the transmitting rate of each user. For example, there is a user $u$ from beamforming group of
+which the size is $K$, the transmission rate is $a$ , and rate equals $b$ in the mode of $K+1$, then $ratio(u)=a/b$. Eq. (\ref{first constraint}) is a throughput constraint for network capacity, which enables to judge the benefits of user $c$ in this transmit time slot. Then this user will judge whether to put it into the beamforming group or just throw it away. As we have mentioned before, increasing the size of beamforming group may lead to inter-user interference. Therefore the total network capacity performance should be considered when putting candidate user $c$ into beamforming group.
+
+The second constraint aims to make full utilization of space-time resource.
+\begin{equation}\label{second constraint}
+  T(c)\leq \frac{M}{K} \cdot T(\max(S)).
+\end{equation}
+$K=|S|$ denotes the size of beamforming group which is received transmit date from AP concurrently. This restriction allows our algorithm to find an optimal match between given transmission time of selected users. For example, in a transmit slot, AP transmits to \emph{user1} and \emph{user2}, while the transmission time of \emph{user1} is 1s and \emph{user2} is 100s. In this case, compared with \emph{user2}, the transmission time of \emph{user1} is too short, which is not a best choice to bind them together for total network.
+
+Based on the idea of dynamic time warping, the algorithm was designed to find an optimal beamforming group which can improved the network capacity. The AP is selected by the correlation of transmission time between candidate user $c$ and current beamforming group. In the process of user selection, AP selects the first user into beamforming group at random, then the other member of beamforming group is selected by correlation with the set of selected users. This process will go through the total unselected users until no one is detected, which indicates that current
+beamforming group is an optimal solution at a transmitting slot.
+
+TOUSE user selection mechanism is based on data transmission time, which leads the contention is fair in term of SNR of users. Next section will present the fairness performance of our mechanism. Eq. (\ref{aggregation throughput}) shows that the network overhead limits the performance of a MU-MIMO transmission. Along with the increasing of beamforming group size, the amount of total transmit data $L$ grows. The larger amount of network overhead is created meanwhile. So it is an important issue to get the trade off between aggregate data and network overhead.
+%\begin{figure}
+%\begin{center}
+%  \includegraphics[width=0.45\textwidth]{pic/2.eps}\\
+%  \caption{A typical topology for illustrating how UPMAC works.}\label{2: A typical topology for illustrating how UPMAC works.}
+%  %\vspace{-5mm}
+%\end{center}
+%\end{figure}
+
+\subsection{TOUSE Algorithm}
+
+
+\begin{algorithm}[htbp]              %算法的开始
+\caption{TOUSE User Selection}      %算法标题
+\label{user selection algorithm}    %算法标签，方便引用
+\begin{algorithmic}[1]              %算法开始，[1]表示每一行显示算法步数
+\REQUIRE ~~\\                        %算法的输入 ~~\\表示换行
+The set of single antenna users, $C$;\\
+The number of transmit antennas and transmit power, $M$ and $P$;
+\OUTPUT ~~\\                         %算法的输出
+The set of solution receivers, $S$;\\
+The size of solution group, $k=|S|$;
+\ENSURE ~~\\
+\WHILE {$k \leq M$ and $ C \neq \emptyset$}
+    \IF {$k=0$}
+        \STATE Selecting a solution $s_1 \in C$ at randomly from $C$;
+        \STATE $C = C - s_1 $, $S= S + s_1$;
+    \ELSE
+        \REPEAT
+        \STATE Selecting a optimal receiver $c_k \in C$ matches $S$;
+        \STATE Judging $c_k$ by two constraint: Eq. (\ref{first constraint}), Eq. (\ref{second constraint});
+        \IF{$c_k$ satisfies the two constraint}
+            \STATE $S=S+c_k$; $C=C-c_k$;
+        \ENDIF
+        \UNTIL Get the solution $s_k=c_k$ or none of optimal solution $s_k\notin C$ meets the condition;
+    \ENDIF
+    \IF {$s_k\notin C$}
+        \STATE None of receiver $c\in C$ matches $S$;
+        \STATE Break, terminate the process of user selection;
+    \ENDIF
+\ENDWHILE \\
+\end{algorithmic}
+\end{algorithm}
+
+
+In order to seek an optimal combination to improve the network capacity, TOUSE applies two constraints which have been mentioned. Given the set of candidate receivers $C=\{c_1,c_2,...,c_n \}$ which is the total candidate users in one transmission slot. TOUSE selects the best combination as beamforming group for AP to simultaneous downlink transmissions. Here is the TOUSE user selection algorithm.
+
+
+The algorithm (\ref{user selection algorithm}) shows the user selection process of TOUSE's. The input of this algorithm is a candidate set of users, and the output is the beamforming group $S$, $|S|\leq M$. In the first round, AP selects a solution randomly from candidate set, which meets the requirements of competition fairness. The time constraint condition process is repeated until a receiver matching the existing solution group is selected, or none of optimal solutions exists in candidate receivers, as line 6-12 shown in Algorithm 1. During the process of searching solution, each selected user is the best one while group with the concurrent solution group. This searching method can reduce the complexity of TOUSE, and the result was acquired rapidly and exactly.
+
+
+
+\section{PERFORMANCE EVALUATION}
+In this section, we further perform simulations to evaluate the performance of TOUSE in indoor environment. The simulations aim to answer the following questions:
+\begin{itemize}
+\item How much capacity gain can TOUSE achieve in comparison with existing schemes?
+\item How does TOUSE perform in terms of fairness compared with existing schemes?
+\item How much the number of transmit antennas impact on TOUSE?
+\item Does TOUSE scale?
+\item Could TOUSE work in different channel quality region?
+\end{itemize}
+
+For the performance comparison, we implemented three state-of-the-art user selection schemes: (1) Pre-sounding User and Mode selection Algorithm (PUMA) \cite{anand2014mode}. PUMA allows MU-MIMO system to efficiently transmit multiple streams by using pre-sounding information. It estimates the throughput of all potential user group combinations.
+(2) Mixed PUMA algorithm (PUMA-MIX). PUMA employed exhaustively searching method to find the optimal user group. We replaced it with iteration method  using for comparison in simulations.
+(3) Random User Selection (RUS), essentially the default standard of 802.11ac , which randomly selects users with equal probability.
+
+In our simulation, we randomly distribute the users around the AP. The channels are generated according to the rayleigh fading channel model, and the transmit power of each antenna is $15W$. The default number of users is set to $10$, packet size is set to $1500$ bytes and the number of transmit antennas is $3$. The detailed setting will be specified in each simulation.
+
+\subsection{Performance Comparison for Continuous Traffic}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=3.1in]{image/CDF.pdf}
+% where an .eps filename suffix will be assumed under latex,
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+\DeclareGraphicsExtensions.
+\caption{Performance comparison by total throughput}
+\label{CDF}
+\end{figure}
+
+We evaluate the performance by comparing with other user selection schemes in terms of throughput gain. We set up an AP with 3 antennas and deploy 10 single-antenna users with randomly assignments of locations. Each of ten users have a different channel quality, and always have packets to receive. Before the transmission, AP obtains the queue information which is totally transmit data to each candidate users. Then AP estimates the bit-rate of each concurrent packet based on the effective SNR which is calculated by each user.
+
+Fig. \ref{CDF} plots the CDF of the total throughput in 3 antennas scenarios, and shows the performance compared with other user selection schemes. The result shows that the traditional scheme, RUS, selecting users with an equal probability, without considering the channel characteristics and other criterions. Compared to RUS, the average throughput gain from enabling concurrent transmissions with TOUSE's user selection is about 50\% in three antennas scenarios. This improvement mainly benefits from the following contributions: First, accurate rate prediction mechanism ensures the high packet reception rate, and reduces the time overhead without CSI feedback. Second, fully utilizing concurrent transmission time by overhead time matches based mechanism. The figure also shows that the PUMA-MIX and PUMA produce a throughput comparable to or even slightly higher than our user selection scheme. The performance of PUMA-MIX is similar to TOUSE's because of the same kind of scheduling algorithm. Although the PUMA performs slightly better than TOUSE and PUMA-MIX, it causes $10\times$ time overhead in the process of user selection than other two schemes. Besides, this time overhead is growing with the number of users.
+
+
+
+
+
+\subsection{Throughput Fairness Analysis}
+
+
+
+In this section, we analyse the opportunities of user selection in a three antenna AP scenario, which is better to show the performance. In order to analyse the fairness of TOUSE, users should be put into difference scenarios and evaluate the influence. There are five specific regions, where have different channel quality and each region has one user to communicate with AP. In the simulation, \emph{user1}, \emph{user4} are located in the region with worst and best channel quality, about $5dB$ and $20dB$ respectively. The quality of region \emph{user2} is better than \emph{user1}, but worse than \emph{user3}, and \emph{user5} is a control group with randomly case.
+
+
+
+During the user selection process, the user group for downlink transmission was selected one after another. In the first round of simulation, TOUSE chooses a lucky user randomly, which means that TOUSE enables all clients to get almost an equal probability to be selected first.
+In order to show more convincing results, we plot in Fig. \ref{fairness performance}. The opportunities is to be second selected for each user in total selection process, which is the metric using for evaluating fairness. The figure shows that both the RUS scheme and our TOUSE enable all users to get almost an equal probability to be the second selected user. This implies that TOUSE enables users to achieve a similar level of fairness compared with fair contention mechanism. The probability of \emph{user1} in TOUSE is slightly lower than other users. Because \emph{user1} is located in a region with the worst channel quality, it results in the lowest throughput rate. In PUMA and PUMA-MIX, it gives little chance to low-throughput users. The user who has higher value of SNR gets more opportunities to be selected. Because these schemes selected concurrent transmit group just depend on throughput of each user.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=3.1in]{image/fairness-2nd.pdf}
+% where an .eps filename suffix will be assumed under latex,
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+\DeclareGraphicsExtensions.
+\caption{Fairness comparison in a 3-antenna AP scenario}
+\label{fairness performance}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3.2in]{image/fair-index.pdf}
+% where an .eps filename suffix will be assumed under latex,
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+\DeclareGraphicsExtensions.
+\caption{Jain's fairness index versus the number of users for different user selection mechanism}
+\label{Jain's fairness index}
+\end{figure}
+
+
+In order to display the performance of TOUSE more clearly, we introduce one of the most relevant fairness indicators called Jain's fairness index (JFI) \cite{jain1984quantitative}. The definition as follows.
+\begin{equation}\label{Jain fairness index}
+  JFI=\frac{[\sum^{N_u}_{u=1} X_u]^2}{N_u \sum^{N_u}_{u=1}[X_u]^2}.
+\end{equation}
+Where $N_u$ presents the total number of users competing for channel, $X_u$ denotes channel access times of user $u$ at all time. $JFI$ ranges from $1/N_u$ (only one user is served) to 1 (all users are served at the same possibility). Fig. \ref{Jain's fairness index} plots the Jain's fairness index for TOUSE, PUMA-MIX, PUMA and RUS as a function of the number of users in a 3-antenna AP scenario. It shows that the fairness performance of the proposed TOUSE clearly outperforms PUMA and almost close to the ideal case.
+
+
+
+
+
+
+\subsection{Effect of Number of Transmit Antennas}
+
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=3in]{image/throughput-antenna.pdf}
+% where an .eps filename suffix will be assumed under latex,
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+\DeclareGraphicsExtensions.
+\caption{Performance in different AP scenario}
+\label{impact by Antenna number}
+\end{figure}
+
+
+
+
+
+Here we present the performance by showing the impact of number of transmit antennas on the throughput. In the simulation, we set that the number of transmitting antennas at the AP varies from 2 to 8, and 30 users which randomly distributed around AP competing for the channel. Fig. \ref{impact by Antenna number} plots the performance of throughput. It shows that user selection is also important even for small scale MU-MIMO system, but it is more necessary for large scale system. Compared with these user selection schemes, all have achieved a similar capacity gain, when the number of antennas increases. The ceiling of throughput is reached with the antennas number growing, due to a large amount of interference between the inter-user. Besides, the result implies that increasing the number of paralled streams is not always the most efficient transmission scheme.
+We will prove that whether the TOUSE can perform scalability.
+
+
+\subsection{Impact of Number of Users}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=3.1in]{image/throughput-user.pdf}
+% where an .eps filename suffix will be assumed under latex,
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+\DeclareGraphicsExtensions.
+\caption{Performance impact by number of users}
+\label{Influence of users number}
+\end{figure}
+
+Here we evaluate the performance of TOUSE when the number of users varies from 5 to 50. We check the total network throughput gain increased by TOUSE when each user just has limited packet to receive. In each simulation, the AP transmits concurrent queue packets to its matching user, and thereby the throughput is calculated based on the process of transmission.
+
+We plot the Fig. \ref{Influence of users number} to represent the performance of scalable. The effect of increasing the number of user on TOUSE, PUMA and PUMA-MIX is relatively small, implying that the TOUSE is performing well even when the network scales up. Since the RUS does not consider the channel characteristics and packet queueing status of users, its total network capacity is poor. However its performance is also independent of the number of users. During this simulation, PUMA get higher throughput whatever the network scales up due to the exhaustively research compared with other schemes. But the total throughput of PUMA-MIX is similar to TOUSE, which means that our user selection has similar level of throughput with a throughput first contention mechanism.
+
+
+\subsection{Performance in Different Channel Quality Regions}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=3in]{image/throughput-srn.pdf}
+% where an .eps filename suffix will be assumed under latex,
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+\DeclareGraphicsExtensions.
+\caption{Performance in different channel quality region}
+\label{Performacne in region}
+\end{figure}
+%低SNR区域，用户选择显得没那么重要。
+
+In order to evaluate how TOUSE performs where the network has the worst channel quality, we make several simulations which have different channel qualities respectively. In a low SNR region, the value of SNR just varies from 0 to 5dB, and varies from 15 to 20dB in a highest region. We set 10 users located in a region with similar channel quality. Fig. \ref{Performacne in region} reveals that user selection mechanism is not so significant for MU-MIMO in a low SNR region, because the interference is large enough to each user no matter what the combination of beamforming group is. However, with higher link qualities, these user selection schemes which is considered the channel characteristics of users performs obviously better than RUS. Figure also shows that the TOUSE brings out a capacity improvement over RUS even in a low SNR region. Compared with PUMA and PUMA-MIX, TOUSE performs in the same level or slightly poor in mostly scenario. But TOUSE achieves a similar capacity gain with going better of the channel quality. Obviously, TOUSE can perform better in different channel quality regions.
+
+\section{RELATED WORK}
+
+Wireless standards like 802.11ac \cite{Gong2015advanced}, LTE \cite{deng2014wifi} have recently pushed toward the use of MU-MIMO for obtaining high-speed and high-throughput wireless communication. The work \cite{liao2014mu} presented a study to random access based on MAC mechanisms for MU-MIMO, and gives a survey and categorizes to the most relevant MU-MIMO MAC proposals. It also identified key requirements for designing efficient MU-MIMO MAC protocols including de/pre-coding \cite{choi2004transmit} and scheduling schemes. The potential of MU-MIMO has been investigated both theoretically \cite{lee2013performance} and empirically \cite{aryafar2010design}, which studied pre-coding techniques, scheduling schemes and practical gain of MU-MIMO in various environments.
+
+Substantial theoretical works \cite{lim2014performance} assumed that CSI is available and paid much attention on implementing low-complexity algorithms to approach the maximum throughput. Xie \emph{et al}., \cite{xie2014scalable} presented scalable and adaptive user selection which requires several rounds of CSI feedback instead of gathering from all users. However, in reality, the vulnerabilities of CSI \cite{miller2012vulnerabilities} still exist due to its estimation methods, like time overhead. To avoid overwhelming the actual channel time spent on transmission, the schemes of user selection without CSI feedback was proposed. The authors of \cite{zhou2015signpost} design an orthogonality evaluation mechanism which enables each user using its own CSI to speculate. But it can only be applied to uplink MU-MIMO. In \cite{anand2014mode}, it proposed a method of user selection prior to channel sounding and exploits theoretical properties of MU-MIMO system to estimate datarate. PUMA achieves better performance in throughput, however, it does not do well in the respect of fairness.
+
+
+
+%To avoid overwhelm the actual channel time spent on transmission, with the represent of Signpost[4], authors design an orthogonality evaluation mechanism which enables each user using its own CSI to speculate.  Thus, CSI feedback comes to zero without sacrifice time and frequency resources by realizing distributed user selection.  Furthermore, Anand et al in [5] implement PUMA, exploits theoretical properties of MU-MIMO system scaling by estimating SINR for a certain client and transforming it to an expected achievable datarate.  PUMA achieves better throughput than best-fixed policy, however, doesn’t do well in respect of fairness.%
+
+Some other works focus on the scheduling scheme of user selection \cite{kuo2014leader}. Mostly \cite{huang2013user} either iteratively select a user that minimizes the interference, reduces the complexity or maximizes the aggregate throughput. In \cite{shen2015sieve}, a novel search and updated strategy was proposed for user selection. It designed a knob to control tradeoff between aggregate capacity and  computational complexity. The work \cite{ko2012multiuser} presents a low complexity scheduling scheme using block diagonalization with chordal distance.
+
+
+%SIEVE search works like a sieve that filters out those candidate combinations which could not perform optimal. Progressive update re-branch users and re-select combinations iteratively until reaching the last level of enumeration tree they built.
+
+In addition, some experimental studies emerged, like \cite{zhang2013nemox}. Authors realizes netMIMO downlink transmission for large-scale wireless network. By organizing a network into clusters, it could manage interference with a decentralized channel-access algorithm, but environment is limited in static network since time-averaged CSI is used as input. In \cite{shen2014rate}, Shen \emph{et al.,} introduced TurboRate, client annotates its packets with single SNR and direction at the AP to obtain the optimal bit rate and could transmit concurrently. Now there are more conditions are considered, like mobility \cite{2016infocomres} or channel control \cite{control2015shep}. The exciting thing is that the team of Xinyu Zhang \cite{Practical2016zhxy} has optimized MU-MIMO performance in 802.11ac commodity devices.
+
+So far, there are three key points in MU-MIMO MAC protocol design: throughput, complexity and fairness \cite{esslaoui2012fair}. But most researches only consider two or one of these points. TOUSE is designed a novel metric without CSI feedback benefiting from \cite{ravindran2012multi}, and presents a fair user selection mechanism based on overhead time matches.
+
+\section{CONCLUSION}
+
+In this paper, we have presented TOUSE, a scalable and fairness user selection scheme for downlink MU-MIMO. TOUSE is a proportional fair schedular usually considers both network capacity and fairness. In order to reduce time overhead, we adopt a novel per-user data-rate estimation method without any CSI feedback. TOUSE selects optimal beamforming group by dynamic time warping based on mechanism, which makes full use of concurrent transmitting time and achieves equal opportunity of channel contention. We have simulated TOUSE along with three other user selection schemes. Simulation shows that TOUSE achieves a $1.5\times$ throughput gain over traditional scheme in three antennas AP scenarios, and the similar level of fairness compared with fair contention mechanism. We also proved that TOUSE can always achieve similar performance of throughput compared with throughput contention schemes. More details of QoS will be considered in our future work.
+
+% conference papers do not normally have an appendix
+
+
+% use section* for acknowledgment
+
+\section*{Acknowledgment}
+
+ This work is supported by Natural Science Foundation of China under Grants No. 61070181, No. 61272524 and No. 61202442 and the Fundamental Research Funds for the Central Universities. This work is also supported by the Fundamental Research Funds for the Central Universities under Grants No. DUT14ZD218 and No. DUT14QY29.
+
+
+
+
+
+
+
+\section*{References}
+
+
+%\cite{muller2007dynamic}
+
+
+\bibliography{ref}
+
+\end{document}
