@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.15)  29 JAN 2016 21:47
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.15)  29 DEC 2016 15:12
 entering extended mode
-**C:/Users/OurEDA/Desktop/ICCè®ºæ–‡æœ€ç»ˆç‰ˆ/bare_conf.tex
-(C:/Users/OurEDA/Desktop/ICCè®ºæ–‡æœ€ç»ˆç‰ˆ/bare_conf.tex
+**C:/Users/OurEDA/Desktop/Github/playground/paper/bare_conf.tex
+(C:/Users/OurEDA/Desktop/Github/playground/paper/bare_conf.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
 ("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ieeetran\IEEEtran.cls"
@@ -88,7 +88,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEtmpitemindent=\dimen116
 \c@IEEEbiography=\count90
 \@IEEEtranrubishbin=\box26
-) ("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty"
+) ("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\keyval.sty"
@@ -225,37 +230,13 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\natbib\natbib.sty"
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip47
-\bibsep=\skip48
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count104
-)
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\xcolor\xcolor.sty"
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\00miktex\color.cfg"
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-)
 ("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\algorithms\algorithm.sty"
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
 ("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count105
+\c@float@type=\count104
 \float@exts=\toks21
 \float@box=\box29
 \@float@everytoks=\toks22
@@ -265,87 +246,280 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks23
-\c@algorithm=\count106
+\c@algorithm=\count105
 )
 ("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\algorithms\algorithmic.sty"
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count107
-\c@ALC@line=\count108
-\c@ALC@rem=\count109
-\c@ALC@depth=\count110
-\ALC@tlm=\skip49
-\algorithmicindent=\skip50
-)
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen128
-)
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\comment\comment.sty"
-\CommentStream=\write3
-
-Excluding comment 'comment')
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ltxmisc\url.sty"
-\Urlmuskip=\muskip11
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
-)
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\pdfpages\pdfpages.sty"
-Package: pdfpages 2011/03/10 v0.4n Insert pages of external PDF documents (AM)
-
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\tools\calc.sty"
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count111
-\calc@Bcount=\count112
-\calc@Adimen=\dimen129
-\calc@Bdimen=\dimen130
-\calc@Askip=\skip51
-\calc@Bskip=\skip52
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count113
-\calc@Cskip=\skip53
-)
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\eso-pic\eso-pic.sty"
-Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
-
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\atbegshi.sty"
-Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
-))
-("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\pdfpages\pppdftex.def"
-File: pppdftex.def 2011/03/10 v0.4n Pdfpages driver for pdfTeX (AM)
-)
-\AM@pagebox=\box31
-\AM@toc@title=\toks24
-\c@AM@survey=\count114
-\AM@templatesizebox=\box32
+\c@ALC@unique=\count106
+\c@ALC@line=\count107
+\c@ALC@rem=\count108
+\c@ALC@depth=\count109
+\ALC@tlm=\skip47
+\algorithmicindent=\skip48
 )
 ("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\tools\array.sty"
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen131
-\extrarowheight=\dimen132
-\NC@list=\toks25
-\extratabsurround=\skip54
-\backup@length=\skip55
+\col@sep=\dimen128
+\extrarowheight=\dimen129
+\NC@list=\toks24
+\extratabsurround=\skip49
+\backup@length=\skip50
 )
-(C:\Users\OurEDA\Desktop\ICCè®ºæ–‡æœ€ç»ˆç‰ˆ\bare_conf.aux
-! Missing \endcsname inserted.
-<to be read again> 
-                   \theta 
-l.33 ...show the perform of the alogrithm}{{3}{5}}
-                                                  
-? 
-! Emergency stop.
-<to be read again> 
-                   \theta 
-l.33 ...show the perform of the alogrithm}{{3}{5}}
-                                                  
-End of file on the terminal!
+(C:\Users\OurEDA\Desktop\Github\playground\paper\bare_conf.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
 
- 
+("C:\Program Files (x86)\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count110
+\scratchdimen=\dimen130
+\scratchbox=\box31
+\nofMPsegments=\count111
+\nofMParguments=\count112
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen131
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
+\everyMPtoPDFconversion=\toks26
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 120.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 120.
+Missing character: There is no ¡ in font cmr10!
+Missing character: There is no ­ in font cmr10!
+ [1{C:/Program Files (x86)/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{
+UGBK.sfd}}
+
+
+]
+Missing character: There is no ¨ in font ptmr7t!
+Missing character: There is no ® in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no ± in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no ° in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no ± in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no ¯ in font ptmr7t!
+
+
+LaTeX Warning: Citation `(2012)[26]' on page 2 undefined on input line 157.
+
+[2]
+Underfull \hbox (badness 1571) in paragraph at lines 166--167
+\OT1/ptm/m/n/10 set of dis-join-t links that can be sched-uled at a same
+ []
+
+
+LaTeX Warning: Citation `11' on page 3 undefined on input line 172.
+
+
+LaTeX Warning: Citation `11' on page 3 undefined on input line 183.
+
+<image/direction.pdf, id=16, 844.65562pt x 596.98032pt>
+File: image/direction.pdf Graphic file (type pdf)
+
+<use image/direction.pdf>
+Package pdftex.def Info: image/direction.pdf used on input line 196.
+(pdftex.def)             Requested size: 216.81pt x 153.23453pt.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 209.
+
+
+LaTeX Warning: Citation `2' on page 3 undefined on input line 225.
+
+[3 <C:/Users/OurEDA/Desktop/Github/playground/paper/image/direction.pdf>]
+Underfull \vbox (badness 4479) has occurred while \output is active []
+
+ [4]
+Underfull \hbox (badness 1681) in paragraph at lines 306--308
+\OT1/ptm/m/n/10 The val-ue of $\OML/cmm/m/it/10 PG[]G[]'[]$ \OT1/ptm/m/n/10 is 
+fixed in above d-e-duce.
+ []
+
+[5]
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 371.
+
+
+LaTeX Warning: Citation `2' on page 6 undefined on input line 408.
+
+<image/topology.pdf, id=37, 702.37407pt x 702.37407pt>
+File: image/topology.pdf Graphic file (type pdf)
+
+<use image/topology.pdf>
+Package pdftex.def Info: image/topology.pdf used on input line 417.
+(pdftex.def)             Requested size: 144.54pt x 144.5342pt.
+Package epstopdf Info: Source file: <image/1.eps>
+(epstopdf)                    date: 2014-10-15 10:57:48
+(epstopdf)                    size: 10132 bytes
+(epstopdf)             Output file: <image/1-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-10-15 10:58:10
+(epstopdf)                    size: 4111 bytes
+(epstopdf)             Command: <epstopdf --outfile=image/1-eps-converted-to.pd
+f image/1.eps>
+(epstopdf)             \includegraphics on input line 434.
+Package epstopdf Info: Output file is already uptodate.
+
+<image/1-eps-converted-to.pdf, id=38, 420.57124pt x 316.18124pt>
+File: image/1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use image/1-eps-converted-to.pdf>
+Package pdftex.def Info: image/1-eps-converted-to.pdf used on input line 434.
+(pdftex.def)             Requested size: 180.67499pt x 135.82983pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 438.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 438.
+ [6 <C:/Users/OurEDA/Desktop/Github/playground/paper/image/topology.pdf>]
+Package epstopdf Info: Source file: <image/3.eps>
+(epstopdf)                    date: 2014-10-15 10:56:41
+(epstopdf)                    size: 12540 bytes
+(epstopdf)             Output file: <image/3-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-10-15 10:58:10
+(epstopdf)                    size: 5127 bytes
+(epstopdf)             Command: <epstopdf --outfile=image/3-eps-converted-to.pd
+f image/3.eps>
+(epstopdf)             \includegraphics on input line 448.
+Package epstopdf Info: Output file is already uptodate.
+
+<image/3-eps-converted-to.pdf, id=46, 420.57124pt x 316.18124pt>
+File: image/3-eps-converted-to.pdf Graphic file (type pdf)
+
+<use image/3-eps-converted-to.pdf>
+Package pdftex.def Info: image/3-eps-converted-to.pdf used on input line 448.
+(pdftex.def)             Requested size: 180.67499pt x 135.82983pt.
+Package epstopdf Info: Source file: <image/4.eps>
+(epstopdf)                    date: 2015-03-24 20:42:43
+(epstopdf)                    size: 11801 bytes
+(epstopdf)             Output file: <image/4-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-03-24 20:43:21
+(epstopdf)                    size: 4755 bytes
+(epstopdf)             Command: <epstopdf --outfile=image/4-eps-converted-to.pd
+f image/4.eps>
+(epstopdf)             \includegraphics on input line 458.
+Package epstopdf Info: Output file is already uptodate.
+
+<image/4-eps-converted-to.pdf, id=47, 420.57124pt x 316.18124pt>
+File: image/4-eps-converted-to.pdf Graphic file (type pdf)
+
+<use image/4-eps-converted-to.pdf>
+Package pdftex.def Info: image/4-eps-converted-to.pdf used on input line 458.
+(pdftex.def)             Requested size: 180.67499pt x 135.82983pt.
+
+Underfull \hbox (badness 2261) in paragraph at lines 468--469
+$\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 2 f\OT1/cmr/m/n/10 100\OML/cmm/m/it/10 ; \
+OT1/cmr/m/n/10 200\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 400\OML/cmm/m/it/10 ; \OT1
+/cmr/m/n/10 800\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1600\OML/cmm/m/it/10 ; \OT1/c
+mr/m/n/10 3200\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6400\OML/cmm/m/it/10 ; \OT1/cm
+r/m/n/10 12800\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 25600\OMS/cmsy/m/n/10 g$\OT1/p
+tm/m/n/10 .
+ []
+
+Package epstopdf Info: Source file: <image/5.eps>
+(epstopdf)                    date: 2014-10-15 10:52:33
+(epstopdf)                    size: 11568 bytes
+(epstopdf)             Output file: <image/5-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-10-15 10:52:49
+(epstopdf)                    size: 4714 bytes
+(epstopdf)             Command: <epstopdf --outfile=image/5-eps-converted-to.pd
+f image/5.eps>
+(epstopdf)             \includegraphics on input line 472.
+Package epstopdf Info: Output file is already uptodate.
+<image/5-eps-converted-to.pdf, id=48, 420.57124pt x 316.18124pt>
+File: image/5-eps-converted-to.pdf Graphic file (type pdf)
+
+<use image/5-eps-converted-to.pdf>
+Package pdftex.def Info: image/5-eps-converted-to.pdf used on input line 472.
+(pdftex.def)             Requested size: 180.67499pt x 135.82983pt.
+ [7 <C:/Users/OurEDA/Desktop/Github/playground/paper/image/1-eps-converted-to.p
+df> <C:/Users/OurEDA/Desktop/Github/playground/paper/image/3-eps-converted-to.p
+df> <C:/Users/OurEDA/Desktop/Github/playground/paper/image/4-eps-converted-to.p
+df> <C:/Users/OurEDA/Desktop/Github/playground/paper/image/5-eps-converted-to.p
+df>]
+Package epstopdf Info: Source file: <image/6.eps>
+(epstopdf)                    date: 2014-10-15 10:55:14
+(epstopdf)                    size: 11882 bytes
+(epstopdf)             Output file: <image/6-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-10-15 10:58:12
+(epstopdf)                    size: 4751 bytes
+(epstopdf)             Command: <epstopdf --outfile=image/6-eps-converted-to.pd
+f image/6.eps>
+(epstopdf)             \includegraphics on input line 485.
+Package epstopdf Info: Output file is already uptodate.
+
+<image/6-eps-converted-to.pdf, id=73, 420.57124pt x 316.18124pt>
+File: image/6-eps-converted-to.pdf Graphic file (type pdf)
+
+<use image/6-eps-converted-to.pdf>
+Package pdftex.def Info: image/6-eps-converted-to.pdf used on input line 485.
+(pdftex.def)             Requested size: 180.67499pt x 135.82983pt.
+
+(C:\Users\OurEDA\Desktop\Github\playground\paper\bare_conf.bbl)
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[8 <C:/Users/OurEDA/Desktop/Github/playground/paper/image/6-eps-converted-to.pd
+f>] (C:\Users\OurEDA\Desktop\Github\playground\paper\bare_conf.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4327 strings out of 495354
- 63308 string characters out of 3182739
- 127457 words of memory out of 3000000
- 7445 multiletter control sequences out of 15000+200000
- 24710 words of font info for 54 fonts, out of 3000000 for 9000
+ 3236 strings out of 495354
+ 48397 string characters out of 3182739
+ 118264 words of memory out of 3000000
+ 6352 multiletter control sequences out of 15000+200000
+ 38169 words of font info for 71 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 42i,0n,35p,351b,103s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 42i,20n,23p,1798b,523s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Progr
+am Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
+m Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program
+ Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program F
+iles (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Fil
+es (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files
+ (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (
+x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86
+)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/C
+TEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/CTEX
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/CTEX/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/CTEX/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/CTEX/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/CTEX/MiKTeX
+/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/typ
+e1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/ti
+mes/utmr8a.pfb><C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmri8
+a.pfb>
+Output written on bare_conf.pdf (8 pages, 276965 bytes).
+PDF statistics:
+ 136 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -21,56 +21,99 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{1}
+\bibitem{capacityGP}
+P.~Gupta and P.~R. Kumar, ``The capacity of wireless networks,'' \emph{IEEE
+  Transactions on Information Theory}, vol.~46, no.~2, 2000.
+
+\bibitem{geometric}
 O.~Goussevskaia, Y.~A. Oswald, and R.~Wattenhofer, ``Complexity in geometric
   sinr,'' in \emph{Proc. of ACM International Symposium on Mobile Ad Hoc
   Networking and Computing (MobiHoc)}, 2007.
 
-\bibitem{2}
+\bibitem{Capacity}
 O.~Goussevskaia, R.~Wattenhofer, M.~M. Halld{\'o}rsson, and E.~Welzl,
   ``Capacity of arbitrary wireless networks,'' in \emph{Proc. of IEEE INFOCOM},
   2009.
 
-\bibitem{3}
-P.-J. Wan, X.~Jia, and F.~Yao, ``Maximum independent set of links under
-  physical interference model,'' in \emph{Proc. of International Conference on
-  Wireless Algorithms, Systems, and Applications (WASA)}, 2009.
+\bibitem{moscibroda2006protocol}
+T.~Moscibroda, R.~Wattenhofer, and Y.~Weber, ``Protocol design beyond
+  graph-based models,'' in \emph{Proc. of the ACM Workshop on Hot Topics in
+  Networks (HotNets-V)}, 2006, pp. 25--30.
 
-\bibitem{6}
-X.~Xu, S.~Tang, and P.-J. Wan, ``Maximum weighted independent set of links
-  under physical interference model,'' in \emph{Proc. of International
-  Conference on Wireless Algorithms, Systems, and Applications (WASA)}, 2010.
+\bibitem{maheshwari2008measurement}
+R.~Maheshwari, S.~Jain, and S.~R. Das, ``A measurement study of interference
+  modeling and scheduling in low-power wireless networks,'' in
+  \emph{Proceedings of the 6th ACM conference on Embedded network sensor
+  systems}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2008, pp. 141--154.
 
-\bibitem{7}
-C.~Ma, F.~Al-dhelaan, and P.-J. Wan, ``Maximum independent set of links with a
-  monotone and sublinear power assignment,'' in \emph{Proc. of International
-  Conference on Wireless Algorithms, Systems, and Applications (WASA)}, 2013.
+\bibitem{xu2012mlls}
+X.~Xu, J.~Cao, and X.-Y. Li, ``Mlls: Minimum length link scheduling under
+  physical interference model,'' \emph{arXiv preprint arXiv:1208.0627}, 2012.
 
-\bibitem{8}
+\bibitem{zhou2014throughput}
+Y.~Zhou, X.-Y. Li, M.~Liu, X.~Mao, S.~Tang, and Z.~Li, ``Throughput optimizing
+  localized link scheduling for multihop wireless networks under physical
+  interference model,'' \emph{IEEE Transactions on Parallel and Distributed
+  Systems}, vol.~25, no.~10, pp. 2708--2720, 2014.
+
+\bibitem{wan2010shortest}
+P.-J. Wan, X.~Xu, and O.~Frieder, ``Shortest link scheduling with power control
+  under physical interference model,'' in \emph{Mobile Ad-hoc and Sensor
+  Networks (MSN), 2010 Sixth International Conference on}.\hskip 1em plus 0.5em
+  minus 0.4em\relax IEEE, 2010, pp. 74--78.
+
+\bibitem{generalmetrics}
 M.~M. Halld{\'o}rsson and P.~Mitra, ``Wireless capacity with oblivious power in
   general metrics,'' in \emph{ACM-SIAM Symposium on Discrete Algorithms}, 2011.
 
-\bibitem{12}
-X.~Xu and S.~Tang, ``A constant approximation algorithm for link scheduling in
-  arbitrary networks under physical interference model,'' in \emph{Proc. of ACM
-  International Workshop on Foundations of Wireless Ad Hoc and Sensor
-  Networking and Computing (FOWANC)}, 2009.
+\bibitem{fanghanel2009oblivious}
+A.~Fangh{\"a}nel, T.~Kesselheim, H.~R{\"a}cke, and B.~V{\"o}cking, ``Oblivious
+  interference scheduling,'' in \emph{Proceedings of the 28th ACM symposium on
+  Principles of distributed computing}.\hskip 1em plus 0.5em minus 0.4em\relax
+  ACM, 2009, pp. 220--229.
 
-\bibitem{5}
-G.~Pei and A.~K.~S. Vullikanti, ``Distributed approximation algorithms for
-  maximum link scheduling and local broadcasting in the physical interference
-  model,'' in \emph{Proc. of IEEE INFOCOM}, 2013.
+\bibitem{halldorsson2012wireless}
+M.~M. Halld{\'o}rsson, ``Wireless scheduling with power control,'' \emph{ACM
+  Transactions on Algorithms (TALG)}, vol.~9, no.~1, p.~7, 2012.
 
-\bibitem{4}
+\bibitem{blough2010approximation}
+D.~M. Blough, G.~Resta, and P.~Santi, ``Approximation algorithms for wireless
+  link scheduling with sinr-based interference,'' \emph{IEEE/ACM Transactions
+  on networking}, vol.~18, no.~6, pp. 1701--1712, 2010.
+
+\bibitem{li2008maximal}
+Q.~Li, G.~Kim, and R.~Negi, ``Maximal scheduling in a hypergraph model for
+  wireless networks,'' in \emph{2008 IEEE International Conference on
+  Communications}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2008, pp.
+  3853--3857.
+
+\bibitem{li2012maximal}
+Q.~Li and R.~Negi, ``Maximal scheduling in wireless ad hoc networks with
+  hypergraph interference models,'' \emph{IEEE Transactions on Vehicular
+  Technology}, vol.~61, no.~1, pp. 297--310, 2012.
+
+\bibitem{kozat2006cross}
+U.~C. Kozat, I.~Koutsopoulos, and L.~Tassiulas, ``Cross-layer design for power
+  efficiency and qos provisioning in multi-hop wireless networks,'' \emph{IEEE
+  Transactions on Wireless Communications}, vol.~5, no.~11, pp. 3306--3315,
+  2006.
+
+\bibitem{kesselheim2011constant}
+T.~Kesselheim, ``A constant-factor approximation for wireless capacity
+  maximization with power control in the sinr model,'' in \emph{Proceedings of
+  the twenty-second annual ACM-SIAM symposium on Discrete Algorithms}.\hskip
+  1em plus 0.5em minus 0.4em\relax SIAM, 2011, pp. 1549--1559.
+
+\bibitem{le2010longest}
+L.~B. Le, E.~Modiano, C.~Joo, and N.~B. Shroff, ``Longest-queue-first
+  scheduling under sinr interference model,'' in \emph{Proceedings of the
+  eleventh ACM international symposium on Mobile ad hoc networking and
+  computing}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2010, pp. 41--50.
+
+\bibitem{directional}
 V.~Ramamurthi, A.~Reaz, S.~Dixit, and B.~Mukherjee, ``Link scheduling and power
   control in wireless mesh networks with directional antennas,'' in \emph{IEEE
   International Conference on Communications (ICC)}, 2008.
-
-\bibitem{9}
-P.-J. Wan, C.~Ma, S.~Tang, and B.~Xu, ``Maximizing capacity with power control
-  under physical interference model in simplex mode,'' in \emph{Proc. of
-  International Conference on Wireless Algorithms, Systems, and Applications
-  (WASA)}, 2011.
 
 \bibitem{10}
 S.~Yi, Y.~Pei, and S.~Kalyanaraman, ``On the capacity improvement of ad hoc

@@ -1,131 +1,11 @@
 
-%% bare_conf.tex
-%% V1.4
-%% 2012/12/27
-%% by Michael Shell
-%% See:
-%% http://www.michaelshell.org/
-%% for current contact information.
-%%
-%% This is a skeleton file demonstrating the use of IEEEtran.cls
-%% (requires IEEEtran.cls version 1.8 or later) with an IEEE conference paper.
-%%
-%% Support sites:
-%% http://www.michaelshell.org/tex/ieeetran/
-%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
-%% and
-%% http://www.ieee.org/
-
-%%*************************************************************************
-%% Legal Notice:
-%% This code is offered as-is without any warranty either expressed or
-%% implied; without even the implied warranty of MERCHANTABILITY or
-%% FITNESS FOR A PARTICULAR PURPOSE!
-%% User assumes all risk.
-%% In no event shall IEEE or any contributor to this code be liable for
-%% any damages or losses, including, but not limited to, incidental,
-%% consequential, or any other damages, resulting from the use or misuse
-%% of any information contained here.
-%%
-%% All comments are the opinions of their respective authors and are not
-%% necessarily endorsed by the IEEE.
-%%
-%% This work is distributed under the LaTeX Project Public License (LPPL)
-%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
-%% distributed and modified. A copy of the LPPL, version 1.3, is included
-%% in the base LaTeX documentation of all distributions of LaTeX released
-%% 2003/12/01 or later.
-%% Retain all contribution notices and credits.
-%% ** Modified files should be clearly indicated as such, including  **
-%% ** renaming them and changing author support contact information. **
-%%
-%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
-%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex,
-%%                    bare_jrnl_transmag.tex
-%%*************************************************************************
-
-% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
-% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
-% *** with production work. IEEE's font choices can trigger bugs that do  ***
-% *** not appear when using other class files.                            ***
-% The testflow support page is at:
-% http://www.michaelshell.org/tex/testflow/
-
-
-
-% Note that the a4paper option is mainly intended so that authors in
-% countries using A4 can easily print to A4 and see how their papers will
-% look in print - the typesetting of the document will not typically be
-% affected with changes in paper size (but the bottom and side margins will).
-% Use the testflow package mentioned above to verify correct handling of
-% both paper sizes by the user's LaTeX system.
-%
-% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
-% should be used if it is desired that the figures are to be displayed in
-% draft mode.
 %
 \documentclass[conference]{IEEEtran}
-% Add the compsoc option for Computer Society conferences.
-%
-% If IEEEtran.cls has not been installed into the LaTeX system files,
-% manually specify the path to it like:
-% \documentclass[conference]{../sty/IEEEtran}
 
 
 
-
-
-% Some very useful LaTeX packages include:
-% (uncomment the ones you want to load)
-
-
-% *** MISC UTILITY PACKAGES ***
-%
-%\usepackage{ifpdf}
-% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
-% compilation based on whether the output is pdf or dvi.
-% usage:
-% \ifpdf
-%   % pdf code
-% \else
-%   % dvi code
-% \fi
-% The latest version of ifpdf.sty can be obtained from:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
-% Also, note that IEEEtran.cls V1.7 and later provides a builtin
-% \ifCLASSINFOpdf conditional that works the same way.
-% When switching from latex to pdflatex and vice-versa, the compiler may
-% have to be run twice to clear warning/error messages.
-
-
-
-
-
-% *** CITATION PACKAGES ***
-%
 \usepackage{cite}
-% cite.sty was written by Donald Arseneau
-% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
-% \cite{} output to follow that of IEEE. Loading the cite package will
-% result in citation numbers being automatically sorted and properly
-% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
-% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
-% \cite will automatically add leading space, if needed. Use cite.sty's
-% noadjust option (cite.sty V3.8 and later) if you want to turn this off
-% such as if a citation ever needs to be enclosed in parenthesis.
-% cite.sty is already installed on most LaTeX systems. Be sure and use
-% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
-% not currently provide for hyperlinked citations.
-% The latest version can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
-% The documentation is contained in the cite.sty file itself.
 
-
-
-
-
-
-% *** GRAPHICS RELATED PACKAGES ***
 %
 \ifCLASSINFOpdf
   \usepackage[pdftex]{graphicx}
@@ -146,25 +26,7 @@
   % every instance of \includegraphics
   % \DeclareGraphicsExtensions{.eps}
 \fi
-% graphicx was written by David Carlisle and Sebastian Rahtz. It is
-% required if you want graphics, photos, etc. graphicx.sty is already
-% installed on most LaTeX systems. The latest version and documentation
-% can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
-% Another good source of documentation is "Using Imported Graphics in
-% LaTeX2e" by Keith Reckdahl which can be found at:
-% http://www.ctan.org/tex-archive/info/epslatex/
-%
-% latex, and pdflatex in dvi mode, support graphics in encapsulated
-% postscript (.eps) format. pdflatex in pdf mode supports graphics
-% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
-% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
-% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
-% which can result in "jaggedy"/blurry rendering of lines and letters as
-% well as large increases in file sizes.
-%
-% You can find documentation about the pdfTeX application at:
-% http://www.tug.org/applications/pdftex
+
 
 
 
@@ -173,157 +35,15 @@
 % *** MATH PACKAGES ***
 %
 \usepackage[cmex10]{amsmath}
-% A popular package from the American Mathematical Society that provides
-% many useful and powerful commands for dealing with mathematics. If using
-% it, be sure to load this package with the cmex10 option to ensure that
-% only type 1 fonts will utilized at all point sizes. Without this option,
-% it is possible that some math symbols, particularly those within
-% footnotes, will be rendered in bitmap form which will result in a
-% document that can not be IEEE Xplore compliant!
-%
-% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
-% thus preventing page breaks from occurring within multiline equations. Use:
-%\interdisplaylinepenalty=2500
-% after loading amsmath to restore such page breaks as IEEEtran.cls normally
-% does. amsmath.sty is already installed on most LaTeX systems. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
 
-
-
-
-
-% *** SPECIALIZED LIST PACKAGES ***
 \usepackage{algorithm}
 \usepackage{algorithmic}
-% algorithmic.sty was written by Peter Williams and Rogerio Brito.
-% This package provides an algorithmic environment fo describing algorithms.
-% You can use the algorithmic environment in-text or within a figure
-% environment to provide for a floating algorithm. Do NOT use the algorithm
-% floating environment provided by algorithm.sty (by the same authors) or
-% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
-% algorithm float types and packages that provide these will not provide
-% correct IEEE style captions. The latest version and documentation of
-% algorithmic.sty can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
-% There is also a support site at:
-% http://algorithms.berlios.de/index.html
-% Also of interest may be the (relatively newer and more customizable)
-% algorithmicx.sty package by Szasz Janos:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
 
-
-
-
-% *** ALIGNMENT PACKAGES ***
 %
 \usepackage{array}
-% Frank Mittelbach's and David Carlisle's array.sty patches and improves
-% the standard LaTeX2e array and tabular environments to provide better
-% appearance and additional user controls. As the default LaTeX2e table
-% generation code is lacking to the point of almost being broken with
-% respect to the quality of the end results, all users are strongly
-% advised to use an enhanced (at the very least that provided by array.sty)
-% set of table tools. array.sty is already installed on most systems. The
-% latest version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/required/tools/
-
-
-% IEEEtran contains the IEEEeqnarray family of commands that can be used to
-% generate multiline equations as well as matrices, tables, etc., of high
-% quality.
 
 
 
-
-% *** SUBFIGURE PACKAGES ***
-%\ifCLASSOPTIONcompsoc
-%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
-%\else
-%  \usepackage[caption=false,font=footnotesize]{subfig}
-%\fi
-% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
-% for subfigure.sty, the latter of which is no longer maintained and is
-% incompatible with some LaTeX packages including fixltx2e. However,
-% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
-% which will override IEEEtran.cls' handling of captions and this will result
-% in non-IEEE style figure/table captions. To prevent this problem, be sure
-% and invoke subfig.sty's "caption=false" package option (available since
-% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
-% handling of captions.
-% Note that the Computer Society format requires a larger sans serif font
-% than the serif footnote size font used in traditional IEEE formatting
-% and thus the need to invoke different subfig.sty package options depending
-% on whether compsoc mode has been enabled.
-%
-% The latest version and documentation of subfig.sty can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
-
-
-
-
-% *** FLOAT PACKAGES ***
-%
-%\usepackage{fixltx2e}
-% fixltx2e, the successor to the earlier fix2col.sty, was written by
-% Frank Mittelbach and David Carlisle. This package corrects a few problems
-% in the LaTeX2e kernel, the most notable of which is that in current
-% LaTeX2e releases, the ordering of single and double column floats is not
-% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
-% single column figure to be placed prior to an earlier double column
-% figure. The latest version and documentation can be found at:
-% http://www.ctan.org/tex-archive/macros/latex/base/
-
-
-%\usepackage{stfloats}
-% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
-% the ability to do double column floats at the bottom of the page as well
-% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
-% LaTeX2e). It also provides a command:
-%\fnbelowfloat
-% to enable the placement of footnotes below bottom floats (the standard
-% LaTeX2e kernel puts them above bottom floats). This is an invasive package
-% which rewrites many portions of the LaTeX2e float routines. It may not work
-% with other packages that modify the LaTeX2e float routines. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
-% Do not use the stfloats baselinefloat ability as IEEE does not allow
-% \baselineskip to stretch. Authors submitting work to the IEEE should note
-% that IEEE rarely uses double column equations and that authors should try
-% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
-% packages (also by Sigitas Tolusis) as IEEE does not format its papers in
-% such ways.
-% Do not attempt to use stfloats with fixltx2e as they are incompatible.
-% Instead, use Morten Hogholm'a dblfloatfix which combines the features
-% of both fixltx2e and stfloats:
-%
-% \usepackage{dblfloatfix}
-% The latest version can be found at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/dblfloatfix/
-
-
-
-
-% *** PDF, URL AND HYPERLINK PACKAGES ***
-%
-%\usepackage{url}
-% url.sty was written by Donald Arseneau. It provides better support for
-% handling and breaking URLs. url.sty is already installed on most LaTeX
-% systems. The latest version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/url/
-% Basically, \url{my_url_here}.
-
-
-
-
-% *** Do not adjust lengths that control margins, column widths, etc. ***
-% *** Do not use packages that alter fonts (such as pslatex).         ***
-% There should be no need to do such things with IEEEtran.cls V1.6 and later.
-% (Unless specifically asked to do so by the journal or conference you plan
-% to submit to, of course. )
-
-
-% correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
 
@@ -342,7 +62,7 @@
 \author{\IEEEauthorblockN{Zhaoshu Tang, Ming Zhu, Lei Wang, Honglian Ma}
 \IEEEauthorblockA{School of Software\\
 Dalian University of Technology, China\\
-Email: tang.zhaoshu@mail.dlut.edu.cn, zhuming@dlut.edu.cn, lei.wang@dlut.edu.cn, mhl@dlut.edu.cn}
+tang.zhaoshu@mail.dlut.edu.cn, zhuming@dlut.edu.cn, lei.wang@dlut.edu.cn, mhl@dlut.edu.cn}
 }
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
@@ -369,8 +89,6 @@ Email: tang.zhaoshu@mail.dlut.edu.cn, zhuming@dlut.edu.cn, lei.wang@dlut.edu.cn,
 
 
 
-% use for special paper notices
-%\IEEEspecialpapernotice{(Invited Paper)}
 
 
 
@@ -390,37 +108,56 @@ For a given set of communication links whose senders transmit at a fixed power l
 Link Scheduling, Directional Antennas, Physical Interference Model
 \end{IEEEkeywords}
 
-
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
 
 
 
 \section{Introduction}
 % no \IEEEPARstart
-This paper mainly studies a typical question in wireless networking which transmit node equip with directional antennas. One of key problem in a given wireless network is to improve the throughput capacity. In the case of shared only one channel, a plurality of communication links transmission at the same time will lead to signal interference. In wireless network, link scheduling problem is to reduce the maximum interference when the links transmit simultaneously, and ensure the message can be successfully accepted by the receiving node. The main objective is to achieve efficient spatial reuse and increase network capacity, considering wireless interference among concurrently transmitting nodes.
 
-By concentrating the energy in specific direction, opposed to omni-directional transmission, Directional antennas can provide the benefits of increased range, reduced interference and increased spatial reuse of bandwidth. Due to the benefits from the directional antennas, the scheduling scheme need to take into account the nature of the antenna beam direction at each node.
+As we all know, link scheduling is the most fundamental and typical problem which can significantly influence network performance.Since Gupta and Kumar first studied on the methods to schedule links and enhance the capacity in Wireless Sensor Networks \cite{capacityGP}, lot of problems were proposed one after another. In the case of shared only one channel, a plurality of communication links transmission at the same time will lead to signal interference. In wireless network, link scheduling problem is to reduce the maximum interference when the links transmit simultaneously, and ensure the message can be successfully accepted by the receiving node. The main objective is to achieve efficient spatial reuse and increase network capacity, considering wireless interference among concurrently transmitting nodes.
 
+The problem maximum link scheduling (MLS) is to seek a largest set of links from a given set A that can be scheduled simultaneously. Given a set of communication link requests $L = \{l_1, l_2, ¡­ , l_n\}$, with $l_i$ denoting the $i$th link request. MLS intends to find a maximum subset of links $S \in L$ to be scheduled simultaneously, designated to one time slot, given a set of communication links with each having a unit traffic demand. This optimization problem is NP-hard proved by Goussevskaia \cite{geometric}. There are a lot of studies to this aspect, some better performance approximation scheduling algorithms have been proposed \cite{Capacity}.
 
-The problem \emph{One-slot Maximum Set of Links} (OSML) is to seek a largest set of solution links from a given set $A$ that can be transmitted simultaneously. This optimization problem is NP-hard proved by Gussevskaia \cite{1}. Plenty of research to this problem, some approximation scheduling algorithms was be proposed \cite{1,2}, which is performance good.
-
-
-Nowadays, various ways to solve the problem of OSML under physical interference model was present. The author of \cite{1} designed the first non-trivial approximation algorithm with approximation bound $O(\log {\frac{\max_{l \in A }d(l)}{\min_{l \in A} d(l)}}) $. Goussevskaia made huge efforts on developing a constant approximation bound in the literature\cite{2}, which proposed a $O(\log {n})$ approximation for the problem of maximizing the number of links scheduled in one time-slot. Then, Peng-Jun Wan $et$ $al$., \cite{3} given a further analysis to the OSML problem under physical interference model. Besides, they summarize the method to solve this kind of problem in\cite{7}. Recently, more influential elements has been take into account in the experiment, like power control \cite{9}, throughput capacity and communication latency \cite{14}. Pei, Guanhong\cite{5} developed the first rigorous distributed algorithm for link scheduling in the SINR model. It uses physical carrier sensing and the distributed decisions are made based on the Received Signal Strength Indication (RSSI).
+By concentrating the energy in specific direction, opposed to omni-directional transmission, directional antennas can provide the benefits of increased range, reduced interference and increased spatial reuse of bandwidth. We can benefit from the advantages provided by directional antennas if the scheduling does not take into account the nature of the beam formation at each node.
 
 
-However, mostly research of link scheduling based on omnidirectional transmission. Ramamurthi\cite{4} proposed a generalized physical interference model apply to the directional antennas, both take into account the main lobes and the side lobe of antennas. But the problem they focus is different from our research. The benefits of directional antennas to improve network capacity has been deep analysed in \cite{10}. Although directional antennas have been studied for cellular networks and has been deployed for cell-sectoring, rarely used for OSML problem.
+In order to solve this problem, there are mainly two kinds of interference model are used. One of them is graph-based model \cite{moscibroda2006protocol}, including the protocol interference model, CTS/RTS model, K-hop interference model and so on. By localizing the interference of a transceiver on others, it is much easier to track and handle. Unfortunately, the graph-based interference model is too idealistic and simple so that there are many vital factors are ignored. Another kind of interference model is physical interference model \cite{maheshwari2008measurement}, which is also known as SINR (signal-to-interference-plus-noise-ratio) model. In physical interference model, the accumulative interference is considered and thus it is more close to the reality. However, when physical interference model is applied, it is much more complex to calculate and design algorithm. Most of the researches are based on graph-based models which is too optimistic. To make our research more accurate, we adopted physical interference model in this paper.
 
-In this paper, we design a directional interference model applicable to directional antennas. Then we propose an approximation algorithm OSML to solve link scheduling problem based on directional interference model. We giving the correctness analysis, performance analysis and provides a sound mathematical proof to some special case. Finally, we also present the performance of the algorithm by simulation, which compared with a omnidirectional algorithm.
+As time goes on, much more conditions that will influence link scheduling performance significantly have been taken into account in the research, like power control which is a vital element. Many kinds of power control for instance, linear transmission power control, uniform transmission power control and arbitrary transmission power control are considered \cite{xu2012mlls}. Another important issue is about distribution or centralization problem. Most studies focus on the centralized implementation, but some develop distributed even localized link scheduling algorithms with provable throughput performance \cite{zhou2014throughput}.
 
-The rest of the paper is organized as followed. Section II describes our directional interference model. In section III, we formulate the scheduling algorithm for the problem, and provide mathematical analysis of the OSML algorithm. In section IV, we present simulation results to illustrate the performance of our scheduling algorithm, and section V concludes the paper.
+In this paper, we apply directional antennas to the research of MLS problem based on the physical interference model, which can significantly reduce ambient interference and ensure more nodes can be transmitted at the same time. Then we also take full-duplex transmission into consideration, in which every node is both sender and receiver. It is more complex but also more realistic.
+
+
+
+%
+%The problem \emph{One-slot Maximum Set of Links} (OSML) is to seek a largest set of solution links from a given set $A$ that can be transmitted simultaneously. This optimization problem is NP-hard proved by Gussevskaia \cite{1}. Plenty of research to this problem, some approximation scheduling algorithms was be proposed \cite{1,2}, which is performance good.
+%
+%
+%Nowadays, various ways to solve the problem of OSML under physical interference model was present. The author of \cite{1} designed the first non-trivial approximation algorithm with approximation bound $O(\log {\frac{\max_{l \in A }d(l)}{\min_{l \in A} d(l)}}) $. Goussevskaia made huge efforts on developing a constant approximation bound in the literature\cite{2}, which proposed a $O(\log {n})$ approximation for the problem of maximizing the number of links scheduled in one time-slot. Then, Peng-Jun Wan $et$ $al$., \cite{3} given a further analysis to the OSML problem under physical interference model. Besides, they summarize the method to solve this kind of problem in\cite{7}. Recently, more influential elements has been take into account in the experiment, like power control \cite{9}, throughput capacity and communication latency \cite{14}. Pei, Guanhong\cite{5} developed the first rigorous distributed algorithm for link scheduling in the SINR model. It uses physical carrier sensing and the distributed decisions are made based on the Received Signal Strength Indication (RSSI).
+%
+%
+%However, mostly research of link scheduling based on omnidirectional transmission. Ramamurthi\cite{4} proposed a generalized physical interference model apply to the directional antennas, both take into account the main lobes and the side lobe of antennas. But the problem they focus is different from our research. The benefits of directional antennas to improve network capacity has been deep analysed in \cite{10}. Although directional antennas have been studied for cellular networks and has been deployed for cell-sectoring, rarely used for OSML problem.
+%
+%In this paper, we design a directional interference model applicable to directional antennas. Then we propose an approximation algorithm OSML to solve link scheduling problem based on directional interference model. We giving the correctness analysis, performance analysis and provides a sound mathematical proof to some special case. Finally, we also present the performance of the algorithm by simulation, which compared with a omnidirectional algorithm.
+%
+The rest of the paper is organized as followed. We describe related work in Section \uppercase\expandafter{\romannumeral2}. Section \uppercase\expandafter{\romannumeral3} give our directional interference model. In section \uppercase\expandafter{\romannumeral4}, we present scheduling algorithm for the problem of MLS and Full-duplex MLS, also provide mathematical analysis for the algorithm. Section \uppercase\expandafter{\romannumeral5} show the simulation results to illustrate the performance of our scheduling algorithm, and section \uppercase\expandafter{\romannumeral6} concludes the paper.
+
+\section{Related Work}
+
+Since Gupta and Kumar first studied on the methods to schedule links and enhance the capacity in Wireless Sensor Networks, three sub-problems were proposed one after another: maximum link scheduling (MLS) problem \cite{geometric}, maximum weighted link scheduling (MWLS) problem \cite{wan2010shortest} and shortest link scheduling (SLS) problem \cite{Capacity}. In the process of studying the scheduling problem, some other factors are also need to take account of, such as the interference, power control, centralized or distributed scheduling, omnidirectional or directional antennas and so on.
+
+Goussevskaia et al. \cite{geometric} give us a simple proof that link scheduling under the SINR model is NP-hard. He also proposed an $O(l_{max} / l_{min})$ factor approximation algorithm for MLS problem with a uniform power assignment, where lmax and lmin denote the length of the longest and the shortest link, respectively. The algorithm used greedy strategy to construct a scheduling in different classes partitioned by length. After a while, Goussevskaia \cite{Capacity} made huge efforts on developing a constant approximation bound in the literature and proposed a $O(\log {n})$ approximation for the problem of maximizing the number of links scheduled in one time-slot scheduling. Then a factor of $O(1)$ -approximation ratio algorithm was put forward by Halld¨®rsson and Mitra \cite{generalmetrics}. They extended the transmission power to oblivious power assignment (including uniform, mean, and linear power assignment). Furthermore, the algorithm is applicable for both unidirectional and bidirectional links. In this paper, we will analyze bidirectional communication because bidirectional communication is more consistent with WSNs. Fanghanel et al. introduced the bidirectional version of the scheduling problem and gave a first polynomial time approximation factor algorithm for SLS using the mean power assignment in general metrics \cite{fanghanel2009oblivious}. This result was improved to $O(n\log {n})$ in \cite{halldorsson2012wireless}.
+
+The links scheduling algorithms under SINR model are more accurate than that under the graph-based models since the physical interference model can accurately describe the interference in wireless networks. Considering the interference model used in Goussevskaia et al. (2007, 2009)[1,3], it is an approximation of the SINR model, but the effect of noise is ignored in this paper. SINR is simplified to SIR problem after neglecting the ambient noise, in which the transmission scope of a link will become infinite. In this way, the possible number of link classes divided by length is infinite as well. Blough et al. \cite{blough2010approximation} proposed the first SLS algorithm under the exact SINR model. He defined a class of links named ¡°black-gray¡± links, whose lengths are equal or near to the maximum transmission scope of the sender. In the extreme case, in which all the links to be scheduled are ¡°black-gray¡±, they obtained an upper bound on the length of SLS algorithm, which is $O(|C_0| + )$, where |C0| is the number of links in class C0, and ¦¤max is the maximal number of receivers in a cell of class Ck. . In Li et al. \cite{li2008maximal} and Li and Negi \cite{li2012maximal}, they proposed a hypergraph model combining graph-based model and SINR models, and demonstrated that the hypergraph model contains the advantages of both graph-based model and the SINR model while avoiding their drawbacks. Namely, the hypergraph model can emulate cumulative interference constraints as hyperedge, where each hyperedge is a set of links that are not allowed to transmit simultaneously. Thus, this model can avoid the defects of graph-based models which overlook the cumulative interference.
+
+The algorithms mentioned above adopt uniform power assignment. Many algorithms for link scheduling with non-uniform power assignment are also addressed by people. Kozal et al.\cite{kozat2006cross} proved the problem of power control and scheduling to be NP-complete by using a reduction from integer programming under the assumption that the values of gain matrix can be chose arbitrarily. In Kesselheim (2011)[24], Kesslheim studied the capacity maximization problem with power control in a wireless network. With the objective of maximizing the number of simultaneous links to communicate, he developed an algorithm which selected a subset of links and chosen a power level for each link. He also proved that the algorithm achieves ¦¸(n), O(log n) approximation in a fading metric and a general metric space, where n is the number of links.
+
+All the works reviewed by now are centralized, and the studies don¡¯t give us a strategy to develop a distributed version. Le et al. (2010) [25] proposed a distributed
+greedy maximal link scheduling algorithm under interference localization. A link l only performs scheduling coordination inside a circle area named interference neighborhood of the link. However, the trivial procedure for determining the interference neighborhood is centralized. Moreover, link l and other links need to calculate their cumulative interference in an iterated procedure, which is impractical in a large scale network. Pei and Vullikanti (2012) [26]proposed a local distributed scheduling and power control algorithm under the SINR model, achieving an $O(\log^2{n})$ approximation factor in the throughput region. Note that the uniform power assignment for all links was adopted, and thus the links in the same link class were assigned the same power. However, they do not give reasons why the number of active nodes in the vicinity of any active node decreases by half after each phase with a high probability.
+
+However, mostly studies of link scheduling based on omnidirectional transmission. Ramamurthi [15] proposed a generalized physical interference model applying to the directional antennas, both taking into account the main lobes and the side lobes of antennas. The benefit of directional antennas to improve network capacity has been deeply analyzed in [16]. Although directional antennas has been studied for cellular networks and has been deployed for cell-sectoring, it is rarely used for OSML problem.
+
 
 \section{The Directional Interference Model}
 
@@ -484,7 +221,8 @@ In this research, we assume that all nodes transmit with the same power level $P
 % (should never be an issue)
 
 \section{The Scheduling Algorithm}
-In order to solve the scheduling problem of OSML (One-slot Maximum Set of Links), we present the follow OSML algorithm. Start with some definitions, the \emph{relative interference} (RI) of a link $l_u$ on link $l_v$, namely $RI_u(v)=I_{uv}/P_{vv}$. The \emph{affectedness} (proposed in \cite{2}) of link $l_v$, caused by a set of links $S$, is the sum of the relative interferences of the links in $S$ on $l_v$, as well as the effect of noise, scale by $\beta$, or
+
+In order to solve the scheduling problem of MLS, we present the follow LSDA(Link Scheduling Algorithm based on Directional Antenna) algorithm. Start with some definitions, the \emph{relative interference} (RI) of a link $l_u$ on link $l_v$, namely $RI_u(v)=I_{uv}/P_{vv}$. The \emph{affectedness} (proposed in \cite{2}) of link $l_v$, caused by a set of links $S$, is the sum of the relative interferences of the links in $S$ on $l_v$, as well as the effect of noise, scale by $\beta$, or
 \begin{equation}
 \begin{split}
   A_S(l_v)&=\beta \bigg(\frac{N}{P_{vv}}+\sum _{l_u \in S}RI_u(v)\bigg)\\
@@ -495,7 +233,7 @@ In order to solve the scheduling problem of OSML (One-slot Maximum Set of Links)
 The formula of \emph{affectedness} was got from $\textrm{SINR} \geq \beta$. Observe that the \emph{affectedness} of link $l_v$ satisfy $A_S(l_v)\leq 1$, equivalent to the $\textrm{SINR} \geq \beta$, means link $l_v$ can successful transmission.
 
 \begin{algorithm}
-\caption{OSML Algorithm}
+\caption{LSDA Algorithm}
 \label{alg1}
 \begin{algorithmic}[1]
 \REQUIRE Set of links in the increasing order of length $L={l_1,l_2,...,l_n};$ $S \leftarrow \emptyset,$ $I \leftarrow \emptyset,$ $L_1 \leftarrow \emptyset$.
@@ -531,16 +269,16 @@ The formula of \emph{affectedness} was got from $\textrm{SINR} \geq \beta$. Obse
 \end{algorithmic}
 \end{algorithm}
 
-Our approximation algorithm for OSML is outlined above. We can simplify the algorithm as a brute-force method. Let $L$ be the set of given communication links, we assume that each link $l_v\in L$ can success communication, added to the solution, its safety ($\textrm{SINR} \geq \beta$) is guaranteed in the step of select. Set $L$ is a sequence which sorted in the increasing order of length of links. Depend on the definition of SINR, we can get the feature that the shorter the length, the more stable of the link. $S$ stores the link in one of independent set, and $I$ is the set of links have interference with the select link $l_v$ in each iterative. In every iteration of the algorithm, there have three step to select the legal and remove illegal link. The first link $l_v$ in $L$ is moved from $L$ to $S$, and use this link as the begin of the first round of selection. The first step (line 6) we need discards all links $l \in I$ whose sender are close to the receiver of $l_v$, meaning $d(r_v,s_w) \leq c \cdot d_{vv}$ ($c$ is a constant bigger than 2, and explained in next part).
+Our approximation algorithm for LSDA is outlined above. We can simplify the algorithm as a brute-force method. Let $L$ be the set of given communication links, we assume that each link $l_v\in L$ can success communication, added to the solution, its safety ($\textrm{SINR} \geq \beta$) is guaranteed in the step of select. Set $L$ is a sequence which sorted in the increasing order of length of links. Depend on the definition of SINR, we can get the feature that the shorter the length, the more stable of the link. $S$ stores the link in one of independent set, and $I$ is the set of links have interference with the select link $l_v$ in each iterative. In every iteration of the algorithm, there have three step to select the legal and remove illegal link. The first link $l_v$ in $L$ is moved from $L$ to $S$, and use this link as the begin of the first round of selection. The first step (line 6) we need discards all links $l \in I$ whose sender are close to the receiver of $l_v$, meaning $d(r_v,s_w) \leq c \cdot d_{vv}$ ($c$ is a constant bigger than 2, and explained in next part).
 \begin{equation}\label{value of c}
 c=\max{  \bigg( 2,(2 \cdot 3^3 \cdot \beta \cdot \frac{\alpha-1}{\alpha-2})^{\frac{1}{\alpha-2}}\bigg)}.
 \end{equation}
-Then make sure the distance between any two links from set $I$ is bigger than $d_{vv}$, remove the illegal links from $L$ (line 16). The last step (line 23), all links $l_u \in L$, whose \emph{affectedness} $A_s(l_u)$ rose to or above a threshold of $2/3$, are removed from $L$ (the number of $2/3$ will explain in next part). This iterative is repeated until all links in $L$ have been select or deleted. In the end, we will get the scheduling set $S$ from OSML algorithm. Next we prove that the obtained schedule is both correct and competitive.
+Then make sure the distance between any two links from set $I$ is bigger than $d_{vv}$, remove the illegal links from $L$ (line 16). The last step (line 23), all links $l_u \in L$, whose \emph{affectedness} $A_s(l_u)$ rose to or above a threshold of $2/3$, are removed from $L$ (the number of $2/3$ will explain in next part). This iterative is repeated until all links in $L$ have been select or deleted. In the end, we will get the scheduling set $S$ from LSDA algorithm. Next we prove that the obtained schedule is both correct and competitive.
 
 
 
-\subsection{Correctness of OSML Algorithm}
-In this section we prove that the solution $S$ obtained in OSML Algorithm is correct, all selected links can be scheduled concurrently without collisions, $\forall l_v \in S$, $A_S(l_v) \leq 1$.
+\subsection{Correctness of Link Scheduling Algorithm}
+In this section we prove that the solution $S$ obtained in LSDA Algorithm is correct, all selected links can be scheduled concurrently without collisions, $\forall l_v \in S$, $A_S(l_v) \leq 1$.
 
 There some definitions need to be used in the proof. For link $l_v \in S$, let $S^-_v$ be the set of links that length shorts than $l_v$, and  $S^+_v$ be the links longer than $l_v$, there have some interference between $l_v$ and any link $l_w$ from $S^-_v$ or $S^+_v$ ($\varphi_{wv}=1$).
 
@@ -593,8 +331,8 @@ c=\max { \bigg( 2,(2 \cdot 3^3 \cdot \beta \cdot \frac{\alpha-1}{\alpha-2})^{\fr
 
 We have shown that each $l_v \in S$, satisfy $A_S(l_v) = A_{S^-_v}(l_v) + A_{S^+_v}(l_v) \leq 2/3 +1/3=1$, which means that $\textrm{SINR} \geq \beta$ for each link in scheduling set $S$. From above mathematical analysis, the value of $c$ was depend on design of third elimination part in algorithm. The judgement of $A_{S^-_v}(l_v) \leq 2/3$ just personal sense, and we proved the correctly.
 
-\subsection{Performance Analysis of OSML Algorithm}
-To analyze the performance of algorithm, we compared the solution $ALG$ of OSML algorithm to an optimal solution, say $OPT$. Considering the complexity of directional transmission, we set some special case, and analyse the performance under those case. At first, give some lemma that satisfy the condition of omnidirectional antennas $\theta = 360^{\circ}$.
+\subsection{Algorithm Performance Analysis}
+To analyze the performance of algorithm, we compared the solution $ALG$ of LSDA algorithm to an optimal solution, say $OPT$. Considering the complexity of directional transmission, we set some special case, and analyse the performance under those case. At first, give some lemma that satisfy the condition of omnidirectional antennas $\theta = 360^{\circ}$.
 
 \emph{lemma 1}: Let $X$ be a feasible solution and let $l_v$ be a link in $X$. The number of sender nodes in $X$ within distance $k \cdot d_{vv}$, $k \geq 1$ of the receiver $r_v$ is at most $k^\alpha$.
 
@@ -605,7 +343,7 @@ To analyze the performance of algorithm, we compared the solution $ALG$ of OSML 
 \end{equation*}
 which means the maximum number is $k^{\alpha}$, otherwise the $\sum_{l_u \in X} RI_u(v) > 1$. Thus the lemma was been proved.
 
-Then, we set other spacial case that communication angle is $\theta = 180^{\circ}$ of each nodes, and have the same orientation angle. Along with the direction of the orientation angle, the length of links getting shorter and shorter. In this case, the shortest link have no influence to the transmission of other links, which means the last elimination step (line 23) of algorithm have no effect, but get the interference from the larger length of links. $ALG_{180}$ represent the solution of OSML algorithm, and $OPT_{180}$ is the optimal solution in the same condition.
+Then, we set other spacial case that communication angle is $\theta = 180^{\circ}$ of each nodes, and have the same orientation angle. Along with the direction of the orientation angle, the length of links getting shorter and shorter. In this case, the shortest link have no influence to the transmission of other links, which means the last elimination step (line 23) of algorithm have no effect, but get the interference from the larger length of links. $ALG_{180}$ represent the solution of LSDA algorithm, and $OPT_{180}$ is the optimal solution in the same condition.
 
 \emph{lemma 2}: In $k$th iteration of the algorithm, we got one link to the solution $ALG_{180}$ and $|OPT_k| \leq (c+(k-1)/2)^{\alpha}$, $OPT_k$ was the optimal solution in $k$th iteration.
 
@@ -620,10 +358,51 @@ In general, during the process of $k$th iteration, $l_v \in ALG_{180}$ was the l
 
 Due to the complexity of the directional antennas, we can not offered generally demonstration for the algorithm. But the number of non-intersect links is the least number of scheduling links. In other words, all of the non-intersect links can be scheduling at the same time.
 
-In next section, we will shown the performance of the OSML algorithm.
 
+\subsection{Full-duplex Algorithm}
 
+Nowadays most of the researches about MLS problem are under unidirectional communication model which is more idealized and easy to tackle. However when it comes to the full-duplex transmissions, i.e. each node is able to send and receive signal at the same time, things are more complex. Because all links can behave as the sender and the receiver, the former definition of $\varphi$ is inappropriate. So we need to redefine some symbols and put forward a new algorithm which is suitable for the full-duplex transmissions situation.
 
+First of all, we redefine the means of $\varphi$ as:
+\[
+\varphi =\left \{ \begin{split}
+\infty &, \theta_{wv}>\theta_w / 2,\\
+1 &, \theta_{wv} \leq \theta_w / 2,
+\end{split}
+\right.
+\]
+Then define the distance between the sending node $s_v$ and receiving node $r_u$ as $D_{s_v,r_u} = d (s_v, r_v) \cdot \varphi$, and we redefine the the distance between two links $l_v$ and $l_u$ as $D(l_v, l_u) = min\{D_{s_v, r_u}, D_{s_v, s_u}, D_{r_v, s_u}, D_{r_v, r_u}\}$. The $affectedness$ is calculated by the follow formula:
+\begin{equation}
+\begin{split}
+  A_S(l_v)&=\beta \bigg(\frac{N}{P_{vv}}+\sum _{l_u \in S}RI_u(v)\bigg)\\
+  &=\beta \frac{\sum_{l_u \in S}I_{uv}+N}{P_{vv}}\\
+    &= \beta \frac{\sum_{l_u \in S} P G_{s_u} G_{r_v} D^{-1}_{l_u, l_v} + N}{P_{vv}}.
+\end{split}
+\end{equation}
+
+Before algorithm description, we consider the condition of full-duplex transmissions. If only two links $l_v$ and $l_v$ transmit concurrently, the sufficient condition of link $l_u$ communicating successfully is that $SINR_{min}(l_v) \geq \beta$. Then we give the definition of "border distance", which is the minimum distance of concurrently transmitting links.
+
+\emph{Definition:} border distance($BD$): a radius depend on the distance of link $l_v$, which is a circle does not include any others.
+\begin{equation}
+BD(l_v) = ( 2^4 \cdot \pi \cdot \beta \cdot \frac{\alpha - 1}{\alpha - 2} )^{\frac{1}{\alpha}}
+\end{equation}
+By the definition of "border distance", in order to ensure links $l_v$ and $l_u$ can transmit at the same time, the distance between $l_v$ and $l_u$ should satisfy: $D(l_v, l_u) \geq BD(l_v)$.
+
+Next, we will present the algorithm of FLSDA(Full-duplex Link Scheduling Algorithm based on Directional Antenna), which solved the extend problem of MLS. The FLSDA works as follows:
+
+\emph{1)} First, the input is a set of candidate links $L = \{l_1, l_2, ... ,l_n \}$, which are ranked from shorted to the longest by the distance of link. We choose the first one $l_v$ in the candidate set delete from $L$, and put it into the output set $S$ as the first solution.
+
+\emph{2)} Then, in order to make sure $SINR(l_v) \geq \beta$. The selection mechanism delete the link $l_u$ whose distance to $l_v$ is shorter than $BD(l_v)$ by border distance, $D(l_u, l_v) \leq BD(l_v)$.
+
+\emph{3)} Pick up the links $l_u \in L$ which get interference by $l_v$ as links set $I$. We judge whether link $l_v$ influence link $l_u$ by formula: $D(l_v, l_u) < \infty$.
+
+\emph{4)} Choose the shortest link $l_u \in I$ and delete the links whose distance to $l_u$ is shorter than $BD(l_v)$ from link set $L$ and $I$. Repeat this remove process until the distance between every two links in $I$ is larger than $BD(l_v)$.
+
+\emph{5)} Next, we decide the inference to links $l_u \in L$ by the current solution. Delete all the links $l_u$ in $L$ which satisfy $A_S(l_u) \geq 2/3$.
+
+\emph{6)} Repeat all above step until the set $L$ is empty, and output the solution which is a set can transmit at the same time.
+
+The process of full-duplex link scheduling algorithm is similar to LSDA. So the correctness has been proved in before. Next section we show the performance of LSDA and FLSDA.
 
 \section{Evaluations}
 In this section, we validate OSML's performance through simulation analysis. We compared the performance with One-slot scheduling algorithm (proposed in \cite{2}). We present the performance of algorithm under the influence of links number, directional antennas interference range and antennas gains.

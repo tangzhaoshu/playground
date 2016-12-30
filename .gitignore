@@ -1,0 +1,14 @@
+# ignore file
+
+
+*.aux
+
+*.bbl
+
+*.blg
+
+*.log
+
+*.bak
+
+*.sav
