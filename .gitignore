@@ -4,7 +4,8 @@
 *.aux
 *.bbl
 *.blg
-*dvi
+*.dvi
 *.log
 *.bak
 *.sav
+*.gz

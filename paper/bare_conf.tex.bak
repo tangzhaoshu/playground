@@ -149,14 +149,14 @@ Since Gupta and Kumar first studied on the methods to schedule links and enhance
 
 Goussevskaia et al. \cite{geometric} give us a simple proof that link scheduling under the SINR model is NP-hard. He also proposed an $O(l_{max} / l_{min})$ factor approximation algorithm for MLS problem with a uniform power assignment, where lmax and lmin denote the length of the longest and the shortest link, respectively. The algorithm used greedy strategy to construct a scheduling in different classes partitioned by length. After a while, Goussevskaia \cite{Capacity} made huge efforts on developing a constant approximation bound in the literature and proposed a $O(\log {n})$ approximation for the problem of maximizing the number of links scheduled in one time-slot scheduling. Then a factor of $O(1)$ -approximation ratio algorithm was put forward by Halld¨®rsson and Mitra \cite{generalmetrics}. They extended the transmission power to oblivious power assignment (including uniform, mean, and linear power assignment). Furthermore, the algorithm is applicable for both unidirectional and bidirectional links. In this paper, we will analyze bidirectional communication because bidirectional communication is more consistent with WSNs. Fanghanel et al. introduced the bidirectional version of the scheduling problem and gave a first polynomial time approximation factor algorithm for SLS using the mean power assignment in general metrics \cite{fanghanel2009oblivious}. This result was improved to $O(n\log {n})$ in \cite{halldorsson2012wireless}.
 
-The links scheduling algorithms under SINR model are more accurate than that under the graph-based models since the physical interference model can accurately describe the interference in wireless networks. Considering the interference model used in Goussevskaia et al. (2007, 2009)[1,3], it is an approximation of the SINR model, but the effect of noise is ignored in this paper. SINR is simplified to SIR problem after neglecting the ambient noise, in which the transmission scope of a link will become infinite. In this way, the possible number of link classes divided by length is infinite as well. Blough et al. \cite{blough2010approximation} proposed the first SLS algorithm under the exact SINR model. He defined a class of links named ¡°black-gray¡± links, whose lengths are equal or near to the maximum transmission scope of the sender. In the extreme case, in which all the links to be scheduled are ¡°black-gray¡±, they obtained an upper bound on the length of SLS algorithm, which is $O(|C_0| + )$, where |C0| is the number of links in class C0, and ¦¤max is the maximal number of receivers in a cell of class Ck. . In Li et al. \cite{li2008maximal} and Li and Negi \cite{li2012maximal}, they proposed a hypergraph model combining graph-based model and SINR models, and demonstrated that the hypergraph model contains the advantages of both graph-based model and the SINR model while avoiding their drawbacks. Namely, the hypergraph model can emulate cumulative interference constraints as hyperedge, where each hyperedge is a set of links that are not allowed to transmit simultaneously. Thus, this model can avoid the defects of graph-based models which overlook the cumulative interference.
+The links scheduling algorithms under SINR model are more accurate than that under the graph-based models since the physical interference model can accurately describe the interference in wireless networks. Considering the interference model used in Goussevskaia et al. (2007, 2009)[1,3], it is an approximation of the SINR model, but the effect of noise is ignored in this paper. SINR is simplified to SIR problem after neglecting the ambient noise, in which the transmission scope of a link will become infinite. In this way, the possible number of link classes divided by length is infinite as well. Blough et al. \cite{blough2010approximation} proposed the first SLS algorithm under the exact SINR model. He defined a class of links named ¡°black-gray¡± links, whose lengths are equal or near to the maximum transmission scope of the sender. In the extreme case, in which all the links to be scheduled are ¡°black-gray¡±, they obtained an upper bound on the length of SLS algorithm, which is $O(|C_0| + \Delta_{max})$, where $|C_0|$is the number of links in class $C_0$, and $\Delta_{max}$ is the maximal number of receivers in a cell of class $C_k$. In \cite{li2008maximal} and \cite{li2012maximal}, Li proposed a hypergraph model combining graph-based model and SINR models, and demonstrated that the hypergraph model contains the advantages of both graph-based model and the SINR model while avoiding their drawbacks. Namely, the hypergraph model can emulate cumulative interference constraints as hyperedge, where each hyperedge is a set of links that are not allowed to transmit simultaneously. Thus, this model can avoid the defects of graph-based models which overlook the cumulative interference.
 
-The algorithms mentioned above adopt uniform power assignment. Many algorithms for link scheduling with non-uniform power assignment are also addressed by people. Kozal et al.\cite{kozat2006cross} proved the problem of power control and scheduling to be NP-complete by using a reduction from integer programming under the assumption that the values of gain matrix can be chose arbitrarily. In Kesselheim (2011)[24], Kesslheim studied the capacity maximization problem with power control in a wireless network. With the objective of maximizing the number of simultaneous links to communicate, he developed an algorithm which selected a subset of links and chosen a power level for each link. He also proved that the algorithm achieves ¦¸(n), O(log n) approximation in a fading metric and a general metric space, where n is the number of links.
+The algorithms mentioned above adopt uniform power assignment. Many algorithms for link scheduling with non-uniform power assignment are also addressed by people. Kozal et al.\cite{kozat2006cross} proved the problem of power control and scheduling to be NP-complete by using a reduction from integer programming under the assumption that the values of gain matrix can be chose arbitrarily. In Kesselheim \cite{kesselheim2011constant}, Kesslheim studied the capacity maximization problem with power control in a wireless network. With the objective of maximizing the number of simultaneous links to communicate, he developed an algorithm which selected a subset of links and chosen a power level for each link. He also proved that the algorithm achieves $\Omega(n)$, $\log(n)$ approximation in a fading metric and a general metric space, where $n$ is the number of links.
 
-All the works reviewed by now are centralized, and the studies don¡¯t give us a strategy to develop a distributed version. Le et al. (2010) [25] proposed a distributed
-greedy maximal link scheduling algorithm under interference localization. A link l only performs scheduling coordination inside a circle area named interference neighborhood of the link. However, the trivial procedure for determining the interference neighborhood is centralized. Moreover, link l and other links need to calculate their cumulative interference in an iterated procedure, which is impractical in a large scale network. Pei and Vullikanti (2012) [26]proposed a local distributed scheduling and power control algorithm under the SINR model, achieving an $O(\log^2{n})$ approximation factor in the throughput region. Note that the uniform power assignment for all links was adopted, and thus the links in the same link class were assigned the same power. However, they do not give reasons why the number of active nodes in the vicinity of any active node decreases by half after each phase with a high probability.
+All the works reviewed by now are centralized, and the studies don¡¯t give us a strategy to develop a distributed version. Le et al. \cite{le2010longest} proposed a distributed
+greedy maximal link scheduling algorithm under interference localization. A link l only performs scheduling coordination inside a circle area named interference neighborhood of the link. However, the trivial procedure for determining the interference neighborhood is centralized. Moreover, link l and other links need to calculate their cumulative interference in an iterated procedure, which is impractical in a large scale network. Pei and Vullikanti \cite{(2012) [26]} proposed a local distributed scheduling and power control algorithm under the SINR model, achieving an $O(\log^2{n})$ approximation factor in the throughput region. Note that the uniform power assignment for all links was adopted, and thus the links in the same link class were assigned the same power. However, they do not give reasons why the number of active nodes in the vicinity of any active node decreases by half after each phase with a high probability.
 
-However, mostly studies of link scheduling based on omnidirectional transmission. Ramamurthi [15] proposed a generalized physical interference model applying to the directional antennas, both taking into account the main lobes and the side lobes of antennas. The benefit of directional antennas to improve network capacity has been deeply analyzed in [16]. Although directional antennas has been studied for cellular networks and has been deployed for cell-sectoring, it is rarely used for OSML problem.
+However, mostly studies of link scheduling based on omnidirectional transmission. Ramamurthi \cite{directional} proposed a generalized physical interference model applying to the directional antennas, both taking into account the main lobes and the side lobes of antennas. The benefit of directional antennas to improve network capacity has been deeply analyzed in \cite{10}. Although directional antennas has been studied for cellular networks and has been deployed for cell-sectoring, it is rarely used for OSML problem.
 
 
 \section{The Directional Interference Model}
@@ -405,14 +405,14 @@ Next, we will present the algorithm of FLSDA(Full-duplex Link Scheduling Algorit
 The process of full-duplex link scheduling algorithm is similar to LSDA. So the correctness has been proved in before. Next section we show the performance of LSDA and FLSDA.
 
 \section{Evaluations}
-In this section, we validate OSML's performance through simulation analysis. We compared the performance with One-slot scheduling algorithm (proposed in \cite{2}). We present the performance of algorithm under the influence of links number, directional antennas interference range and antennas gains.
+In this section, we evaluate the performance of our link scheduling algorithms through simulation analysis, and analyse the influence by the element of links number, directional angle, antennas gains and so on.  We also make compared with One-slot scheduling algorithm (OSSA proposed in \cite{Capacity}) to show the performance.
 
 To simplify the analysis of experiment result. We list the following conditions:
 (1) All of the links random distributed on a plane field of size $1000*1000$ units (see Fig. \ref{Simulated Topologies}).
 (2) All of the links transmit in the same power.
 (3) In the experimental, we ignore the influence by ambient noise $N=0$.
 
-\begin{figure}[htpb]
+\begin{figure}[t]
 \centering
 \includegraphics[width=2in]{image/topology.pdf}
 % where an .eps filename suffix will be assumed under latex,
@@ -422,9 +422,30 @@ To simplify the analysis of experiment result. We list the following conditions:
 \label{Simulated Topologies}
 \end{figure}
 
-In OSML scheduling algorithm, The size of the independent set present the performance of the algorithm. In our experiment, we using the number of links of the independent set as the performance standard.
 
- We give some parameter values used in experiment. Path-loss exponent $\alpha =3$, minimum SINR required for a message to be successfully received $\beta =1.2$, ambient noise $N=0$. Maximum of the link length $l_{max}=20$ and the minimum $l_{min}=10$. General condition, the directional angle of the antennas $\theta =60^{\circ}$, and the antenna gain $Gain=20$.
+\begin{table}[h]
+\centering
+\caption{Default configuration parameter}
+\label{parameter values}
+  \begin{tabular}{|c|c|}
+  \hline
+  Parameter      &   Description  \\
+  \hline
+  Field         &   $1000 \time 1000$ units        \\
+  Antenna Gain $G$       &   20dBi    \\
+  Directional Angle $\theta$        &   $120^{\circ}$   \\
+  Minimum SINR Required $\beta$        &   1.2    \\
+  Path-loss Exponent $\alpha$        &   3    \\
+  Power $P$         &   10w   \\
+
+  \hline
+  \end{tabular}
+
+\end{table}
+
+
+In our link scheduling algorithm, The size of the independent set present the performance of the algorithm. In our experiment, we using the size of output set as the performance standard, and the parameter values used in experiment is present as following (as shown in Table \ref{parameter values}).
+
 
 \subsection{Experimental Results and Analysis}
 
@@ -435,13 +456,15 @@ In OSML scheduling algorithm, The size of the independent set present the perfor
 % where an .eps filename suffix will be assumed under latex,
 % and a .pdf suffix will be assumed for pdflatex; or what has been declared
 \DeclareGraphicsExtensions.
-\caption{OSML Scheduling Algorithm. Nodes random distribution and $\theta = 60^{\circ} $ or $\theta = 120^{\circ}$, the number of links in one-slot schedule show the perform of the algorithm.}
+\caption{LSDA Scheduling Algorithm. Nodes random distribution, $\theta = 120^{\circ}$, the number of links in one-slot schedule show the perform of the algorithm.}
 \label{OSML Scheduling Algorithm.}
 \end{figure}
 
-The results are shown in Fig. \ref{OSML Scheduling Algorithm.}, we analyze affect by the length of the input scheduling set to the algorithm, and set $n \in \{100,200,400,800,1600,3200,6400,12800,25600\}$. The simulation present that the size of the maximum independent set grows along with the increase of the number of the request link, but due to the limitations of the space, growth rate becomes slower and tends to balance.
+In this subsection, we demonstrate that our algorithms LSDA and FLSDA via simulation study.
 
-We have a general impression of the performance of the algorithm from above results. Now we give some results from other aspect to the algorithm. First, the influence by the directional angle, the range of the angle satisfied $\theta \in \{30^{\circ},60^{\circ},90^{\circ},...,360^{\circ}\}$, and we make a comparison experiment $n=100$ and $n=3200$. In Fig. \ref{Influence of Directional Angle}. We known that the angle make a great influence to the performance of the OSML scheduling algorithm, when other parameters were fixed. The smaller the angle, the better performance of the algorithm. In the case of maximum angle $\theta = 360^{\circ}$, the algorithm has a worst performance.
+Assume that all nodes are deployed in a large network region. The length of links $l$ varies from 10 to 20 unit. Some important parameters are listed before. In our design, we fixed those parameters and increase the number of candidate links set to illustrate the performance of our algorithm. The results are shown in Fig. \ref{OSML Scheduling Algorithm.}, we analyse the influence by the size of the input set of links, and increase from $100 \times 2^0$ to $100\times 2^8$, $n \in \{100,200,400,800,1600,3200,6400,12800,25600\}$. In this experiment, we randomly create an input candidate links set which the size is $n$, and using the size of output set to evaluate the performance of LSDA. The simulation present that the size of the maximum independent set grows along with the increase of the number of the request link, but due to the limitations of the space, growth rate becomes slower and tends to balance.
+
+We have a general impression to the performance of LSDA algorithm from above result. Then Now we give some results from other aspect to the algorithm. First, the influence of directional angle, the range of the angle satisfied $\theta \in \{30^{\circ},60^{\circ},90^{\circ},...,360^{\circ}\}$, and we make a comparison experiment $n=100$ and $n=3200$. In Fig. \ref{Influence of Directional Angle}. We known that the angle make a great influence to the performance of the LSDA scheduling algorithm, when other parameters were fixed. The smaller the angle, the better performance of the algorithm. In the case of maximum angle $\theta = 360^{\circ}$, the algorithm has a worst performance.
 
 \begin{figure}[htpb]
 \centering
@@ -478,7 +501,9 @@ The above results were just get by separate analyzed of the OSML algorithm. Now 
 \end{figure}
 
 
-To sum up, in random distribution wireless network, it has get an obvious effect to reduce the interference when multiple links transmission simultaneously by using directional antennas. The OSML scheduling algorithm have better performance than this omnidirectional algorithm, and we also obtain that the antenna gain have a limited effect to the algorithm, but seriously influence by directional angle.
+To sum up, in random distribution wireless network, it has get an obvious effect to reduce the interference when multiple links transmission simultaneously by using directional antennas. The LSDA scheduling algorithm have better performance than this omnidirectional algorithm, and we also obtain that the antenna gain have a limited effect to the algorithm, but seriously influence by directional angle.
+
+
 
 \begin{figure}[!t]
 \centering
@@ -489,6 +514,23 @@ To sum up, in random distribution wireless network, it has get an obvious effect
 \caption{Comparison between OSML and One-slot Algorithm. Set the directional angle $\theta=360^{\circ}$, which means use same random data running in different algorithm, compared the performance of two algorithm.}
 \label{Comparison between OSML and One-slot Algorithm 2}
 \end{figure}
+
+
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=2.5in]{image/bidirectional.eps}
+% where an .eps filename suffix will be assumed under latex,
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+\DeclareGraphicsExtensions.
+\caption{Comparison between FLSA and OOSA.
+Set the directional angle $\theta = 120^{\cdot}$, antenna gain G=20 and power=10 ,
+which means use same random data running in different algorithm,
+compared the performance of two algorithm.}
+\label{Simulated Topologies}
+\end{figure}
+
+When take full-duplex into consideration, we have new results shown in Fig.8 and Fig.9. In Fig.8, we compared the bidrectional algorithm with OSSA while set number of links n ¡Ê {100, 200, 400, 800, 1600, 3200, 6400, 12800, 25600}, angle ¦È = 120?, antenna gain G=20 and power=10. From Fig.8 it¡¯s obvious that two curves of the algorithm perform very close to each other when the density of the links is low. However the bidrectional algorithm behaves significantly much better than OSSA as the number of links increases and both of them tend to a fixed number and keep steady. In Fig.9 the directional angle ¦È = 120? and the link numbers=400, we can see that the influence of the change of path loss on the two algorithms is similar. Both of the results of two alogorithm keep increasing with the increase of the path loss exponent but the bidrectional alogorithm also performs better than OSSA.
+
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
 % For figures, \caption should occur after the \includegraphics.
