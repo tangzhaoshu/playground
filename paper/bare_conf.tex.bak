@@ -99,7 +99,7 @@ tang.zhaoshu@mail.dlut.edu.cn, zhuming@dlut.edu.cn, lei.wang@dlut.edu.cn, mhl@dl
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-For a given set of communication links whose senders transmit at a fixed power level, it is a hot problem to select a maximum set of links that can be transmitted simultaneously, which is known to be NP-hard. The existing algorithm only apply to the condition of omnidirectional transmission. This paper addresses the problem in a plane wireless network where the nodes use directional antennas under physical interference model. We develop a directional interference model applicable to such networks, and first propose the approximation algorithm to solve scheduling problem under this model. We proved the correctness of the algorithm by mathematical analysis. We have also proved the great advantages of using directional antenna by extensive simulations.
+For a given set of communication links whose senders transmit at a fixed power level, it is a hot problem to select a maximum set of links that can be transmitted simultaneously, which is known to be NP-hard. The existing algorithm only apply to the condition of omnidirectional transmission. This paper addresses the problem in a plane wireless network where the nodes use directional antennas under physical interference model. We develop a directional interference model applicable to such networks, and first propose an approximation algorithm to solve scheduling problem under directional environment. Besides, we extend this problem to the situation of full-duplex transmission, and give a solution. At last, mathematical analysis and simulations proved the correctness of the algorithm and the great advantages of directional antenna.
 \end{abstract}
 
 % no keywords
@@ -117,16 +117,22 @@ Link Scheduling, Directional Antennas, Physical Interference Model
 
 As we all know, link scheduling is the most fundamental and typical problem which can significantly influence network performance.Since Gupta and Kumar first studied on the methods to schedule links and enhance the capacity in Wireless Sensor Networks \cite{capacityGP}, lot of problems were proposed one after another. In the case of shared only one channel, a plurality of communication links transmission at the same time will lead to signal interference. In wireless network, link scheduling problem is to reduce the maximum interference when the links transmit simultaneously, and ensure the message can be successfully accepted by the receiving node. The main objective is to achieve efficient spatial reuse and increase network capacity, considering wireless interference among concurrently transmitting nodes.
 
-The problem maximum link scheduling (MLS) is to seek a largest set of links from a given set A that can be scheduled simultaneously. Given a set of communication link requests $L = \{l_1, l_2, ¡­ , l_n\}$, with $l_i$ denoting the $i$th link request. MLS intends to find a maximum subset of links $S \in L$ to be scheduled simultaneously, designated to one time slot, given a set of communication links with each having a unit traffic demand. This optimization problem is NP-hard proved by Goussevskaia \cite{geometric}. There are a lot of studies to this aspect, some better performance approximation scheduling algorithms have been proposed \cite{Capacity}.
+The problem maximum link scheduling (MLS) is to seek a largest set of links from a given set A that can be scheduled simultaneously. Given a set of communication link requests $L = \{l_1, l_2, ¡­ , l_n\}$, with $l_i$ denoting the $i$th link request. MLS intends to find a maximum subset of links $S \in L$ to be scheduled simultaneously, designated to one time slot, given a set of communication links with each having a unit traffic demand. This optimization problem is NP-hard proved by Goussevskaia \cite{geometric}. There are a lot of studies to this aspect, some better performance approximation scheduling algorithms have been proposed \cite{wang2015improved, yu2016shortest}.
 
 By concentrating the energy in specific direction, opposed to omni-directional transmission, directional antennas can provide the benefits of increased range, reduced interference and increased spatial reuse of bandwidth. We can benefit from the advantages provided by directional antennas if the scheduling does not take into account the nature of the beam formation at each node.
 
 
-In order to solve this problem, there are mainly two kinds of interference model are used. One of them is graph-based model \cite{moscibroda2006protocol}, including the protocol interference model, CTS/RTS model, K-hop interference model and so on. By localizing the interference of a transceiver on others, it is much easier to track and handle. Unfortunately, the graph-based interference model is too idealistic and simple so that there are many vital factors are ignored. Another kind of interference model is physical interference model \cite{maheshwari2008measurement}, which is also known as SINR (signal-to-interference-plus-noise-ratio) model. In physical interference model, the accumulative interference is considered and thus it is more close to the reality. However, when physical interference model is applied, it is much more complex to calculate and design algorithm. Most of the researches are based on graph-based models which is too optimistic. To make our research more accurate, we adopted physical interference model in this paper.
+In order to solve this problem, there are mainly two kinds of interference model are used. One of them is graph-based model \cite{moscibroda2006protocol}, including the protocol interference model, CTS/RTS model, K-hop interference model and so on. By localizing the interference of a transceiver on others, it is much easier to track and handle. Unfortunately, the graph-based interference model is too idealistic and simple so that there are many vital factors are ignored. Another kind of interference model is physical interference model \cite{capacityGP}, which is also known as SINR (signal-to-interference-plus-noise-ratio) model. In physical interference model, the global interference is considered and is more related to physical layer constraints. It is a challenging issue to design algorithms under the SINR model. Most of the researches are based on graph-based models which is too optimistic. To make our research more accurate, we adopted physical interference model in this paper.
 
-As time goes on, much more conditions that will influence link scheduling performance significantly have been taken into account in the research, like power control which is a vital element. Many kinds of power control for instance, linear transmission power control, uniform transmission power control and arbitrary transmission power control are considered \cite{xu2012mlls}. Another important issue is about distribution or centralization problem. Most studies focus on the centralized implementation, but some develop distributed even localized link scheduling algorithms with provable throughput performance \cite{zhou2014throughput}.
+As time goes on, much more conditions that will influence link scheduling performance significantly have been taken into account in the research, like power control which is a vital element. Many kinds of power control for instance, linear transmission power control, uniform transmission power control and arbitrary transmission power control are considered \cite{huang2017sinr, atmani2014energy}. Another important issue is about distribution or centralization problem. Most studies focus on the centralized implementation, but some develop distributed even localized link scheduling algorithms with provable throughput performance \cite{zhou2014throughput}.
 
-In this paper, we apply directional antennas to the research of MLS problem based on the physical interference model, which can significantly reduce ambient interference and ensure more nodes can be transmitted at the same time. Then we also take full-duplex transmission into consideration, in which every node is both sender and receiver. It is more complex but also more realistic.
+In this paper, we apply directional antennas to the research of MLS problem based on the physical interference model, which can significantly reduce ambient interference and ensure more nodes can be transmitted at the same time. Then we also take full-duplex transmission into consideration, in which every node is both sender and receiver. It is more complex but also more realistic. The main contributions can be presented as follows.
+
+\begin{itemize}
+  \item We consider a more realistic and accurate SINR interference model, and design a directional interference model applicable to directional environment. In this model, we take directional angle and antennas gain into account, and provide a more realistic interference model which is suited for directional antennas.
+  \item We study link scheduling to maximize the network throughput under directional environment. We propose an approximation algorithm with uniform power assignment. Our performance analysis and simulation study demonstrate the efficiency of LSDA (Link Scheduling Algorithm based on Directional Antenna) and FLSDA (Full-duplex Link Scheduling Algorithm based on Directional Antenna) compared to the state-of-the-art algorithms.
+  \item This paper we consider the situation of both half-duplex and full-duplex, and gives corresponding algorithm for each situation. The design of algorithm was motivated by cellular networks, which is to find maximum optimal cells and avoid interference from the neighboring cells.
+\end{itemize}
 
 
 
@@ -145,16 +151,16 @@ The rest of the paper is organized as followed. We describe related work in Sect
 
 \section{Related Work}
 
-Since Gupta and Kumar first studied on the methods to schedule links and enhance the capacity in Wireless Sensor Networks, three sub-problems were proposed one after another: maximum link scheduling (MLS) problem \cite{geometric}, maximum weighted link scheduling (MWLS) problem \cite{wan2010shortest} and shortest link scheduling (SLS) problem \cite{Capacity}. In the process of studying the scheduling problem, some other factors are also need to take account of, such as the interference, power control, centralized or distributed scheduling, omnidirectional or directional antennas and so on.
+Since Gupta and Kumar first studied on the methods to schedule links and enhance the capacity in Wireless Sensor Networks, three sub-problems were proposed one after another: maximum link scheduling (MLS) problem \cite{zhou2015approximation}, maximum weighted link scheduling (MWLS) problem \cite{wan2014fast} and shortest link scheduling (SLS) problem \cite{deng2015heuristic}. In the process of studying the scheduling problem, some other factors are also need to take account of, such as the interference, power control, centralized or distributed scheduling, omnidirectional or directional antennas and so on. Sometimes we also should take into account both links scheduling and other problem, links channel assignment or rate adaptation \cite{he2016link}.
 
-Goussevskaia et al. \cite{geometric} give us a simple proof that link scheduling under the SINR model is NP-hard. He also proposed an $O(l_{max} / l_{min})$ factor approximation algorithm for MLS problem with a uniform power assignment, where lmax and lmin denote the length of the longest and the shortest link, respectively. The algorithm used greedy strategy to construct a scheduling in different classes partitioned by length. After a while, Goussevskaia \cite{Capacity} made huge efforts on developing a constant approximation bound in the literature and proposed a $O(\log {n})$ approximation for the problem of maximizing the number of links scheduled in one time-slot scheduling. Then a factor of $O(1)$ -approximation ratio algorithm was put forward by Halld¨®rsson and Mitra \cite{generalmetrics}. They extended the transmission power to oblivious power assignment (including uniform, mean, and linear power assignment). Furthermore, the algorithm is applicable for both unidirectional and bidirectional links. In this paper, we will analyze bidirectional communication because bidirectional communication is more consistent with WSNs. Fanghanel et al. introduced the bidirectional version of the scheduling problem and gave a first polynomial time approximation factor algorithm for SLS using the mean power assignment in general metrics \cite{fanghanel2009oblivious}. This result was improved to $O(n\log {n})$ in \cite{halldorsson2012wireless}.
+Goussevskaia et al. \cite{geometric} give us a simple proof that link scheduling under the SINR model is NP-hard. He also proposed an $O(l_{max} / l_{min})$ factor approximation algorithm for MLS problem with a uniform power assignment, where lmax and lmin denote the length of the longest and the shortest link, respectively. The algorithm used greedy strategy to construct a scheduling in different classes partitioned by length. After a while, Goussevskaia \cite{Capacity} made huge efforts on developing a constant approximation bound in the literature and proposed a $O(\log {n})$ approximation for the problem of maximizing the number of links scheduled in one time-slot scheduling. Then a factor of $O(1)$ -approximation ratio algorithm was put forward by Halld¨®rsson and Mitra \cite{generalmetrics}. They extended the transmission power to oblivious power assignment (including uniform, mean, and linear power assignment). Furthermore, the algorithm is applicable for both unidirectional and bidirectional links. In this paper, we will analyze bidirectional communication because bidirectional communication is more consistent with WSNs. Fanghanel et al. introduced the bidirectional version of the scheduling problem and gave a first polynomial time approximation factor algorithm for SLS using the mean power assignment in general metrics \cite{fanghanel2009oblivious}. Now Peng and his team \cite{al2016new} present a new paradigm for SLS problem. This problem was be deep analyse from both theory and application.
 
 The links scheduling algorithms under SINR model are more accurate than that under the graph-based models since the physical interference model can accurately describe the interference in wireless networks. Considering the interference model used in Goussevskaia et al. (2007, 2009)[1,3], it is an approximation of the SINR model, but the effect of noise is ignored in this paper. SINR is simplified to SIR problem after neglecting the ambient noise, in which the transmission scope of a link will become infinite. In this way, the possible number of link classes divided by length is infinite as well. Blough et al. \cite{blough2010approximation} proposed the first SLS algorithm under the exact SINR model. He defined a class of links named ¡°black-gray¡± links, whose lengths are equal or near to the maximum transmission scope of the sender. In the extreme case, in which all the links to be scheduled are ¡°black-gray¡±, they obtained an upper bound on the length of SLS algorithm, which is $O(|C_0| + \Delta_{max})$, where $|C_0|$is the number of links in class $C_0$, and $\Delta_{max}$ is the maximal number of receivers in a cell of class $C_k$. In \cite{li2008maximal} and \cite{li2012maximal}, Li proposed a hypergraph model combining graph-based model and SINR models, and demonstrated that the hypergraph model contains the advantages of both graph-based model and the SINR model while avoiding their drawbacks. Namely, the hypergraph model can emulate cumulative interference constraints as hyperedge, where each hyperedge is a set of links that are not allowed to transmit simultaneously. Thus, this model can avoid the defects of graph-based models which overlook the cumulative interference.
 
 The algorithms mentioned above adopt uniform power assignment. Many algorithms for link scheduling with non-uniform power assignment are also addressed by people. Kozal et al.\cite{kozat2006cross} proved the problem of power control and scheduling to be NP-complete by using a reduction from integer programming under the assumption that the values of gain matrix can be chose arbitrarily. In Kesselheim \cite{kesselheim2011constant}, Kesslheim studied the capacity maximization problem with power control in a wireless network. With the objective of maximizing the number of simultaneous links to communicate, he developed an algorithm which selected a subset of links and chosen a power level for each link. He also proved that the algorithm achieves $\Omega(n)$, $\log(n)$ approximation in a fading metric and a general metric space, where $n$ is the number of links.
 
 All the works reviewed by now are centralized, and the studies don¡¯t give us a strategy to develop a distributed version. Le et al. \cite{le2010longest} proposed a distributed
-greedy maximal link scheduling algorithm under interference localization. A link l only performs scheduling coordination inside a circle area named interference neighborhood of the link. However, the trivial procedure for determining the interference neighborhood is centralized. Moreover, link l and other links need to calculate their cumulative interference in an iterated procedure, which is impractical in a large scale network. Pei and Vullikanti \cite{(2012) [26]} proposed a local distributed scheduling and power control algorithm under the SINR model, achieving an $O(\log^2{n})$ approximation factor in the throughput region. Note that the uniform power assignment for all links was adopted, and thus the links in the same link class were assigned the same power. However, they do not give reasons why the number of active nodes in the vicinity of any active node decreases by half after each phase with a high probability.
+greedy maximal link scheduling algorithm under interference localization. A link l only performs scheduling coordination inside a circle area named interference neighborhood of the link. However, the trivial procedure for determining the interference neighborhood is centralized. Moreover, link $l$ and other links need to calculate their cumulative interference in an iterated procedure, which is impractical in a large scale network. Pei and Vullikanti \cite{Distributed} proposed a local distributed scheduling and power control algorithm under the SINR model, achieving an $O(\log^2{n})$ approximation factor in the throughput region. Note that the uniform power assignment for all links was adopted, and thus the links in the same link class were assigned the same power. However, they do not give reasons why the number of active nodes in the vicinity of any active node decreases by half after each phase with a high probability.
 
 However, mostly studies of link scheduling based on omnidirectional transmission. Ramamurthi \cite{directional} proposed a generalized physical interference model applying to the directional antennas, both taking into account the main lobes and the side lobes of antennas. The benefit of directional antennas to improve network capacity has been deeply analyzed in \cite{10}. Although directional antennas has been studied for cellular networks and has been deployed for cell-sectoring, it is rarely used for OSML problem.
 
@@ -169,7 +175,7 @@ Here is a brief introduce to independent set. It is a set of disjoint links that
 
 (2) for each $1 \leq i \leq k$, the SINR of the link $u_i,v_i$ with respect to ${u_j:1 \leq j \leq k,j \neq i}$ is at least $\beta$.
 
-\emph{1) physical interference model \cite{11}:} In this model, the transmission from sending node $s_v$ is successfully received by receiver $r_v$ if and only if
+\emph{1) physical interference model:} In this model, the transmission from sending node $s_v$ is successfully received by receiver $r_v$ if and only if
 \begin{equation}
   \textrm{SINR}=\frac{P d^{-\alpha}_{vv}}{N+ \sum _{l_w \in S}P   d^{- \alpha}_{wv} } \geq \beta,
 \end{equation}
@@ -180,7 +186,7 @@ In our search, each nodes sending by directional antenna but received by omni-di
 We assume the length of link $l_v$ is denoted by $d_{vv}$, and simplify directional antennas as only have one main beam, fixing the direction of the antenna. Which the interference range only in a particular angle generated by sending node.
 
 
-\emph{2) direcional interference model \cite{11}:} The link $l_v=(s_v,r_v)$ successfully transmitted under the following conditions:\\
+\emph{2) direcional interference model \cite{directional}:} The link $l_v=(s_v,r_v)$ successfully transmitted under the following conditions:\\
 (1) In the absence of other links:
 \begin{equation}
 \textrm{SNR}=\frac{PG_{s_v} G_{r_v} d^{-\alpha}_{vv}}{N} \geq \beta.
@@ -222,7 +228,7 @@ In this research, we assume that all nodes transmit with the same power level $P
 
 \section{The Scheduling Algorithm}
 
-In order to solve the scheduling problem of MLS, we present the follow LSDA(Link Scheduling Algorithm based on Directional Antenna) algorithm. Start with some definitions, the \emph{relative interference} (RI) of a link $l_u$ on link $l_v$, namely $RI_u(v)=I_{uv}/P_{vv}$. The \emph{affectedness} (proposed in \cite{2}) of link $l_v$, caused by a set of links $S$, is the sum of the relative interferences of the links in $S$ on $l_v$, as well as the effect of noise, scale by $\beta$, or
+In order to solve the scheduling problem of MLS, we present the follow LSDA (Link Scheduling Algorithm based on Directional Antenna) algorithm. Start with some definitions, the \emph{relative interference} (RI) of a link $l_u$ on link $l_v$, namely $RI_u(v)=I_{uv}/P_{vv}$. The \emph{affectedness} (proposed in \cite{2}) of link $l_v$, caused by a set of links $S$, is the sum of the relative interferences of the links in $S$ on $l_v$, as well as the effect of noise, scale by $\beta$, or
 \begin{equation}
 \begin{split}
   A_S(l_v)&=\beta \bigg(\frac{N}{P_{vv}}+\sum _{l_u \in S}RI_u(v)\bigg)\\
@@ -254,7 +260,7 @@ The formula of \emph{affectedness} was got from $\textrm{SINR} \geq \beta$. Obse
 \STATE $l_a=(s_a,r_a) \leftarrow$ the first link in $I$.
 \STATE $I \leftarrow I \backslash l_a$.
 \REPEAT
-\STATE $I_a \leftarrow l_u \in I:$ $d_{ua}=d(s_u,s_a) \leq  d_{aa}/2$.
+\STATE $I_a \leftarrow l_u \in I:$ $d_{ua}=d(s_u,s_a) \leq  c \cdot d_{aa}/2$.
 \STATE $I \leftarrow I \backslash I_a$.
 \STATE $L_v \leftarrow I_a \cup L_2$.
 \UNTIL{$I$ is traversal end.}
@@ -388,7 +394,7 @@ BD(l_v) = ( 2^4 \cdot \pi \cdot \beta \cdot \frac{\alpha - 1}{\alpha - 2} )^{\fr
 \end{equation}
 By the definition of "border distance", in order to ensure links $l_v$ and $l_u$ can transmit at the same time, the distance between $l_v$ and $l_u$ should satisfy: $D(l_v, l_u) \geq BD(l_v)$.
 
-Next, we will present the algorithm of FLSDA(Full-duplex Link Scheduling Algorithm based on Directional Antenna), which solved the extend problem of MLS. The FLSDA works as follows:
+Next, we will present the algorithm of FLSDA (Full-duplex Link Scheduling Algorithm based on Directional Antenna), which solved the extend problem of MLS. The FLSDA works as follows:
 
 \emph{1)} First, the input is a set of candidate links $L = \{l_1, l_2, ... ,l_n \}$, which are ranked from shorted to the longest by the distance of link. We choose the first one $l_v$ in the candidate set delete from $L$, and put it into the output set $S$ as the first solution.
 
@@ -503,7 +509,7 @@ The above results were just get by separate analyzed of the OSML algorithm. Now 
 
 To sum up, in random distribution wireless network, it has get an obvious effect to reduce the interference when multiple links transmission simultaneously by using directional antennas. The LSDA scheduling algorithm have better performance than this omnidirectional algorithm, and we also obtain that the antenna gain have a limited effect to the algorithm, but seriously influence by directional angle.
 
-
+Now we take full-duplex transmission into consideration, the default configuration parameter were list in Table \ref{parameter values}.
 
 \begin{figure}[!t]
 \centering
@@ -516,20 +522,32 @@ To sum up, in random distribution wireless network, it has get an obvious effect
 \end{figure}
 
 
+
 \begin{figure}[htpb]
 \centering
 \includegraphics[width=2.5in]{image/bidirectional.eps}
 % where an .eps filename suffix will be assumed under latex,
 % and a .pdf suffix will be assumed for pdflatex; or what has been declared
 \DeclareGraphicsExtensions.
-\caption{Comparison between FLSA and OOSA.
-Set the directional angle $\theta = 120^{\cdot}$, antenna gain G=20 and power=10 ,
-which means use same random data running in different algorithm,
-compared the performance of two algorithm.}
-\label{Simulated Topologies}
+\caption{Comparison between FLSDA and OOSA. Set the directional angle $\theta = 120^{\cdot}$.}
+\label{FLSDA and OOSA}
 \end{figure}
 
-When take full-duplex into consideration, we have new results shown in Fig.8 and Fig.9. In Fig.8, we compared the bidrectional algorithm with OSSA while set number of links n ¡Ê {100, 200, 400, 800, 1600, 3200, 6400, 12800, 25600}, angle ¦È = 120?, antenna gain G=20 and power=10. From Fig.8 it¡¯s obvious that two curves of the algorithm perform very close to each other when the density of the links is low. However the bidrectional algorithm behaves significantly much better than OSSA as the number of links increases and both of them tend to a fixed number and keep steady. In Fig.9 the directional angle ¦È = 120? and the link numbers=400, we can see that the influence of the change of path loss on the two algorithms is similar. Both of the results of two alogorithm keep increasing with the increase of the path loss exponent but the bidrectional alogorithm also performs better than OSSA.
+
+\begin{figure}[htpb]
+\centering
+\includegraphics[width=2.5in]{image/loss.pdf}
+% where an .eps filename suffix will be assumed under latex,
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+\DeclareGraphicsExtensions.
+\caption{Comparison between FLSDA and OOSA.
+Set the directional angle $\theta = 120^{\cdot}$, }
+\label{path loss exponent}
+\end{figure}
+
+When take full-duplex into consideration, we give our performance result shown in Figure \ref{FLSDA and OOSA} and Figure \ref{path loss exponent}. Figure \ref{FLSDA and OOSA}, we compared our full-duplex algorithm FLSDA with OSSA while set number of links $n \in \{100,200,400,800,1600,3200,6400,12800,25600\}$, and the angle of directional antenna is set as $\theta=120^{\circ}$. It¡¯s obvious that two curves of the algorithm perform very close to each other when the density of the links is low. However the FLSDA behaves significantly better than OSSA as the number of links increases and both of them tend to a fixed number and keep steady.
+
+Next, we analyze the influence of the path loss exponent $\alpha$ on the results (Figure \ref{path loss exponent}). In this simulation, we make comparison between the performance of FLSDA and OSSA while set the directional angle $\theta=120^{\circ}$ and the link numbers $n = 400$. It can be seen that the performance of FLSDA is superior to OSSA, even though the performance change of two algorithms influence by path loss exponent is similar. Both of the results of two algorithm keep increasing with the increase of the path loss exponent but our algorithm also performs better than OSSA.
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -539,73 +557,6 @@ When take full-duplex into consideration, we have new results shown in Fig.8 and
 % even when the captionsoff option is in effect. However, because
 % of issues like this, it may be the safest practice to put all your
 % \label just after \caption rather than within \caption{}.
-%
-% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
-% option should be used if it is desired that the figures are to be
-% displayed while in draft mode.
-%
-%\begin{figure}[!t]
-%\centering
-%\includegraphics[width=2.5in]{myfigure}
-% where an .eps filename suffix will be assumed under latex,
-% and a .pdf suffix will be assumed for pdflatex; or what has been declared
-% via \DeclareGraphicsExtensions.
-%\caption{Simulation Results.}
-%\label{fig_sim}
-%\end{figure}
-
-% Note that IEEE typically puts floats only at the top, even when this
-% results in a large percentage of a column being occupied by floats.
-
-
-% An example of a double column floating figure using two subfigures.
-% (The subfig.sty package must be loaded for this to work.)
-% The subfigure \label commands are set within each subfloat command,
-% and the \label for the overall figure must come after \caption.
-% \hfil is used as a separator to get equal spacing.
-% Watch out that the combined width of all the subfigures on a
-% line do not exceed the text width or a line break will occur.
-%
-%\begin{figure*}[!t]
-%\centering
-%\subfloat[Case I]{\includegraphics[width=2.5in]{box}%
-%\label{fig_first_case}}
-%\hfil
-%\subfloat[Case II]{\includegraphics[width=2.5in]{box}%
-%\label{fig_second_case}}
-%\caption{Simulation results.}
-%\label{fig_sim}
-%\end{figure*}
-%
-% Note that often IEEE papers with subfigures do not employ subfigure
-% captions (using the optional argument to \subfloat[]), but instead will
-% reference/describe all of them (a), (b), etc., within the main caption.
-
-
-% An example of a floating table. Note that, for IEEE style tables, the
-% \caption command should come BEFORE the table. Table text will default to
-% \footnotesize as IEEE normally uses this smaller font for tables.
-% The \label must come after \caption as always.
-%
-%\begin{table}[!t]
-%% increase table row spacing, adjust to taste
-%\renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
-%\caption{An Example of a Table}
-%\label{table_example}
-%\centering
-%% Some packages, such as MDW tools, offer better commands for making tables
-%% than the plain LaTeX2e tabular which is used here.
-%\begin{tabular}{|c||c|}
-%\hline
-%One & Two\\
-%\hline
-%Three & Four\\
-%\hline
-%\end{tabular}
-%\end{table}
-
 
 % Note that IEEE does not put floats in the very first column - or typically
 % anywhere on the first page for that matter. Also, in-text middle ("here")
@@ -618,7 +569,7 @@ When take full-duplex into consideration, we have new results shown in Fig.8 and
 
 \section{Conclusions}
 
- In this paper, we developed a directional interference model for wireless network where the nodes using directional antennas. We first proposed a OSML approximation algorithm based on the directional interference model, and show the performance by simulation and mathematical analysis. The results of experiments proved that the performance of OSML was greatly affected by antenna interference angle, but not sensitive to antenna gains. Compared with the omni-directional antennas algorithm, OSML bring better result due to the nature of directional antennas. However, there are several challenges to OSML. The radiation beam of directional antenna is more complicated than we thought. From the OSML algorithm, we show the advantage of directional antenna to the problem of link scheduling, and hope that will be a significant step to solve this problem.
+In this paper, we developed a directional interference model for wireless network where the nodes using directional antennas. Based on this directional interference model, we proposed a LSDA and FLSDA approximation algorithm for the half-duplex and full-duplex scenarios of links scheduling, respectively. We give simulation and mathematical analysis to show the performance of algorithm. The results of experiments proved that the performance of LSDA was greatly affected by antenna interference angle, but not sensitive to antenna gains. Compared with the omni-directional antennas algorithm, LSDA and FLSDA demonstrate the directional antenna has great advantage in the field of links scheduling. However, there are several challenges to LSDA. The radiation beam of directional antenna is more complicated than we thought.
 
 % conference papers do not normally have an appendix
 

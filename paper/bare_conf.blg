@@ -7,12 +7,14 @@ I was expecting a `,' or a `}'---line 104 of file RTDA.bib
  :   title={Maximizing capacity with power control under physical interference model in simplex mode},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "(2012)[26]"
-Warning--I didn't find a database entry for "11"
+Repeated entry---line 311 of file RTDA.bib
+ : @article{zhou2014throughput
+ :                            ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "2"
 -- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-(There was 1 error message)
+(There were 2 error messages)

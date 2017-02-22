@@ -30,25 +30,31 @@ O.~Goussevskaia, Y.~A. Oswald, and R.~Wattenhofer, ``Complexity in geometric
   sinr,'' in \emph{Proc. of ACM International Symposium on Mobile Ad Hoc
   Networking and Computing (MobiHoc)}, 2007.
 
-\bibitem{Capacity}
-O.~Goussevskaia, R.~Wattenhofer, M.~M. Halld{\'o}rsson, and E.~Welzl,
-  ``Capacity of arbitrary wireless networks,'' in \emph{Proc. of IEEE INFOCOM},
-  2009.
+\bibitem{wang2015improved}
+C.~Wang, J.~Yu, D.~Yu, B.~Huang, and S.~Yu, ``An improved approximation
+  algorithm for the shortest link scheduling in wireless networks under sinr
+  and hypergraph models,'' \emph{Journal of Combinatorial Optimization}, pp.
+  1--16, 2015.
+
+\bibitem{yu2016shortest}
+J.~Yu, B.~Huang, X.~Cheng, and M.~Atiquzzaman, ``Shortest link scheduling
+  algorithms in wireless networks under sinr,'' \emph{IEEE Transactions on
+  Vehicular Technology}, 2016.
 
 \bibitem{moscibroda2006protocol}
 T.~Moscibroda, R.~Wattenhofer, and Y.~Weber, ``Protocol design beyond
   graph-based models,'' in \emph{Proc. of the ACM Workshop on Hot Topics in
   Networks (HotNets-V)}, 2006, pp. 25--30.
 
-\bibitem{maheshwari2008measurement}
-R.~Maheshwari, S.~Jain, and S.~R. Das, ``A measurement study of interference
-  modeling and scheduling in low-power wireless networks,'' in
-  \emph{Proceedings of the 6th ACM conference on Embedded network sensor
-  systems}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2008, pp. 141--154.
+\bibitem{huang2017sinr}
+B.~Huang, J.~Yu, X.~Cheng, H.~Chen, and H.~Liu, ``Sinr based shortest link
+  scheduling with oblivious power control in wireless networks,'' \emph{Journal
+  of Network and Computer Applications}, vol.~77, pp. 64--72, 2017.
 
-\bibitem{xu2012mlls}
-X.~Xu, J.~Cao, and X.-Y. Li, ``Mlls: Minimum length link scheduling under
-  physical interference model,'' \emph{arXiv preprint arXiv:1208.0627}, 2012.
+\bibitem{atmani2014energy}
+M.~Atmani, Y.~Hadjadj-Aoul, and D.~A{\"\i}ssani, ``Energy-aware link scheduling
+  protocol for wireless sensor networks,'' \emph{Wireless Personal
+  Communications}, vol.~79, no.~1, pp. 417--435, 2014.
 
 \bibitem{zhou2014throughput}
 Y.~Zhou, X.-Y. Li, M.~Liu, X.~Mao, S.~Tang, and Z.~Li, ``Throughput optimizing
@@ -56,11 +62,32 @@ Y.~Zhou, X.-Y. Li, M.~Liu, X.~Mao, S.~Tang, and Z.~Li, ``Throughput optimizing
   interference model,'' \emph{IEEE Transactions on Parallel and Distributed
   Systems}, vol.~25, no.~10, pp. 2708--2720, 2014.
 
-\bibitem{wan2010shortest}
-P.-J. Wan, X.~Xu, and O.~Frieder, ``Shortest link scheduling with power control
-  under physical interference model,'' in \emph{Mobile Ad-hoc and Sensor
-  Networks (MSN), 2010 Sixth International Conference on}.\hskip 1em plus 0.5em
-  minus 0.4em\relax IEEE, 2010, pp. 74--78.
+\bibitem{zhou2015approximation}
+Z.-A. Zhou and C.-G. Li, ``Approximation algorithms for maximum link scheduling
+  under sinr-based interference model,'' \emph{International Journal of
+  Distributed Sensor Networks}, vol. 2015, p.~81, 2015.
+
+\bibitem{wan2014fast}
+P.-J. Wan, X.~Jia, G.~Dai, H.~Du, and O.~Frieder, ``Fast and simple
+  approximation algorithms for maximum weighted independent set of links,'' in
+  \emph{INFOCOM, 2014 Proceedings IEEE}.\hskip 1em plus 0.5em minus 0.4em\relax
+  IEEE, 2014, pp. 1653--1661.
+
+\bibitem{deng2015heuristic}
+H.~Deng, J.~Yu, D.~Yu, G.~Li, and B.~Huang, ``Heuristic algorithms for one-slot
+  link scheduling in wireless sensor networks under sinr,'' \emph{International
+  Journal of Distributed Sensor Networks}, vol.~11, no.~3, p. 806520, 2015.
+
+\bibitem{he2016link}
+Z.~He, S.~Mao, S.~Kompella, and A.~Swami, ``Link scheduling and channel
+  assignment with a graph spectral clustering approach,'' in \emph{Military
+  Communications Conference, MILCOM 2016-2016 IEEE}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2016, pp. 73--78.
+
+\bibitem{Capacity}
+O.~Goussevskaia, R.~Wattenhofer, M.~M. Halld{\'o}rsson, and E.~Welzl,
+  ``Capacity of arbitrary wireless networks,'' in \emph{Proc. of IEEE INFOCOM},
+  2009.
 
 \bibitem{generalmetrics}
 M.~M. Halld{\'o}rsson and P.~Mitra, ``Wireless capacity with oblivious power in
@@ -72,9 +99,12 @@ A.~Fangh{\"a}nel, T.~Kesselheim, H.~R{\"a}cke, and B.~V{\"o}cking, ``Oblivious
   Principles of distributed computing}.\hskip 1em plus 0.5em minus 0.4em\relax
   ACM, 2009, pp. 220--229.
 
-\bibitem{halldorsson2012wireless}
-M.~M. Halld{\'o}rsson, ``Wireless scheduling with power control,'' \emph{ACM
-  Transactions on Algorithms (TALG)}, vol.~9, no.~1, p.~7, 2012.
+\bibitem{al2016new}
+F.~Al-dhelaan, P.-J. Wan, and H.~Yuan, ``A new paradigm for shortest link
+  scheduling in wireless networks: Theory and applications,'' in
+  \emph{International Conference on Wireless Algorithms, Systems, and
+  Applications}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2016, pp.
+  24--36.
 
 \bibitem{blough2010approximation}
 D.~M. Blough, G.~Resta, and P.~Santi, ``Approximation algorithms for wireless
@@ -109,6 +139,11 @@ L.~B. Le, E.~Modiano, C.~Joo, and N.~B. Shroff, ``Longest-queue-first
   scheduling under sinr interference model,'' in \emph{Proceedings of the
   eleventh ACM international symposium on Mobile ad hoc networking and
   computing}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2010, pp. 41--50.
+
+\bibitem{Distributed}
+G.~Pei and A.~K.~S. Vullikanti, ``Distributed approximation algorithms for
+  maximum link scheduling and local broadcasting in the physical interference
+  model,'' in \emph{Proc. of IEEE INFOCOM}, 2013.
 
 \bibitem{directional}
 V.~Ramamurthi, A.~Reaz, S.~Dixit, and B.~Mukherjee, ``Link scheduling and power
