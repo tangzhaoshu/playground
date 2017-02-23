@@ -277,7 +277,7 @@ The formula of \emph{affectedness} was got from $\textrm{SINR} \geq \beta$. Obse
 
 Our approximation algorithm for LSDA is outlined above. We can simplify the algorithm as a brute-force method. Let $L$ be the set of given communication links, we assume that each link $l_v\in L$ can success communication, added to the solution, its safety ($\textrm{SINR} \geq \beta$) is guaranteed in the step of select. Set $L$ is a sequence which sorted in the increasing order of length of links. Depend on the definition of SINR, we can get the feature that the shorter the length, the more stable of the link. $S$ stores the link in one of independent set, and $I$ is the set of links have interference with the select link $l_v$ in each iterative. In every iteration of the algorithm, there have three step to select the legal and remove illegal link. The first link $l_v$ in $L$ is moved from $L$ to $S$, and use this link as the begin of the first round of selection. The first step (line 6) we need discards all links $l \in I$ whose sender are close to the receiver of $l_v$, meaning $d(r_v,s_w) \leq c \cdot d_{vv}$ ($c$ is a constant bigger than 2, and explained in next part).
 \begin{equation}\label{value of c}
-c=\max{  \bigg( 2,(2 \cdot 3^3 \cdot \beta \cdot \frac{\alpha-1}{\alpha-2})^{\frac{1}{\alpha-2}}\bigg)}.
+c=\max { \bigg( 2,(2^4 \cdot 3 \cdot \beta \cdot \frac{\alpha-1}{\alpha-2})^{\frac{1}{\alpha}}\bigg)}.
 \end{equation}
 Then make sure the distance between any two links from set $I$ is bigger than $d_{vv}$, remove the illegal links from $L$ (line 16). The last step (line 23), all links $l_u \in L$, whose \emph{affectedness} $A_s(l_u)$ rose to or above a threshold of $2/3$, are removed from $L$ (the number of $2/3$ will explain in next part). This iterative is repeated until all links in $L$ have been select or deleted. In the end, we will get the scheduling set $S$ from LSDA algorithm. Next we prove that the obtained schedule is both correct and competitive.
 
@@ -390,7 +390,7 @@ Before algorithm description, we consider the condition of full-duplex transmiss
 
 \emph{Definition:} border distance($BD$): a radius depend on the distance of link $l_v$, which is a circle does not include any others.
 \begin{equation}
-BD(l_v) = ( 2^4 \cdot \pi \cdot \beta \cdot \frac{\alpha - 1}{\alpha - 2} )^{\frac{1}{\alpha}}
+BD(l_v) = ( 2^4 \cdot 3 \cdot \beta \cdot \frac{\alpha - 1}{\alpha - 2} )^{\frac{1}{\alpha}}
 \end{equation}
 By the definition of "border distance", in order to ensure links $l_v$ and $l_u$ can transmit at the same time, the distance between $l_v$ and $l_u$ should satisfy: $D(l_v, l_u) \geq BD(l_v)$.
 
