@@ -1,7 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.15)  16 JUN 2016 15:14
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.15)  17 MAY 2017 16:12
 entering extended mode
-**C:/Users/OurEDA/Desktop/JNCA/Author*Biography/bare_jrnl.tex
-("C:/Users/OurEDA/Desktop/JNCA/Author Biography/bare_jrnl.tex"
+**C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/MIMO/Author*Biography/
+bare_jrnl.tex
+
+("C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/MIMO/Author Biography/
+bare_jrnl.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
 ("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\ieeetran\IEEEtran.cls"
@@ -286,7 +289,8 @@ File: pppdftex.def 2011/03/10 v0.4n Pdfpages driver for pdfTeX (AM)
 ("C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Users\OurEDA\Desktop\JNCA\Author Biography\bare_jrnl.aux")
+("C:\Users\OurEDA\Desktop\Github\playground\ResearchWork\MIMO\Author Biography\
+bare_jrnl.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 366.
 LaTeX Font Info:    ... okay on input line 366.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 366.
@@ -388,25 +392,27 @@ Package pdftex.def Info: ma.jpg used on input line 568.
 UGBK.sfd}}
 
 
- <C:/Users/OurEDA/Desktop/JNCA/Author Biography/tang.jpg> <C:/Users/OurEDA/Desk
-top/JNCA/Author Biography/qin.jpg> <C:/Users/OurEDA/Desktop/JNCA/Author Biograp
-hy/zhuming.pdf> <C:/Users/OurEDA/Desktop/JNCA/Author Biography/fang.jpg> <C:/Us
-ers/OurEDA/Desktop/JNCA/Author Biography/wanglei.pdf> <C:/Users/OurEDA/Desktop/
-JNCA/Author Biography/ma.jpg>]
-("C:\Users\OurEDA\Desktop\JNCA\Author Biography\bare_jrnl.aux") ) 
+ <C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/MIMO/Author Biography/
+tang.jpg> <C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/MIMO/Author B
+iography/qin.jpg> <C:/Users/OurEDA/Desktop/Github/playground/ResearchWork/MIMO/
+Author Biography/zhuming.pdf> <C:/Users/OurEDA/Desktop/Github/playground/Resear
+chWork/MIMO/Author Biography/fang.jpg> <C:/Users/OurEDA/Desktop/Github/playgrou
+nd/ResearchWork/MIMO/Author Biography/wanglei.pdf> <C:/Users/OurEDA/Desktop/Git
+hub/playground/ResearchWork/MIMO/Author Biography/ma.jpg>]
+("C:\Users\OurEDA\Desktop\Github\playground\ResearchWork\MIMO\Author Biography\
+bare_jrnl.aux") ) 
 Here is how much of TeX's memory you used:
  4381 strings out of 495354
- 62571 string characters out of 3182739
+ 62788 string characters out of 3182739
  135456 words of memory out of 3000000
  7503 multiletter control sequences out of 15000+200000
  27973 words of font info for 57 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 33i,10n,35p,293b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Fi
-les (x86)/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/C
-TEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/CTEX/MiKTeX
-/fonts/type1/urw/times/utmr8a.pfb>
-Output written on bare_jrnl.pdf (1 page, 2558486 bytes).
+ 33i,10n,35p,324b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/CTEX/MiKTeX/fonts/enc/dvips/fontname/8
+r.enc}<C:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/
+Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
+Output written on bare_jrnl.pdf (1 page, 2558548 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
