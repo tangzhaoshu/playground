@@ -40,6 +40,12 @@ class model {
 };
 
 int main() {
+    string ch = "中国北京";
+    string en = "china beijing";
+    cout << ch.length() << endl;
+    cout << en.length() << endl;
+    cout << ch.substr(0,3) << endl;
+    cout << "分割线" << endl;
     model mod(3, 4);
     for (int i = 0; i < 3; i ++) {
         for (int j = 0; j < 4; j ++) {
