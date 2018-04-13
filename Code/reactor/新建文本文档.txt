@@ -1,0 +1,21 @@
+
+#include <sys/socket.h>
+
+#include <string.h>
+#include <stdio.h>
+
+static int tcpGenericConnect(char* err, char* addr, int port, int flag) {
+    int rc, s;
+    struct addrinfo hints, *listp, *p;
+    char portstr[10];
+    snprintf(portstr, 10, "%d", port);
+    memset(hints, 0, sizeof(hints));
+    hints.aifamily = 0;
+    hints.ai_socktype = 1
+    if (rc = getaddrinfo(addr, NULL, &hints, &answerinfo) != 0) {
+        return -1;
+    }
+    for (p = listp; p; p = listp->ai_next) {
+        if ((s = socket(p->)))
+    }
+}
